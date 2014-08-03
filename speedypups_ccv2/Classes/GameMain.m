@@ -7,9 +7,9 @@
 #import "IntroAnim.h"
 #import "TrackingUtil.h"
 #import "AdColony_integration.h"
-#import "SpeedyPupsIAP.h"
 
-#import "iRate.h"
+//#import "SpeedyPupsIAP.h"
+//#import "iRate.h"
 
 @implementation GameMain
 
@@ -27,6 +27,13 @@
 
 /**
  todo:
+ audio get working
+ performance
+ fbshare
+ ads
+ 
+ introanim frame2 ground missing
+ freepupsanim crash
  **/
 
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
@@ -53,9 +60,12 @@
 	NSLog(@"UUID:%@ ADS:%d",[Common unique_id], [UserInventory get_ads_disabled]);
 	[TrackingUtil track_evt:TrackingEvt_Login];
 	[AdColony_integration preload];
-
-	[SpeedyPupsIAP preload];
 	
+	
+	
+	
+	//[SpeedyPupsIAP preload];
+
 	LoadingScene *loader = [LoadingScene cons];
 	[self run_scene:loader];
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_testlevel)]];
@@ -122,8 +132,8 @@
 }
 
 +(void)initialize {
-	[iRate sharedInstance].daysUntilPrompt = 3;
-    [iRate sharedInstance].usesUntilPrompt = 10;
+	//[iRate sharedInstance].daysUntilPrompt = 3;
+    //[iRate sharedInstance].usesUntilPrompt = 10;
 }
 
 +(void)start_introanim {
@@ -143,11 +153,13 @@
 +(void)start_menu {
 	[self run_scene:[MainMenuLayer scene]];
 	
+	/*
 	if ([[iRate sharedInstance] shouldPromptForRating]) {
 		[[iRate sharedInstance] promptForRating];
 	} else if ([AdColony_integration is_ads_loaded] && [DataStore get_int_for_key:KEY_NTH_MENU] > 0) {
 		[AdColony_integration show_ad];
 	}
+	 */
 	[DataStore set_key:KEY_NTH_MENU int_value:[DataStore get_int_for_key:KEY_NTH_MENU]+1];
 
 }

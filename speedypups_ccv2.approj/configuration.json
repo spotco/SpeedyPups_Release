@@ -79,7 +79,7 @@
 
     // Path to the image to use for the app's icon.
     // Usually something like "./Icon.png".
-    // "ICON": "",
+    "ICON": "./speedypups_ccv2/Resources/icons/Icon-60@2x.png",
 
     // A regular expression to determine which assets
     // should be compressed when building the final app.

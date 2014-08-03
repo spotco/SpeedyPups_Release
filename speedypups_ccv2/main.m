@@ -11,6 +11,10 @@
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+#ifdef ANDROID
+	[UIScreen mainScreen].currentMode =
+	[UIScreenMode emulatedMode:UIScreenBestEmulatedMode];
+#endif
     int retVal = UIApplicationMain(argc, argv, nil, @"AppController");
     [pool release];
     return retVal;

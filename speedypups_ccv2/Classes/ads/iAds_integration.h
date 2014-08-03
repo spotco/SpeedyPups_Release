@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
-#import <iAd/iAd.h>
 
-@interface iAds_integration : NSObject <ADBannerViewDelegate>
+@interface iAds_integration : NSObject
 -(id)init_landscape_bottom;
 -(void)onEnter;
 -(void)onExit;

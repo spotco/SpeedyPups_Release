@@ -1,8 +1,8 @@
 {
     "assets": [
         {
-            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpuN9LlJ/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
-            "target": "../../../../../../../../Users/spotco/Documents/speedypups_ccv2/normal"
+            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpXb29Aa/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
+            "target": "../../../../../../../../Users/spotco/Documents/speedypups_ccv2_android/normal"
         }
     ], 
     "config": {}, 
@@ -1063,11 +1063,6 @@
                     "prefix": "speedypups_ccv2/Classes/game/playereffect/", 
                     "suffix": "HitEffect.h"
                 }, 
-                "IAPHelper.h": {
-                    "key": "IAPHelper.h", 
-                    "prefix": "speedypups_ccv2/Classes/iap/", 
-                    "suffix": "IAPHelper.h"
-                }, 
                 "IOSVersion.h": {
                     "key": "IOSVersion.h", 
                     "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
@@ -1573,11 +1568,6 @@
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
                     "suffix": "SpeedUp.h"
                 }, 
-                "SpeedyPupsIAP.h": {
-                    "key": "SpeedyPupsIAP.h", 
-                    "prefix": "speedypups_ccv2/Classes/iap/", 
-                    "suffix": "SpeedyPupsIAP.h"
-                }, 
                 "Spike.h": {
                     "key": "Spike.h", 
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
@@ -2007,7 +1997,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpuN9LlJ/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpXb29Aa/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -2015,11 +2005,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpuN9LlJ/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpXb29Aa/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpuN9LlJ/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpXb29Aa/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 

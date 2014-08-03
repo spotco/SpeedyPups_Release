@@ -139,10 +139,8 @@
 		7E594D15198B65BC00D78315 /* nmenu_bg_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D11198B65BC00D78315 /* nmenu_bg_3.png */; };
 		7E594D18198B9A8900D78315 /* spotcos_logo_ss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D16198B9A8900D78315 /* spotcos_logo_ss.plist */; };
 		7E594D19198B9A8900D78315 /* spotcos_logo_ss.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D17198B9A8900D78315 /* spotcos_logo_ss.png */; };
-		7E637AB4196E394D0064B085 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6378AA196E394D0064B085 /* AdColony.framework */; };
 		7E637AB5196E394D0064B085 /* AdColony_integration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6378AC196E394D0064B085 /* AdColony_integration.m */; };
 		7E637AB6196E394D0064B085 /* iAds_integration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6378AE196E394D0064B085 /* iAds_integration.m */; };
-		7E637AB7196E394D0064B085 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6378B0196E394D0064B085 /* FacebookSDK.framework */; };
 		7E637AB8196E394D0064B085 /* FBShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6378B2196E394D0064B085 /* FBShare.m */; };
 		7E637AB9196E394D0064B085 /* BackgroundObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6378B6196E394D0064B085 /* BackgroundObject.m */; };
 		7E637ABA196E394D0064B085 /* BGLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6378B8196E394D0064B085 /* BGLayer.m */; };
@@ -289,8 +287,6 @@
 		7E637B47196E394D0064B085 /* UILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379DF196E394D0064B085 /* UILayer.m */; };
 		7E637B48196E394D0064B085 /* UIWaterAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379E1196E394D0064B085 /* UIWaterAlert.m */; };
 		7E637B49196E394D0064B085 /* GameMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379E3196E394D0064B085 /* GameMain.m */; };
-		7E637B4A196E394D0064B085 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379E6196E394D0064B085 /* IAPHelper.m */; };
-		7E637B4B196E394D0064B085 /* SpeedyPupsIAP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379E8196E394D0064B085 /* SpeedyPupsIAP.m */; };
 		7E637B4C196E394D0064B085 /* IntroAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379EB196E394D0064B085 /* IntroAnim.m */; };
 		7E637B4D196E394D0064B085 /* IntroAnimFrame1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379ED196E394D0064B085 /* IntroAnimFrame1.m */; };
 		7E637B4E196E394D0064B085 /* IntroAnimFrame2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6379EF196E394D0064B085 /* IntroAnimFrame2.m */; };
@@ -1118,12 +1114,10 @@
 		7E594D11198B65BC00D78315 /* nmenu_bg_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nmenu_bg_3.png; sourceTree = "<group>"; };
 		7E594D16198B9A8900D78315 /* spotcos_logo_ss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = spotcos_logo_ss.plist; sourceTree = "<group>"; };
 		7E594D17198B9A8900D78315 /* spotcos_logo_ss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotcos_logo_ss.png; sourceTree = "<group>"; };
-		7E6378AA196E394D0064B085 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
 		7E6378AB196E394D0064B085 /* AdColony_integration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdColony_integration.h; sourceTree = "<group>"; };
 		7E6378AC196E394D0064B085 /* AdColony_integration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdColony_integration.m; sourceTree = "<group>"; };
 		7E6378AD196E394D0064B085 /* iAds_integration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAds_integration.h; sourceTree = "<group>"; };
 		7E6378AE196E394D0064B085 /* iAds_integration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAds_integration.m; sourceTree = "<group>"; };
-		7E6378B0196E394D0064B085 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7E6378B1196E394D0064B085 /* FBShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShare.h; sourceTree = "<group>"; };
 		7E6378B2196E394D0064B085 /* FBShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShare.m; sourceTree = "<group>"; };
 		7E6378B5196E394D0064B085 /* BackgroundObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundObject.h; sourceTree = "<group>"; };
@@ -1416,10 +1410,6 @@
 		7E6379E1196E394D0064B085 /* UIWaterAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWaterAlert.m; sourceTree = "<group>"; };
 		7E6379E2196E394D0064B085 /* GameMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMain.h; sourceTree = "<group>"; };
 		7E6379E3196E394D0064B085 /* GameMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMain.m; sourceTree = "<group>"; };
-		7E6379E5196E394D0064B085 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
-		7E6379E6196E394D0064B085 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
-		7E6379E7196E394D0064B085 /* SpeedyPupsIAP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedyPupsIAP.h; sourceTree = "<group>"; };
-		7E6379E8196E394D0064B085 /* SpeedyPupsIAP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedyPupsIAP.m; sourceTree = "<group>"; };
 		7E6379EA196E394D0064B085 /* IntroAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroAnim.h; sourceTree = "<group>"; };
 		7E6379EB196E394D0064B085 /* IntroAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroAnim.m; sourceTree = "<group>"; };
 		7E6379EC196E394D0064B085 /* IntroAnimFrame1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroAnimFrame1.h; sourceTree = "<group>"; };
@@ -2068,8 +2058,6 @@
 				7E16A97618FAB6B80039A93F /* AVFoundation.framework in Frameworks */,
 				7E16A97C18FAB6B80039A93F /* CoreGraphics.framework in Frameworks */,
 				7E16A97E18FAB6B80039A93F /* CoreText.framework in Frameworks */,
-				7E637AB4196E394D0064B085 /* AdColony.framework in Frameworks */,
-				7E637AB7196E394D0064B085 /* FacebookSDK.framework in Frameworks */,
 				7E16A97018FAB6B80039A93F /* OpenGLES.framework in Frameworks */,
 				7E16A97A18FAB6B80039A93F /* Foundation.framework in Frameworks */,
 				7E16A97418FAB6B80039A93F /* AudioToolbox.framework in Frameworks */,
@@ -2586,7 +2574,6 @@
 		7E6378A9196E394D0064B085 /* ads */ = {
 			isa = PBXGroup;
 			children = (
-				7E6378AA196E394D0064B085 /* AdColony.framework */,
 				7E6378AB196E394D0064B085 /* AdColony_integration.h */,
 				7E6378AC196E394D0064B085 /* AdColony_integration.m */,
 				7E6378AD196E394D0064B085 /* iAds_integration.h */,
@@ -2598,7 +2585,6 @@
 		7E6378AF196E394D0064B085 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
-				7E6378B0196E394D0064B085 /* FacebookSDK.framework */,
 				7E6378B1196E394D0064B085 /* FBShare.h */,
 				7E6378B2196E394D0064B085 /* FBShare.m */,
 			);
@@ -3015,10 +3001,6 @@
 		7E6379E4196E394D0064B085 /* iap */ = {
 			isa = PBXGroup;
 			children = (
-				7E6379E5196E394D0064B085 /* IAPHelper.h */,
-				7E6379E6196E394D0064B085 /* IAPHelper.m */,
-				7E6379E7196E394D0064B085 /* SpeedyPupsIAP.h */,
-				7E6379E8196E394D0064B085 /* SpeedyPupsIAP.m */,
 			);
 			path = iap;
 			sourceTree = "<group>";
@@ -4845,7 +4827,6 @@
 				7E637B7E196E394D0064B085 /* ALContext.m in Sources */,
 				7E637ACF196E394D0064B085 /* Challenge.m in Sources */,
 				7E637B3C196E394D0064B085 /* ChallengeEndUI.m in Sources */,
-				7E637B4A196E394D0064B085 /* IAPHelper.m in Sources */,
 				7E637AB8196E394D0064B085 /* FBShare.m in Sources */,
 				7E637B8E196E394D0064B085 /* TWTShare.m in Sources */,
 				7E637B3B196E394D0064B085 /* AskContinueUI.m in Sources */,
@@ -4889,7 +4870,6 @@
 				7E637AD3196E394D0064B085 /* GamePhysicsImplementation.m in Sources */,
 				7E637B57196E394D0064B085 /* DailyLoginPopup.m in Sources */,
 				7E637B4D196E394D0064B085 /* IntroAnimFrame1.m in Sources */,
-				7E637B4B196E394D0064B085 /* SpeedyPupsIAP.m in Sources */,
 				7E637B2D196E394D0064B085 /* DogRocketEffect.m in Sources */,
 				7E637B7D196E394D0064B085 /* ALChannelSource.m in Sources */,
 				7E637B02196E394D0064B085 /* SubBossLoader.m in Sources */,

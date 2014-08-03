@@ -3,14 +3,58 @@
 #import "Common.h"
 #import "BGTimeManager.h"
 
-#ifdef ANDROID
+#if 1
 @implementation AudioManager : NSObject
 
-+(void)begin_load{}
++(void)begin_load{
+	CDSoundEngine *sse = [CDAudioManager sharedManager].soundEngine;
+	
+	/**
+	 A source group is another name for a channel
+	 Here I have 2 channels, the first index allows for only a single effect... my background music
+	 The second channel I have reserved for my sound effects.  This is set to 31 because you can
+	 have up to 32 effects at once
+	 */
+	NSArray *sourceGroups = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:31], nil];
+	[sse defineSourceGroups:sourceGroups];
+	
+	//Initialise audio manager asynchronously as it can take a few seconds
+	/** Different modes of the engine
+	 typedef enum {
+	 kAMM_FxOnly,					//!Other apps will be able to play audio
+	 kAMM_FxPlusMusic,				//!Only this app will play audio
+	 kAMM_FxPlusMusicIfNoOtherAudio,	//!If another app is playing audio at start up then allow it to continue and don't play music
+	 kAMM_MediaPlayback,				//!This app takes over audio e.g music player app
+	 kAMM_PlayAndRecord				//!App takes over audio and has input and output
+	 } tAudioManagerMode;*/
+	[CDAudioManager initAsynchronously:kAMM_FxPlusMusicIfNoOtherAudio];
+	
+	//Load sound buffers asynchrounously
+	NSMutableArray *loadRequests = [[NSMutableArray alloc] init];
+	
+	/**
+	 Here we set up an array of sounds to load
+	 Each CDBufferLoadRequest takes an integer as an identifier (to call later)
+	 and the file path.  Pretty straightforward here.
+	 */
+	[loadRequests addObject:[[CDBufferLoadRequest alloc] init:1 filePath:SFX_CAT_LAUGH]];
+	[loadRequests addObject:[[CDBufferLoadRequest alloc] init:2 filePath:SFX_SPIN]];
+	[sse loadBuffersAsynchronously:loadRequests];
+	
+}
 +(void)schedule_update{}
-+(void)playbgm_imm:(BGM_GROUP)tar{}
++(void)playbgm_imm:(BGM_GROUP)tar{
+	//[[CDAudioManager sharedManager].soundEngine playSound:1 sourceGroupId:kASC_Right pitch:1.0f pan:0.0f gain:1.0f loop:NO];
+	[[CDAudioManager sharedManager].soundEngine playSound:2 sourceGroupId:kASC_Right pitch:1.0f pan:0.0f gain:1.0f loop:NO];
+	
+	NSLog(@"loaded %f",[CDAudioManager sharedManager].soundEngine.asynchLoadProgress);
+	
+	
+}
 +(void)playbgm_file:(NSString*)file{}
-+(void)playsfx:(NSString*)tar{}
++(void)playsfx:(NSString*)tar{
+	
+}
 +(void)playsfx:(NSString*)tar after_do:(CallBack*)cb{}
 
 +(void)bgm_stop{}
