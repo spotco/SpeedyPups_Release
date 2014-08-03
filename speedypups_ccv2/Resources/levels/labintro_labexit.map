@@ -1,0 +1,8 @@
+{
+    "objects": [],
+    "start_x": 154,
+    "assert_links": 0,
+    "connect_pts": {"x2": 1754, "y2": 550, "x1": 51, "y1": 550},
+    "start_y": 652,
+    "islands": [{"x2": 1754, "ground": "lab", "ndir": "left", "y1": 550, "hei": 500, "y2": 550, "type": "line", "x1": 51, "can_fall": true}]
+}

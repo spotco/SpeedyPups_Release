@@ -1,0 +1,28 @@
+{
+    "assert_links": 5,
+    "start_x": 351,
+    "islands": [
+        {"y2": 898.8, "x1": 1772.5, "ndir": "left", "y1": 902.5, "ground": "open", "can_fall": true, "x2": 2197.5, "type": "line", "hei": 500},
+        {"y2": 895, "x1": 3201.7, "ndir": "left", "y1": 898.3, "ground": "open", "can_fall": true, "x2": 4450.1, "type": "line", "hei": 500},
+        {"y2": 696.3, "x1": 46, "ndir": "left", "y1": 700, "ground": "open", "can_fall": true, "x2": 1350, "type": "line", "hei": 500},
+        {"y2": 706.3, "x1": 1350, "ndir": "left", "y1": 696.3, "ground": "open", "can_fall": true, "x2": 1447.5, "type": "line", "hei": 500},
+        {"y2": 902.5, "x1": 1656.3, "ndir": "left", "y1": 873.8, "ground": "open", "can_fall": true, "x2": 1772.5, "type": "line", "hei": 500},
+        {"y2": 773.8, "x1": 1447.5, "ndir": "left", "y1": 706.3, "ground": "open", "can_fall": true, "x2": 1560, "type": "line", "hei": 500},
+        {"y2": 873.8, "x1": 1560, "ndir": "left", "y1": 773.8, "ground": "open", "can_fall": true, "x2": 1656.3, "type": "line", "hei": 500}
+    ],
+    "start_y": 798,
+    "objects": [
+        {"label": "0", "x": 2151.7, "y": 301.6, "width": 1101.7, "type": "water", "height": 545.1333333333336},
+        {"label": "2", "x": 3208.4, "y": 735, "width": 135, "type": "blocker", "height": 143.33333333333348},
+        {"x": 1430, "type": "dogcape", "y": 897.5},
+        {"label": "8", "x": 3265.1, "type": "tutorialend", "y": 998.8},
+        {"label": "(9)gd_img:6", "x": 3318.4, "img": 6, "type": "ground_detail", "y": 900},
+        {"label": "(10)gd_img:6", "x": 3578.4, "img": 6, "type": "ground_detail", "y": 896.6},
+        {"label": "(11)gd_img:2", "x": 3851.8, "img": 2, "type": "ground_detail", "y": 896.6},
+        {"label": "0", "x": 453.8, "type": "checkpoint", "y": 698.8},
+        {"label": "(1)gd_img:6", "x": 797.5, "img": 6, "type": "ground_detail", "y": 700},
+        {"label": "(2)gd_img:6", "x": 1151.3, "img": 6, "type": "ground_detail", "y": 698.8},
+        {"label": "(4)gd_img:5", "x": 2001.3, "img": 5, "type": "ground_detail", "y": 898.8}
+    ],
+    "connect_pts": {"y2": 895, "x1": 46, "x2": 4450.1, "y1": 700}
+}

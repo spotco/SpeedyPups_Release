@@ -1,0 +1,8 @@
+{
+    "islands": [{"type": "line", "y2": 200, "x1": 100, "can_fall": true, "x2": 1300, "ground": "lab", "ndir": "left", "y1": 200, "hei": 500}],
+    "assert_links": 0,
+    "objects": [{"x": 200, "y2": 195, "y": 195, "x2": 1200, "type": "handrail", "label": "3"}],
+    "start_y": 0.021428571428600662,
+    "start_x": 0,
+    "connect_pts": {"y2": 200, "x1": 100, "y1": 200, "x2": 1300}
+}

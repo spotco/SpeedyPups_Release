@@ -1,0 +1,12 @@
+{
+    "start_y": 0,
+    "connect_pts": {"y2": 453.3, "x1": 136.7, "x2": 1453.4, "y1": 463.3},
+    "assert_links": 0,
+    "start_x": 0,
+    "islands": [{"ground": "open", "can_fall": true, "x2": 1453.4, "type": "line", "hei": 50, "y2": 453.3, "x1": 136.7, "ndir": "left", "y1": 463.3}],
+    "objects": [
+        {"x": 451.7, "label": "0", "y": 460, "type": "checkpoint"},
+        {"x": 753.4, "bid": 1, "label": "BID:1", "y": 601.7, "type": "dogbone"},
+        {"x": 1003.4, "bid": 2, "label": "BID:2", "y": 601.7, "type": "dogbone"}
+    ]
+}

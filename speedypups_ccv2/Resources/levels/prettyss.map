@@ -1,0 +1,29 @@
+{
+    "start_x": 251,
+    "islands": [
+        {"y2": 289, "x1": 82, "ndir": "left", "y1": 285, "ground": "open", "can_fall": true, "x2": 913, "type": "line", "hei": 500},
+        {"y2": 621, "x1": 812, "ndir": "right", "y1": 837, "ground": "open", "can_fall": true, "x2": 823, "type": "line", "hei": 500},
+        {"y2": 497, "x1": 823, "ndir": "right", "y1": 621, "ground": "open", "can_fall": true, "x2": 853, "type": "line", "hei": 500},
+        {"y2": 459, "x1": 853, "ndir": "right", "y1": 497, "ground": "open", "can_fall": true, "x2": 879, "type": "line", "hei": 500},
+        {"y2": 434, "x1": 879, "ndir": "right", "y1": 459, "ground": "open", "can_fall": true, "x2": 914, "type": "line", "hei": 500},
+        {"y2": 412, "x1": 914, "ndir": "right", "y1": 434, "ground": "open", "can_fall": true, "x2": 969, "type": "line", "hei": 500},
+        {"y2": 402, "x1": 969, "ndir": "right", "y1": 412, "ground": "open", "can_fall": true, "x2": 1087, "type": "line", "hei": 500},
+        {"y2": 402.2, "x1": 1087, "ndir": "right", "y1": 402, "ground": "open", "can_fall": true, "x2": 1758.9, "type": "line", "hei": 500}
+    ],
+    "connect_pts": {"y2": 402.2, "x1": 82, "x2": 1758.9, "y1": 285},
+    "start_y": 340.0222222222223,
+    "objects": [
+        {"label": "0", "x": 452, "type": "checkpoint", "y": 287},
+        {"label": "(1)gd_img:42", "x": 678, "img": 42, "type": "ground_detail", "y": 289},
+        {"label": "(2)gd_img:18", "x": 701, "img": 18, "type": "ground_detail", "y": 289},
+        {"label": "(3)gd_img:19", "x": 657, "img": 19, "type": "ground_detail", "y": 289},
+        {"label": "5", "x": 608, "type": "birdflock", "y": 283},
+        {"label": "(6)gd_img:1", "x": 351, "img": 1, "type": "ground_detail", "y": 287},
+        {"label": "7", "x": 895.6, "y": 5.6, "width": 894.4, "type": "water", "height": 256.62222222222226},
+        {"label": "8", "x": 876.7, "dir": {"x": 0.4, "y": 0.92}, "type": "jumppad", "y": 296.7},
+        {"label": "BID:1", "x": 1044.5, "bid": 1, "type": "dogbone", "y": 376.7},
+        {"label": "BID:2", "x": 1153.4, "bid": 2, "type": "dogbone", "y": 373.3},
+        {"label": "BID:3", "x": 1253.4, "bid": 3, "type": "dogbone", "y": 374.4}
+    ],
+    "assert_links": 6
+}

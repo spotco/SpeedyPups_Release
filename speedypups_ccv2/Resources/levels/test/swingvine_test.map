@@ -1,0 +1,15 @@
+{
+    "objects": [
+        {"x": 651, "type": "swingvine", "x2": 651, "y": 501, "label": "2", "y2": 148},
+        {"x": 946, "type": "swingvine", "x2": 962, "y": 602, "label": "4", "y2": 182},
+        {"x": 1347, "type": "swingvine", "x2": 1348, "y": 701, "label": "5", "y2": 206}
+    ],
+    "start_x": 99,
+    "islands": [
+        {"y1": 99, "type": "line", "can_fall": true, "x2": 559, "ground": "open", "y2": 144, "x1": 51, "hei": 50, "ndir": "left"},
+        {"y1": 150, "type": "line", "can_fall": true, "x2": 1350, "ground": "open", "y2": 151, "x1": 751, "hei": 50, "ndir": "left"}
+    ],
+    "start_y": 151,
+    "connect_pts": {"y1": 99, "y2": 151, "x1": 51, "x2": 1350},
+    "assert_links": 0
+}

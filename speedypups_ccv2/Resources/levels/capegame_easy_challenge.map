@@ -1,0 +1,29 @@
+{
+    "connect_pts": {"y2": 1399, "x1": 46, "x2": 4952, "y1": 1200},
+    "start_x": 348,
+    "assert_links": 5,
+    "start_y": 1301,
+    "objects": [
+        {"label": "0", "x": 2151.7, "y": 801.6, "width": 1101.7, "type": "water", "height": 545.1333333333336},
+        {"label": "2", "x": 3208.4, "y": 1235, "width": 135, "type": "blocker", "height": 143.33333333333348},
+        {"label": "capegame_easy", "x": 1430, "type": "dogcape", "y": 1397.5},
+        {"label": "8", "x": 3265.1, "type": "tutorialend", "y": 1498.8},
+        {"label": "(9)gd_img:6", "x": 3318.4, "img": 6, "type": "ground_detail", "y": 1400},
+        {"label": "(10)gd_img:6", "x": 3578.4, "img": 6, "type": "ground_detail", "y": 1396.6},
+        {"label": "(11)gd_img:2", "x": 3851.8, "img": 2, "type": "ground_detail", "y": 1396.6},
+        {"label": "0", "x": 453.8, "type": "checkpoint", "y": 1198.8},
+        {"label": "(1)gd_img:6", "x": 797.5, "img": 6, "type": "ground_detail", "y": 1200},
+        {"label": "(2)gd_img:6", "x": 1151.3, "img": 6, "type": "ground_detail", "y": 1198.8},
+        {"label": "(4)gd_img:5", "x": 2001.3, "img": 5, "type": "ground_detail", "y": 1398.8},
+        {"label": "0", "x": 4199, "type": "game_end", "y": 1399}
+    ],
+    "islands": [
+        {"y2": 1398.8, "x1": 1772.5, "ndir": "left", "y1": 1402.5, "ground": "open", "can_fall": true, "x2": 2197.5, "type": "line", "hei": 500},
+        {"y2": 1399, "x1": 3201.7, "ndir": "left", "y1": 1398.3, "ground": "open", "can_fall": true, "x2": 4952, "type": "line", "hei": 500},
+        {"y2": 1196.3, "x1": 46, "ndir": "left", "y1": 1200, "ground": "open", "can_fall": true, "x2": 1350, "type": "line", "hei": 500},
+        {"y2": 1206.3, "x1": 1350, "ndir": "left", "y1": 1196.3, "ground": "open", "can_fall": true, "x2": 1447.5, "type": "line", "hei": 500},
+        {"y2": 1402.5, "x1": 1656.3, "ndir": "left", "y1": 1373.8, "ground": "open", "can_fall": true, "x2": 1772.5, "type": "line", "hei": 500},
+        {"y2": 1273.8, "x1": 1447.5, "ndir": "left", "y1": 1206.3, "ground": "open", "can_fall": true, "x2": 1560, "type": "line", "hei": 500},
+        {"y2": 1373.8, "x1": 1560, "ndir": "left", "y1": 1273.8, "ground": "open", "can_fall": true, "x2": 1656.3, "type": "line", "hei": 500}
+    ]
+}

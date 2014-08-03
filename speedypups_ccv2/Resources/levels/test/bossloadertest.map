@@ -1,0 +1,17 @@
+{
+    "assert_links": 2,
+    "connect_pts": {"y2": 300, "x1": 108, "y1": 100, "x2": 1500},
+    "objects": [
+        {"label": "0", "x": 763, "type": "copter", "y": 366},
+        {"label": "(0)gd_img:9", "x": 535, "type": "ground_detail", "img": 9, "y": 252},
+        {"label": "(1)gd_img:9", "x": 602, "type": "ground_detail", "img": 9, "y": 277},
+        {"label": "(2)gd_img:9", "x": 693, "type": "ground_detail", "img": 9, "y": 295}
+    ],
+    "islands": [
+        {"y2": 291, "x1": 108, "type": "line", "can_fall": true, "x2": 640, "ndir": "left", "ground": "open", "y1": 100, "hei": 500},
+        {"y2": 303, "x1": 640, "type": "line", "can_fall": true, "x2": 900, "ndir": "left", "ground": "open", "y1": 291, "hei": 500},
+        {"y2": 300, "x1": 900, "type": "line", "can_fall": true, "x2": 1500, "ndir": "left", "ground": "open", "y1": 303, "hei": 500}
+    ],
+    "start_y": 205,
+    "start_x": 218
+}

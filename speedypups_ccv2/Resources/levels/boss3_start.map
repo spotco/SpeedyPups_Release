@@ -1,0 +1,27 @@
+{
+    "islands": [
+        {"can_fall": true, "x2": 1004, "ground": "lab", "ndir": "left", "type": "line", "y1": 498.8, "hei": 500, "y2": 498, "x1": 51.3},
+        {"can_fall": true, "x2": 1206, "ground": "lab", "ndir": "left", "type": "line", "y1": 498, "hei": 500, "y2": 594, "x1": 1004},
+        {"can_fall": true, "x2": 1694, "ground": "lab", "ndir": "left", "type": "line", "y1": 594, "hei": 500, "y2": 600, "x1": 1206},
+        {"can_fall": true, "x2": 2050, "ground": "lab", "ndir": "left", "type": "line", "y1": 600, "hei": 500, "y2": 696, "x1": 1694},
+        {"can_fall": true, "x2": 3354, "ground": "lab", "ndir": "left", "type": "line", "y1": 696, "hei": 500, "y2": 700, "x1": 2050}
+    ],
+    "assert_links": 4,
+    "objects": [
+        {"type": "checkpoint", "x": 550, "y": 501.6, "label": "1"},
+        {"type": "robotbossloader", "x": 2148, "y": 696, "label": "2"},
+        {"type": "dogbone", "x": 1300, "bid": 34, "y": 752, "label": "BID:34"},
+        {"type": "dogbone", "x": 1398, "bid": 35, "y": 750, "label": "BID:35"},
+        {"type": "dogbone", "x": 1354, "bid": 36, "y": 750, "label": "BID:36"},
+        {"type": "dogbone", "x": 1448, "bid": 37, "y": 750, "label": "BID:37"},
+        {"type": "dogbone", "x": 1500, "bid": 38, "y": 748, "label": "BID:38"},
+        {"type": "dogbone", "x": 1452, "bid": 39, "y": 800, "label": "BID:39"},
+        {"type": "dogbone", "x": 1450, "bid": 40, "y": 700, "label": "BID:40"},
+        {"type": "dogbone", "x": 1404, "bid": 41, "y": 656, "label": "BID:41"},
+        {"type": "dogbone", "x": 1400, "bid": 42, "y": 848, "label": "BID:42"},
+        {"type": "dogbone", "x": 1250, "bid": 43, "y": 752, "label": "BID:43"}
+    ],
+    "start_x": 0,
+    "connect_pts": {"y1": 498.8, "x2": 3354, "y2": 700, "x1": 51.3},
+    "start_y": 0
+}

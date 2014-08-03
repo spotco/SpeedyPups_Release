@@ -1,0 +1,29 @@
+{
+    "start_y": 141,
+    "assert_links": 6,
+    "objects": [
+        {"x": 660, "y": 114, "x2": 655, "y2": 351, "label": "0", "type": "breakable_wall"},
+        {"x": 965, "y": 74, "x2": 1410, "y2": 91, "label": "1", "type": "spikevine"},
+        {"x": 1514, "y": 137, "x2": 1505, "y2": 399, "label": "4", "type": "breakable_wall"},
+        {"x": 2410, "y": 378, "x2": 2224, "y2": 630, "label": "6", "type": "breakable_wall"},
+        {"x": 2999, "y": 554, "x2": 2987, "y2": 895, "label": "7", "type": "breakable_wall"},
+        {"x": 2415, "y": 770, "x2": 2830, "y2": 893, "label": "8", "type": "spikevine"},
+        {"x": 3165, "y": 323, "x2": 3137, "y2": 651, "label": "9", "type": "spikevine"},
+        {"x": 3278, "y": 326, "x2": 3262, "y2": 657, "label": "10", "type": "spikevine"},
+        {"x": 3709, "y": 609, "x2": 4049, "y2": 634, "label": "11", "type": "spikevine"},
+        {"x": 4549, "y": 635, "x2": 4547, "y2": 1008, "label": "12", "type": "breakable_wall"},
+        {"x": 4648, "y": 638, "x2": 4646, "y2": 1008, "label": "13", "type": "breakable_wall"}
+    ],
+    "islands": [
+        {"can_fall": true, "x1": 50, "y1": 101, "hei": 50, "x2": 964, "y2": 114, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 1422, "y1": 125, "hei": 50, "x2": 2061, "y2": 142, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 2061, "y1": 142, "hei": 50, "x2": 2237, "y2": 178, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 2237, "y1": 178, "hei": 50, "x2": 2317, "y2": 269, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 2317, "y1": 269, "hei": 50, "x2": 2458, "y2": 413, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 2458, "y1": 413, "hei": 50, "x2": 2686, "y2": 516, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 2686, "y1": 516, "hei": 50, "x2": 3088, "y2": 550, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 3345, "y1": 560, "hei": 50, "x2": 4185, "y2": 624, "type": "line", "ndir": "left", "ground": "open"},
+        {"can_fall": true, "x1": 4185, "y1": 624, "hei": 50, "x2": 4758, "y2": 632, "type": "line", "ndir": "left", "ground": "open"}
+    ],
+    "start_x": 105
+}

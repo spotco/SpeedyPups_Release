@@ -1,0 +1,23 @@
+{
+    "objects": [
+        {"x": 1551.7, "label": "0", "type": "checkpoint", "y": 555},
+        {"x": 935, "label": "2", "type": "labexit", "y": 546.6},
+        {"x": 891.7, "label": "4", "width": 106.69999999999992, "y": 746.6, "height": 703.3833333333334, "type": "blocker"},
+        {"img": 6, "x": 1301.7, "label": "(5)gd_img:6", "type": "ground_detail", "y": 551.7},
+        {"img": 6, "x": 1850, "label": "(6)gd_img:6", "type": "ground_detail", "y": 551.7},
+        {"img": 18, "x": 1871.7, "label": "(7)gd_img:18", "type": "ground_detail", "y": 551.7},
+        {"img": 18, "x": 1325, "label": "(8)gd_img:18", "type": "ground_detail", "y": 550},
+        {"img": 21, "x": 1826.7, "label": "(9)gd_img:21", "type": "ground_detail", "y": 551.7},
+        {"img": 21, "x": 1280, "label": "(10)gd_img:21", "type": "ground_detail", "y": 548.3},
+        {"x": 299, "label": "0", "type": "tutorialend", "y": 651},
+        {"x": 702, "label": "CAM(120,110,160)", "width": 224, "y": 528, "height": 500, "camera": {"x": 120, "z": 160, "y": 110}, "type": "camera_area"}
+    ],
+    "start_y": 0,
+    "start_x": 0,
+    "connect_pts": {"x2": 2550, "y2": 553.3, "x1": 51, "y1": 548},
+    "assert_links": 1,
+    "islands": [
+        {"x2": 951, "ground": "lab", "ndir": "left", "y1": 548, "hei": 500, "y2": 551, "type": "line", "x1": 51, "can_fall": true},
+        {"x2": 2550, "ground": "open", "ndir": "left", "y1": 551, "hei": 500, "y2": 553.3, "type": "line", "x1": 951, "can_fall": true}
+    ]
+}

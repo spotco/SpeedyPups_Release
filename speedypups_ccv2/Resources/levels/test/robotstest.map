@@ -1,0 +1,11 @@
+{
+    "islands": [
+        {"type": "line", "y2": 247, "x1": 129, "can_fall": true, "x2": 750, "ground": "open", "ndir": "left", "y1": 248, "hei": 50},
+        {"type": "line", "y2": 246, "x1": 750, "can_fall": true, "x2": 3500, "ground": "lab", "ndir": "left", "y1": 247, "hei": 500}
+    ],
+    "objects": [{"type": "labentrance", "x": 734, "label": "0", "y": 246}, {"type": "subbossloader", "x": 2000, "label": "BID:1", "y": 248, "bid": 1}],
+    "assert_links": 1,
+    "start_x": 230,
+    "connect_pts": {"y2": 246, "x1": 129, "y1": 248, "x2": 3500},
+    "start_y": 281
+}

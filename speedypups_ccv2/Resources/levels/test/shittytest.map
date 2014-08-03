@@ -1,0 +1,12 @@
+{
+    "start_y": 512,
+    "assert_links": 2,
+    "connect_pts": {"y2": 457, "x1": 167, "x2": 1343, "y1": 446},
+    "start_x": 286,
+    "islands": [
+        {"ground": "open", "can_fall": true, "x2": 516, "type": "line", "hei": 50, "y2": 450, "x1": 167, "ndir": "left", "y1": 446},
+        {"ground": "bridge", "can_fall": true, "x2": 1208.8, "type": "line", "hei": 50, "y2": 456.3, "x1": 516, "ndir": "left", "y1": 450},
+        {"ground": "open", "can_fall": true, "x2": 1343, "type": "line", "hei": 50, "y2": 457, "x1": 1208.8, "ndir": "left", "y1": 456.3}
+    ],
+    "objects": [{"x": 1286, "dir": {"x": 0.54, "y": 0.84}, "label": "0", "y": 476, "type": "jumppad"}]
+}

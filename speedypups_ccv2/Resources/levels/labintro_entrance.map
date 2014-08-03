@@ -1,0 +1,36 @@
+{
+    "connect_pts": {"y2": 1150, "x1": 25, "x2": 4550, "y1": 1149},
+    "assert_links": 1,
+    "start_y": 1250,
+    "start_x": 301,
+    "islands": [
+        {"ground": "open", "can_fall": true, "x2": 1450, "type": "line", "hei": 500, "y2": 1147.5, "x1": 25, "ndir": "left", "y1": 1149},
+        {"ground": "lab", "can_fall": true, "x2": 4550, "type": "line", "hei": 500, "y2": 1150, "x1": 1450, "ndir": "left", "y1": 1147.5},
+        {"ground": "lab", "can_fall": true, "x2": 3854, "type": "line", "hei": 100, "y2": 1348, "x1": 3302, "ndir": "left", "y1": 1344}
+    ],
+    "objects": [
+        {"x": 1438.6, "label": "1", "y": 1145.7, "type": "labentrance"},
+        {"x": 651, "img": 11, "label": "(7)gd_img:11", "y": 1144, "type": "ground_detail"},
+        {"x": 949, "img": 11, "label": "(9)gd_img:11", "y": 1146, "type": "ground_detail"},
+        {"x": 1249, "img": 11, "label": "(10)gd_img:11", "y": 1146, "type": "ground_detail"},
+        {"x": 798.4, "img": 6, "label": "(11)gd_img:6", "y": 1151.6, "type": "ground_detail"},
+        {"x": 1118.4, "img": 6, "label": "(12)gd_img:6", "y": 1153.3, "type": "ground_detail"},
+        {"x": 1140, "img": 18, "label": "(13)gd_img:18", "y": 1153.3, "type": "ground_detail"},
+        {"x": 783.4, "img": 18, "label": "(14)gd_img:18", "y": 1153.3, "type": "ground_detail"},
+        {"x": 810, "img": 22, "label": "(15)gd_img:22", "y": 1155, "type": "ground_detail"},
+        {"x": 1093.4, "img": 22, "label": "(16)gd_img:22", "y": 1155, "type": "ground_detail"},
+        {"x": 1458.6, "height": 1350, "label": "18", "y": 642.9, "width": 952, "type": "labwall"},
+        {"x": 1418, "height": 642, "label": "19", "y": 1346, "width": 106, "type": "blocker"},
+        {"x": 2746, "label": "force", "y": 1150, "type": "checkpoint"},
+        {"x": 3154, "bid": 1, "label": "BID:1", "y": 1298, "type": "dogbone"},
+        {"x": 3152, "bid": 2, "label": "BID:2", "y": 1396, "type": "dogbone"},
+        {"x": 3252, "bid": 3, "label": "BID:3", "y": 1398, "type": "dogbone"},
+        {"x": 3250, "bid": 4, "label": "BID:4", "y": 1496, "type": "dogbone"},
+        {"x": 3802, "bid": 5, "label": "BID:5", "y": 1592, "type": "dogbone"},
+        {"x": 3802, "bid": 6, "label": "BID:6", "y": 1512, "type": "dogbone"},
+        {"x": 3904, "bid": 7, "label": "BID:7", "y": 1594, "type": "dogbone"},
+        {"x": 3906, "bid": 8, "label": "BID:8", "y": 1508, "type": "dogbone"},
+        {"x": 1701, "x2": 2602, "label": "0", "y": 1148, "y2": 1147, "type": "handrail"},
+        {"x": 3313, "x2": 3840, "label": "3", "y": 1342, "y2": 1345, "type": "handrail"}
+    ]
+}

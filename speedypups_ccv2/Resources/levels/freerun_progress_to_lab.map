@@ -1,0 +1,18 @@
+{
+    "islands": [{"can_fall": true, "x2": 2253.4, "ground": "open", "ndir": "left", "type": "line", "y1": 450, "hei": 500, "y2": 451.6, "x1": 96.7}],
+    "objects": [
+        {"type": "progressdisp", "x": 548.4, "y": 448.3, "label": "lab"},
+        {"type": "ground_detail", "x": 748.4, "img": 40, "y": 446.6, "label": "(2)gd_img:40"},
+        {"type": "ground_detail", "x": 1700, "img": 40, "y": 451.6, "label": "(3)gd_img:40"},
+        {"type": "ground_detail", "x": 765, "img": 29, "y": 448.3, "label": "(4)gd_img:29"},
+        {"type": "ground_detail", "x": 730, "img": 28, "y": 448.3, "label": "(5)gd_img:28"},
+        {"type": "ground_detail", "x": 1106.7, "img": 37, "y": 451.6, "label": "(7)gd_img:37"},
+        {"type": "ground_detail", "x": 1350, "img": 37, "y": 453.3, "label": "(8)gd_img:37"},
+        {"type": "ground_detail", "x": 1716.7, "img": 29, "y": 455, "label": "(9)gd_img:29"},
+        {"type": "ground_detail", "x": 1681.7, "img": 27, "y": 453.3, "label": "(10)gd_img:27"}
+    ],
+    "start_x": 0,
+    "connect_pts": {"y1": 450, "x2": 2253.4, "y2": 451.6, "x1": 96.7},
+    "start_y": 0,
+    "assert_links": 0
+}

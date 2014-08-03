@@ -1,0 +1,20 @@
+{
+    "start_y": 252,
+    "connect_pts": {"y2": 226, "x1": 80, "y1": 206, "x2": 2750},
+    "objects": [
+        {"label": "BID:1", "x": 660, "type": "labentrance", "bid": 1, "y": 211},
+        {"height": 367, "x": 630, "type": "blocker", "y": 350, "label": "0", "width": 109},
+        {"height": 1019, "x": 721, "type": "labwall", "y": 4, "label": "3", "width": 1194},
+        {"label": "BID:2", "x": 1889, "type": "labexit", "bid": 2, "y": 222},
+        {"height": 654, "x": 1842, "type": "blocker", "y": 359, "label": "6", "width": 112},
+        {"y2": 651, "x": 1231, "type": "electricwall", "y": 347, "label": "7", "x2": 1480}
+    ],
+    "islands": [
+        {"y2": 212, "x1": 80, "type": "line", "can_fall": true, "x2": 721, "ndir": "left", "ground": "open", "y1": 206, "hei": 500},
+        {"y2": 222, "x1": 721, "type": "line", "can_fall": true, "x2": 1911, "ndir": "left", "ground": "lab", "y1": 212, "hei": 500},
+        {"y2": 226, "x1": 1911, "type": "line", "can_fall": true, "x2": 2750, "ndir": "left", "ground": "open", "y1": 222, "hei": 500},
+        {"y2": 417, "x1": 910, "type": "line", "can_fall": true, "x2": 1191, "ndir": "left", "ground": "lab", "y1": 415, "hei": 50}
+    ],
+    "assert_links": 2,
+    "start_x": 201
+}

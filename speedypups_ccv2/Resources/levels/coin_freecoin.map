@@ -1,0 +1,58 @@
+{
+    "start_y": 800.0333333333335,
+    "start_x": 601.7,
+    "islands": [
+        {"y2": 698.3, "x1": 253.4, "ndir": "left", "y1": 696.7, "ground": "open", "can_fall": true, "x2": 1451.7, "type": "line", "hei": 500},
+        {"y2": 746.6, "x1": 1451.7, "ndir": "left", "y1": 698.3, "ground": "open", "can_fall": true, "x2": 1566.7, "type": "line", "hei": 500},
+        {"y2": 810, "x1": 1566.7, "ndir": "left", "y1": 746.6, "ground": "open", "can_fall": true, "x2": 1635, "type": "line", "hei": 500},
+        {"y2": 908.3, "x1": 1635, "ndir": "left", "y1": 810, "ground": "open", "can_fall": true, "x2": 1678.4, "type": "line", "hei": 500},
+        {"y2": 1136.7, "x1": 1678.4, "ndir": "left", "y1": 908.3, "ground": "open", "can_fall": true, "x2": 1720, "type": "line", "hei": 500},
+        {"y2": 1250, "x1": 1720, "ndir": "left", "y1": 1136.7, "ground": "open", "can_fall": true, "x2": 1770, "type": "line", "hei": 500},
+        {"y2": 1303.3, "x1": 1770, "ndir": "left", "y1": 1250, "ground": "open", "can_fall": true, "x2": 1836.7, "type": "line", "hei": 500},
+        {"y2": 1326.6, "x1": 1836.7, "ndir": "left", "y1": 1303.3, "ground": "open", "can_fall": true, "x2": 1921.7, "type": "line", "hei": 500},
+        {"y2": 1326.6, "x1": 1921.7, "ndir": "left", "y1": 1326.6, "ground": "open", "can_fall": true, "x2": 2181.7, "type": "line", "hei": 500},
+        {"y2": 1273.3, "x1": 2181.7, "ndir": "left", "y1": 1326.6, "ground": "open", "can_fall": true, "x2": 2288.4, "type": "line", "hei": 500},
+        {"y2": 1191.6, "x1": 2288.4, "ndir": "left", "y1": 1273.3, "ground": "open", "can_fall": true, "x2": 2341.7, "type": "line", "hei": 500},
+        {"y2": 1083.3, "x1": 2341.7, "ndir": "left", "y1": 1191.6, "ground": "open", "can_fall": true, "x2": 2368.4, "type": "line", "hei": 500},
+        {"y2": 885, "x1": 2368.4, "ndir": "left", "y1": 1083.3, "ground": "open", "can_fall": true, "x2": 2411.7, "type": "line", "hei": 500},
+        {"y2": 783.3, "x1": 2411.7, "ndir": "left", "y1": 885, "ground": "open", "can_fall": true, "x2": 2475, "type": "line", "hei": 500},
+        {"y2": 745, "x1": 2475, "ndir": "left", "y1": 783.3, "ground": "open", "can_fall": true, "x2": 2541.7, "type": "line", "hei": 500},
+        {"y2": 706.6, "x1": 2541.7, "ndir": "left", "y1": 745, "ground": "open", "can_fall": true, "x2": 2733.4, "type": "line", "hei": 500},
+        {"y2": 700, "x1": 2733.4, "ndir": "left", "y1": 706.6, "ground": "open", "can_fall": true, "x2": 3601.8, "type": "line", "hei": 500}
+    ],
+    "assert_links": 16,
+    "connect_pts": {"y2": 700, "x1": 253.4, "x2": 3601.8, "y1": 696.7},
+    "objects": [
+        {"label": "0", "x": 2046.7, "type": "coin", "y": 1550},
+        {"label": "(2)gd_img:2", "x": 2048.4, "img": 2, "type": "ground_detail", "y": 1325},
+        {"label": "(4)gd_img:6", "x": 951.7, "img": 6, "type": "ground_detail", "y": 700},
+        {"label": "(5)gd_img:6", "x": 1203.4, "img": 6, "type": "ground_detail", "y": 698.3},
+        {"label": "(6)gd_img:18", "x": 935, "img": 18, "type": "ground_detail", "y": 701.6},
+        {"label": "(7)gd_img:18", "x": 1190, "img": 18, "type": "ground_detail", "y": 698.3},
+        {
+            "label": "CAM(300,106,224)",
+            "x": 1300,
+            "y": 661.6,
+            "width": 226.70000000000005,
+            "type": "camera_area",
+            "height": 548.3833333333334,
+            "camera": {"x": 300, "z": 224, "y": 106}
+        },
+        {"label": "(12)gd_img:6", "x": 2953.4, "img": 6, "type": "ground_detail", "y": 706.6},
+        {"label": "(13)gd_img:6", "x": 3301.8, "img": 6, "type": "ground_detail", "y": 705},
+        {"label": "(14)gd_img:29", "x": 2971.8, "img": 29, "type": "ground_detail", "y": 705},
+        {"label": "(15)gd_img:29", "x": 3325.1, "img": 29, "type": "ground_detail", "y": 705},
+        {"label": "(16)gd_img:29", "x": 3278.4, "img": 29, "type": "ground_detail", "y": 703.3},
+        {"label": "(17)gd_img:29", "x": 2933.4, "img": 29, "type": "ground_detail", "y": 703.3},
+        {"label": "18", "x": 2025, "type": "birdflock", "y": 1325},
+        {
+            "label": "CAM(120,110,160)",
+            "x": 3165.1,
+            "y": 676.6,
+            "width": 320,
+            "type": "camera_area",
+            "height": 978.3833333333334,
+            "camera": {"x": 120, "z": 160, "y": 110}
+        }
+    ]
+}

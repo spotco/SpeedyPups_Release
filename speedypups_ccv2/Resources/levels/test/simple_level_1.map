@@ -1,0 +1,44 @@
+{
+	"start_x":"75",
+	"start_y":"247",
+	"assert_links":"0",
+	"islands":[
+		{"type":"line", "x1":"3", "y1":"212", "x2":"998", "y2":"215", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"0"},
+		{"type":"line", "x1":"998", "y1":"215", "x2":"1451", "y2":"398", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"1"},
+		{"type":"line", "x1":"1451", "y1":"398", "x2":"1902", "y2":"401", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"2"},
+		{"type":"line", "x1":"2053", "y1":"99", "x2":"2553", "y2":"102", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"3"},
+		{"type":"line", "x1":"2655", "y1":"249", "x2":"3103", "y2":"251", "hei":"100", "ndir":"left", "can_fall":"true", "label":"16"},
+		{"type":"line", "x1":"3200", "y1":"398", "x2":"3601", "y2":"400", "hei":"100", "ndir":"left", "can_fall":"true", "label":"17"},
+		{"type":"line", "x1":"3701", "y1":"547", "x2":"4002", "y2":"551", "hei":"100", "ndir":"left", "can_fall":"true", "label":"18"},
+		{"type":"line", "x1":"4102", "y1":"699", "x2":"4451", "y2":"703", "hei":"100", "ndir":"left", "can_fall":"true", "label":"19"},
+		{"type":"line", "x1":"4551", "y1":"849", "x2":"4951", "y2":"851", "hei":"100", "ndir":"left", "can_fall":"true", "label":"20"},
+		{"type":"line", "x1":"5050", "y1":"998", "x2":"5499", "y2":"1000", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"21"},
+		{"type":"line", "x1":"5499", "y1":"1000", "x2":"5532", "y2":"996", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"22"},
+		{"type":"line", "x1":"5532", "y1":"996", "x2":"5563", "y2":"986", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"23"},
+		{"type":"line", "x1":"5563", "y1":"986", "x2":"5604", "y2":"951", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"24"},
+		{"type":"line", "x1":"5604", "y1":"951", "x2":"5639", "y2":"914", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"25"},
+		{"type":"line", "x1":"5639", "y1":"914", "x2":"5901", "y2":"349", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"26"},
+		{"type":"line", "x1":"5901", "y1":"349", "x2":"5921", "y2":"322", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"27"},
+		{"type":"line", "x1":"5921", "y1":"322", "x2":"5947", "y2":"298", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"28"},
+		{"type":"line", "x1":"5947", "y1":"298", "x2":"5978", "y2":"278", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"29"},
+		{"type":"line", "x1":"5978", "y1":"278", "x2":"6016", "y2":"265", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"30"},
+		{"type":"line", "x1":"6016", "y1":"265", "x2":"6049", "y2":"258", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"31"},
+		{"type":"line", "x1":"6049", "y1":"258", "x2":"6651", "y2":"259", "hei":"1000", "ndir":"left", "can_fall":"true", "label":"33"}
+	],
+
+	"objects":[
+		{"type":"ground_detail", "x":"51", "y":"212", "img":"1","label":"0"},
+		{"type":"ground_detail", "x":"200", "y":"210", "img":"1", "label":"1"},
+		{"type":"ground_detail", "x":"300", "y":"210", "img":"2", "label":"2"},
+		{"type":"ground_detail", "x":"1602", "y":"396", "img":"1", "label":"3"},
+		{"type":"ground_detail", "x":"1751", "y":"398", "img":"2", "label":"4"},
+		{"type":"ground_detail", "x":"2200", "y":"99", "img":"1", "label":"5"},
+		{"type":"checkpoint", "x":"2850", "y":"249", "img":"2", "label":"6"},
+		{"type":"ground_detail", "x":"5200", "y":"998", "img":"1", "label":"7"},
+		{"type":"game_end", "x":"6500", "y":"258", "img":"3", "label":"8"},
+        {"type":"cape", "x":"721", "y":"317", "label":"0"},
+		{"type":"coin", "x":"808", "y":"319", "bid":1, "label":"1"},
+		{"type":"rocket", "x":"902", "y":"313", "label":"2"},
+        {"type":"coin", "x":"5400", "y":"1022","bid":2, "label":"0"}
+	]
+}
