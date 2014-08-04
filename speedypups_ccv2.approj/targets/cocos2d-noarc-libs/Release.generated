@@ -1,7 +1,7 @@
 {
     "assets": [
         {
-            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp2MtKau/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
+            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpLw3L0r/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
             "target": "../../../../../../../../Users/spotco/Documents/speedypups_ccv2_android/normal"
         }
     ], 
@@ -1867,7 +1867,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp2MtKau/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpLw3L0r/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -1875,11 +1875,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp2MtKau/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpLw3L0r/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp2MtKau/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpLw3L0r/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 

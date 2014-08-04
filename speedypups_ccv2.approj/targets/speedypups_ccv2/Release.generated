@@ -409,10 +409,6 @@
             "target": "tut_anim_2.plist"
         }, 
         {
-            "asset": "speedypups_ccv2/Resources/music/fanfare_win.mp3", 
-            "target": "fanfare_win.mp3"
-        }, 
-        {
             "asset": "speedypups_ccv2/Resources/levels/coin_freecoin.map", 
             "target": "coin_freecoin.map"
         }, 
@@ -785,6 +781,10 @@
             "target": "jumppad_bouncyroom.map"
         }, 
         {
+            "asset": "speedypups_ccv2/Resources/sfx/sfx_fanfare_win.wav", 
+            "target": "sfx_fanfare_win.wav"
+        }, 
+        {
             "asset": "speedypups_ccv2/Resources/sfx/bark_high.wav", 
             "target": "bark_high.wav"
         }, 
@@ -1107,6 +1107,10 @@
         {
             "asset": "speedypups_ccv2/Resources/nmenu/nmenu_items.png", 
             "target": "nmenu_items.png"
+        }, 
+        {
+            "asset": "speedypups_ccv2/Resources/sfx/sfx_fanfare_lose.wav", 
+            "target": "sfx_fanfare_lose.wav"
         }, 
         {
             "asset": "speedypups_ccv2/Resources/levels/test/easy_world1.map", 
@@ -1435,10 +1439,6 @@
         {
             "asset": "speedypups_ccv2/Resources/levels/filler_steepdec.map", 
             "target": "filler_steepdec.map"
-        }, 
-        {
-            "asset": "speedypups_ccv2/Resources/music/fanfare_lose.mp3", 
-            "target": "fanfare_lose.mp3"
         }, 
         {
             "asset": "speedypups_ccv2/Resources/object/obstacle/electric/electric_body.png", 
@@ -3615,7 +3615,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpG_mkLt/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpvR_NIE/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -3623,11 +3623,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpG_mkLt/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpvR_NIE/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpG_mkLt/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpvR_NIE/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 

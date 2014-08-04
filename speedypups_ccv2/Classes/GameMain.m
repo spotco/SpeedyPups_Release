@@ -27,10 +27,7 @@
 
 /**
  todo:
- performance
  fbshare
- ads
- 
  introanim frame2 ground missing
  freepupsanim crash
  **/
