@@ -1746,6 +1746,8 @@
     }, 
     "deps": [
         "UIKit", 
+        "OpenAL", 
+        "CoreAudio", 
         "Twitter", 
         "SystemConfiguration", 
         "StoreKit", 
@@ -1758,7 +1760,6 @@
         "AdSupport", 
         "CoreTelephony", 
         "iAd", 
-        "OpenAL", 
         "UIKit", 
         "QuartzCore", 
         "AVFoundation", 
@@ -1766,7 +1767,6 @@
         "CoreText", 
         "OpenGLES", 
         "Foundation", 
-        "AudioToolbox", 
         "GameKit"
     ], 
     "flags": [
@@ -1816,66 +1816,6 @@
         {
             "header_path": "SpeedyPups-project-headers.hmap", 
             "hmap": {
-                "ALBuffer.h": {
-                    "key": "ALBuffer.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALBuffer.h"
-                }, 
-                "ALCaptureDevice.h": {
-                    "key": "ALCaptureDevice.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALCaptureDevice.h"
-                }, 
-                "ALChannelSource.h": {
-                    "key": "ALChannelSource.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALChannelSource.h"
-                }, 
-                "ALContext.h": {
-                    "key": "ALContext.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALContext.h"
-                }, 
-                "ALDevice.h": {
-                    "key": "ALDevice.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALDevice.h"
-                }, 
-                "ALListener.h": {
-                    "key": "ALListener.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALListener.h"
-                }, 
-                "ALSoundSource.h": {
-                    "key": "ALSoundSource.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALSoundSource.h"
-                }, 
-                "ALSoundSourcePool.h": {
-                    "key": "ALSoundSourcePool.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALSoundSourcePool.h"
-                }, 
-                "ALSource.h": {
-                    "key": "ALSource.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALSource.h"
-                }, 
-                "ALTypes.h": {
-                    "key": "ALTypes.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALTypes.h"
-                }, 
-                "ALWrapper.h": {
-                    "key": "ALWrapper.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "ALWrapper.h"
-                }, 
-                "ARCSafe_MemMgmt.h": {
-                    "key": "ARCSafe_MemMgmt.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "ARCSafe_MemMgmt.h"
-                }, 
                 "AdColony_integration.h": {
                     "key": "AdColony_integration.h", 
                     "prefix": "speedypups_ccv2/Classes/ads/", 
@@ -2681,6 +2621,51 @@
                     "prefix": "speedypups_ccv2/Classes/facebook/", 
                     "suffix": "FBShare.h"
                 }, 
+                "FIError.h": {
+                    "key": "FIError.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FIError.h"
+                }, 
+                "FISampleBuffer.h": {
+                    "key": "FISampleBuffer.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISampleBuffer.h"
+                }, 
+                "FISampleDecoder.h": {
+                    "key": "FISampleDecoder.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISampleDecoder.h"
+                }, 
+                "FISampleFormat.h": {
+                    "key": "FISampleFormat.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISampleFormat.h"
+                }, 
+                "FISound.h": {
+                    "key": "FISound.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISound.h"
+                }, 
+                "FISoundContext.h": {
+                    "key": "FISoundContext.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISoundContext.h"
+                }, 
+                "FISoundDevice.h": {
+                    "key": "FISoundDevice.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISoundDevice.h"
+                }, 
+                "FISoundEngine.h": {
+                    "key": "FISoundEngine.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISoundEngine.h"
+                }, 
+                "FISoundSource.h": {
+                    "key": "FISoundSource.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/Finch/", 
+                    "suffix": "FISoundSource.h"
+                }, 
                 "FadeOutLabWall.h": {
                     "key": "FadeOutLabWall.h", 
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
@@ -2810,11 +2795,6 @@
                     "key": "HitEffect.h", 
                     "prefix": "speedypups_ccv2/Classes/game/playereffect/", 
                     "suffix": "HitEffect.h"
-                }, 
-                "IOSVersion.h": {
-                    "key": "IOSVersion.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "IOSVersion.h"
                 }, 
                 "IngameUI.h": {
                     "key": "IngameUI.h", 
@@ -3071,110 +3051,10 @@
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
                     "suffix": "NRobotBossComponents.h"
                 }, 
-                "NSMutableArray+WeakReferences.h": {
-                    "key": "NSMutableArray+WeakReferences.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "NSMutableArray+WeakReferences.h"
-                }, 
-                "NSMutableDictionary+WeakReferences.h": {
-                    "key": "NSMutableDictionary+WeakReferences.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "NSMutableDictionary+WeakReferences.h"
-                }, 
                 "NSThread+performBlock.h": {
                     "key": "NSThread+performBlock.h", 
                     "prefix": "speedypups_ccv2/libs/cocos2d/Support/", 
                     "suffix": "NSThread+performBlock.h"
-                }, 
-                "OALAction+Private.h": {
-                    "key": "OALAction+Private.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/", 
-                    "suffix": "OALAction+Private.h"
-                }, 
-                "OALAction.h": {
-                    "key": "OALAction.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/", 
-                    "suffix": "OALAction.h"
-                }, 
-                "OALActionManager.h": {
-                    "key": "OALActionManager.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/", 
-                    "suffix": "OALActionManager.h"
-                }, 
-                "OALAudioActions.h": {
-                    "key": "OALAudioActions.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/", 
-                    "suffix": "OALAudioActions.h"
-                }, 
-                "OALAudioFile.h": {
-                    "key": "OALAudioFile.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "OALAudioFile.h"
-                }, 
-                "OALAudioSession.h": {
-                    "key": "OALAudioSession.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Session/", 
-                    "suffix": "OALAudioSession.h"
-                }, 
-                "OALAudioTrack.h": {
-                    "key": "OALAudioTrack.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/AudioTrack/", 
-                    "suffix": "OALAudioTrack.h"
-                }, 
-                "OALAudioTrackNotifications.h": {
-                    "key": "OALAudioTrackNotifications.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/AudioTrack/", 
-                    "suffix": "OALAudioTrackNotifications.h"
-                }, 
-                "OALAudioTracks.h": {
-                    "key": "OALAudioTracks.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/AudioTrack/", 
-                    "suffix": "OALAudioTracks.h"
-                }, 
-                "OALNotifications.h": {
-                    "key": "OALNotifications.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "OALNotifications.h"
-                }, 
-                "OALSimpleAudio.h": {
-                    "key": "OALSimpleAudio.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/", 
-                    "suffix": "OALSimpleAudio.h"
-                }, 
-                "OALSuspendHandler.h": {
-                    "key": "OALSuspendHandler.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Session/", 
-                    "suffix": "OALSuspendHandler.h"
-                }, 
-                "OALTools.h": {
-                    "key": "OALTools.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "OALTools.h"
-                }, 
-                "OALUtilityActions.h": {
-                    "key": "OALUtilityActions.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/", 
-                    "suffix": "OALUtilityActions.h"
-                }, 
-                "ObjectAL (iOS)-Prefix.pch": {
-                    "key": "ObjectAL (iOS)-Prefix.pch", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/", 
-                    "suffix": "ObjectAL (iOS)-Prefix.pch"
-                }, 
-                "ObjectAL.h": {
-                    "key": "ObjectAL.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/", 
-                    "suffix": "ObjectAL.h"
-                }, 
-                "ObjectALConfig.h": {
-                    "key": "ObjectALConfig.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/", 
-                    "suffix": "ObjectALConfig.h"
-                }, 
-                "ObjectALMacros.h": {
-                    "key": "ObjectALMacros.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "ObjectALMacros.h"
                 }, 
                 "ObjectPool.h": {
                     "key": "ObjectPool.h", 
@@ -3190,11 +3070,6 @@
                     "key": "OneUpParticle.h", 
                     "prefix": "speedypups_ccv2/Classes/game/particle/", 
                     "suffix": "OneUpParticle.h"
-                }, 
-                "OpenALManager.h": {
-                    "key": "OpenALManager.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/", 
-                    "suffix": "OpenALManager.h"
                 }, 
                 "OpenGL_Internal.h": {
                     "key": "OpenGL_Internal.h", 
@@ -3311,6 +3186,11 @@
                     "prefix": "speedypups_ccv2/libs/CocosDenshion/", 
                     "suffix": "SimpleAudioEngine.h"
                 }, 
+                "SoundManager.h": {
+                    "key": "SoundManager.h", 
+                    "prefix": "speedypups_ccv2/Classes/SoundManager/", 
+                    "suffix": "SoundManager.h"
+                }, 
                 "SpeedUp.h": {
                     "key": "SpeedUp.h", 
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
@@ -3355,11 +3235,6 @@
                     "key": "SwingVine.h", 
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
                     "suffix": "SwingVine.h"
-                }, 
-                "SynthesizeSingleton.h": {
-                    "key": "SynthesizeSingleton.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "SynthesizeSingleton.h"
                 }, 
                 "TGAlib.h": {
                     "key": "TGAlib.h", 
@@ -3666,11 +3541,6 @@
                     "prefix": "speedypups_ccv2/libs/kazmath/", 
                     "suffix": "kazmath.h"
                 }, 
-                "mach_timing.h": {
-                    "key": "mach_timing.h", 
-                    "prefix": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/", 
-                    "suffix": "mach_timing.h"
-                }, 
                 "mat3.h": {
                     "key": "mat3.h", 
                     "prefix": "speedypups_ccv2/libs/kazmath/", 
@@ -3745,7 +3615,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp1C1HkT/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpG_mkLt/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -3753,11 +3623,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp1C1HkT/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpG_mkLt/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp1C1HkT/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpG_mkLt/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
@@ -3794,182 +3664,70 @@
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/OALAction.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FIError.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/OALActionManager.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISampleBuffer.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/OALAudioActions.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISampleDecoder.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Actions/OALUtilityActions.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISampleFormat.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/AudioTrack/OALAudioTrack.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISound.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/AudioTrack/OALAudioTrackNotifications.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISoundContext.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/AudioTrack/OALAudioTracks.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISoundDevice.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OALSimpleAudio.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISoundEngine.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALBuffer.m"
+            "source": "speedypups_ccv2/Classes/SoundManager/Finch/FISoundSource.m"
         }, 
         {
             "defines": {}, 
             "flags": [], 
             "header_paths": [], 
             "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALCaptureDevice.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALChannelSource.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALContext.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALDevice.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALListener.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALSoundSourcePool.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALSource.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/ALWrapper.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/OpenAL/OpenALManager.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Session/OALAudioSession.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Session/OALSuspendHandler.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/IOSVersion.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/NSMutableArray+WeakReferences.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/NSMutableDictionary+WeakReferences.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/OALAudioFile.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/OALTools.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "c", 
-            "source": "speedypups_ccv2/Classes/ObjectAL (iOS)/Support/mach_timing.c"
+            "source": "speedypups_ccv2/Classes/SoundManager/SoundManager.m"
         }, 
         {
             "defines": {}, 

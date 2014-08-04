@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		7E16A96E18FAB6B80039A93F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A96D18FAB6B80039A93F /* QuartzCore.framework */; };
 		7E16A97018FAB6B80039A93F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A96F18FAB6B80039A93F /* OpenGLES.framework */; };
-		7E16A97218FAB6B80039A93F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A97118FAB6B80039A93F /* OpenAL.framework */; };
-		7E16A97418FAB6B80039A93F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A97318FAB6B80039A93F /* AudioToolbox.framework */; };
 		7E16A97618FAB6B80039A93F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A97518FAB6B80039A93F /* AVFoundation.framework */; };
 		7E16A97818FAB6B80039A93F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A97718FAB6B80039A93F /* UIKit.framework */; };
 		7E16A97A18FAB6B80039A93F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A97918FAB6B80039A93F /* Foundation.framework */; };
@@ -326,32 +324,6 @@
 		7E637B70196E394D0064B085 /* ShopRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A39196E394D0064B085 /* ShopRecord.m */; };
 		7E637B71196E394D0064B085 /* ShopTabTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A3B196E394D0064B085 /* ShopTabTouchButton.m */; };
 		7E637B72196E394D0064B085 /* SpinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A3D196E394D0064B085 /* SpinButton.m */; };
-		7E637B73196E394D0064B085 /* OALAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A42196E394D0064B085 /* OALAction.m */; };
-		7E637B74196E394D0064B085 /* OALActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A44196E394D0064B085 /* OALActionManager.m */; };
-		7E637B75196E394D0064B085 /* OALAudioActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A46196E394D0064B085 /* OALAudioActions.m */; };
-		7E637B76196E394D0064B085 /* OALUtilityActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A48196E394D0064B085 /* OALUtilityActions.m */; };
-		7E637B77196E394D0064B085 /* OALAudioTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A4B196E394D0064B085 /* OALAudioTrack.m */; };
-		7E637B78196E394D0064B085 /* OALAudioTrackNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A4D196E394D0064B085 /* OALAudioTrackNotifications.m */; };
-		7E637B79196E394D0064B085 /* OALAudioTracks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A4F196E394D0064B085 /* OALAudioTracks.m */; };
-		7E637B7A196E394D0064B085 /* OALSimpleAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A51196E394D0064B085 /* OALSimpleAudio.m */; };
-		7E637B7B196E394D0064B085 /* ALBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A57196E394D0064B085 /* ALBuffer.m */; };
-		7E637B7C196E394D0064B085 /* ALCaptureDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A59196E394D0064B085 /* ALCaptureDevice.m */; };
-		7E637B7D196E394D0064B085 /* ALChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A5B196E394D0064B085 /* ALChannelSource.m */; };
-		7E637B7E196E394D0064B085 /* ALContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A5D196E394D0064B085 /* ALContext.m */; };
-		7E637B7F196E394D0064B085 /* ALDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A5F196E394D0064B085 /* ALDevice.m */; };
-		7E637B80196E394D0064B085 /* ALListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A61196E394D0064B085 /* ALListener.m */; };
-		7E637B81196E394D0064B085 /* ALSoundSourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A64196E394D0064B085 /* ALSoundSourcePool.m */; };
-		7E637B82196E394D0064B085 /* ALSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A66196E394D0064B085 /* ALSource.m */; };
-		7E637B83196E394D0064B085 /* ALWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A69196E394D0064B085 /* ALWrapper.m */; };
-		7E637B84196E394D0064B085 /* OpenALManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A6B196E394D0064B085 /* OpenALManager.m */; };
-		7E637B85196E394D0064B085 /* OALAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A6E196E394D0064B085 /* OALAudioSession.m */; };
-		7E637B86196E394D0064B085 /* OALSuspendHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A70196E394D0064B085 /* OALSuspendHandler.m */; };
-		7E637B87196E394D0064B085 /* IOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A74196E394D0064B085 /* IOSVersion.m */; };
-		7E637B88196E394D0064B085 /* mach_timing.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A75196E394D0064B085 /* mach_timing.c */; };
-		7E637B89196E394D0064B085 /* NSMutableArray+WeakReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A78196E394D0064B085 /* NSMutableArray+WeakReferences.m */; };
-		7E637B8A196E394D0064B085 /* NSMutableDictionary+WeakReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A7A196E394D0064B085 /* NSMutableDictionary+WeakReferences.m */; };
-		7E637B8B196E394D0064B085 /* OALAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A7C196E394D0064B085 /* OALAudioFile.m */; };
-		7E637B8C196E394D0064B085 /* OALTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A7F196E394D0064B085 /* OALTools.m */; };
 		7E637B8D196E394D0064B085 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A84196E394D0064B085 /* iRate.m */; };
 		7E637B8E196E394D0064B085 /* TWTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A87196E394D0064B085 /* TWTShare.m */; };
 		7E637B8F196E394D0064B085 /* DailyLoginPrizeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A8A196E394D0064B085 /* DailyLoginPrizeManager.m */; };
@@ -786,6 +758,18 @@
 		7E637F06196E3B810064B085 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637F05196E3B810064B085 /* StoreKit.framework */; };
 		7E637F08196E3B8B0064B085 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637F07196E3B8B0064B085 /* SystemConfiguration.framework */; };
 		7E637F0A196E3B910064B085 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637F09196E3B910064B085 /* Twitter.framework */; };
+		7E8B4EC2198EFCF800E9CB45 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */; };
+		7E8B4EC6198EFE8F00E9CB45 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4EC5198EFE8F00E9CB45 /* SoundManager.m */; };
+		7E8B4F55198F0B3800E9CB45 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16A97118FAB6B80039A93F /* OpenAL.framework */; };
+		7E8B4F73198F0BC200E9CB45 /* FIError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F57198F0BC200E9CB45 /* FIError.m */; };
+		7E8B4F74198F0BC200E9CB45 /* FISampleBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F59198F0BC200E9CB45 /* FISampleBuffer.m */; };
+		7E8B4F76198F0BC200E9CB45 /* FISampleDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F5C198F0BC200E9CB45 /* FISampleDecoder.m */; };
+		7E8B4F78198F0BC200E9CB45 /* FISampleFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F5F198F0BC200E9CB45 /* FISampleFormat.m */; };
+		7E8B4F79198F0BC200E9CB45 /* FISound.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F61198F0BC200E9CB45 /* FISound.m */; };
+		7E8B4F7A198F0BC200E9CB45 /* FISoundContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F63198F0BC200E9CB45 /* FISoundContext.m */; };
+		7E8B4F7C198F0BC200E9CB45 /* FISoundDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F66198F0BC200E9CB45 /* FISoundDevice.m */; };
+		7E8B4F7E198F0BC200E9CB45 /* FISoundEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F69198F0BC200E9CB45 /* FISoundEngine.m */; };
+		7E8B4F7F198F0BC200E9CB45 /* FISoundSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F6B198F0BC200E9CB45 /* FISoundSource.m */; };
 		7EB48B6E193C9956008DE2EA /* libcocos2d-noarc-libs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16B10618FAB8180039A93F /* libcocos2d-noarc-libs.a */; };
 		7EB4914C193D1D60008DE2EA /* carton_six_13.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 7EB49148193D1D60008DE2EA /* carton_six_13.fnt */; };
 		7EB4914D193D1D60008DE2EA /* carton_six_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB49149193D1D60008DE2EA /* carton_six_13.png */; };
@@ -1488,68 +1472,6 @@
 		7E637A3B196E394D0064B085 /* ShopTabTouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTabTouchButton.m; sourceTree = "<group>"; };
 		7E637A3C196E394D0064B085 /* SpinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinButton.h; sourceTree = "<group>"; };
 		7E637A3D196E394D0064B085 /* SpinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinButton.m; sourceTree = "<group>"; };
-		7E637A40196E394D0064B085 /* OALAction+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OALAction+Private.h"; sourceTree = "<group>"; };
-		7E637A41196E394D0064B085 /* OALAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAction.h; sourceTree = "<group>"; };
-		7E637A42196E394D0064B085 /* OALAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAction.m; sourceTree = "<group>"; };
-		7E637A43196E394D0064B085 /* OALActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALActionManager.h; sourceTree = "<group>"; };
-		7E637A44196E394D0064B085 /* OALActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALActionManager.m; sourceTree = "<group>"; };
-		7E637A45196E394D0064B085 /* OALAudioActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAudioActions.h; sourceTree = "<group>"; };
-		7E637A46196E394D0064B085 /* OALAudioActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAudioActions.m; sourceTree = "<group>"; };
-		7E637A47196E394D0064B085 /* OALUtilityActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALUtilityActions.h; sourceTree = "<group>"; };
-		7E637A48196E394D0064B085 /* OALUtilityActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALUtilityActions.m; sourceTree = "<group>"; };
-		7E637A4A196E394D0064B085 /* OALAudioTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAudioTrack.h; sourceTree = "<group>"; };
-		7E637A4B196E394D0064B085 /* OALAudioTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAudioTrack.m; sourceTree = "<group>"; };
-		7E637A4C196E394D0064B085 /* OALAudioTrackNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAudioTrackNotifications.h; sourceTree = "<group>"; };
-		7E637A4D196E394D0064B085 /* OALAudioTrackNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAudioTrackNotifications.m; sourceTree = "<group>"; };
-		7E637A4E196E394D0064B085 /* OALAudioTracks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAudioTracks.h; sourceTree = "<group>"; };
-		7E637A4F196E394D0064B085 /* OALAudioTracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAudioTracks.m; sourceTree = "<group>"; };
-		7E637A50196E394D0064B085 /* OALSimpleAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALSimpleAudio.h; sourceTree = "<group>"; };
-		7E637A51196E394D0064B085 /* OALSimpleAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALSimpleAudio.m; sourceTree = "<group>"; };
-		7E637A52196E394D0064B085 /* ObjectAL (iOS)-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectAL (iOS)-Prefix.pch"; sourceTree = "<group>"; };
-		7E637A53196E394D0064B085 /* ObjectAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectAL.h; sourceTree = "<group>"; };
-		7E637A54196E394D0064B085 /* ObjectALConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectALConfig.h; sourceTree = "<group>"; };
-		7E637A56196E394D0064B085 /* ALBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALBuffer.h; sourceTree = "<group>"; };
-		7E637A57196E394D0064B085 /* ALBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBuffer.m; sourceTree = "<group>"; };
-		7E637A58196E394D0064B085 /* ALCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCaptureDevice.h; sourceTree = "<group>"; };
-		7E637A59196E394D0064B085 /* ALCaptureDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCaptureDevice.m; sourceTree = "<group>"; };
-		7E637A5A196E394D0064B085 /* ALChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALChannelSource.h; sourceTree = "<group>"; };
-		7E637A5B196E394D0064B085 /* ALChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALChannelSource.m; sourceTree = "<group>"; };
-		7E637A5C196E394D0064B085 /* ALContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALContext.h; sourceTree = "<group>"; };
-		7E637A5D196E394D0064B085 /* ALContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALContext.m; sourceTree = "<group>"; };
-		7E637A5E196E394D0064B085 /* ALDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDevice.h; sourceTree = "<group>"; };
-		7E637A5F196E394D0064B085 /* ALDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDevice.m; sourceTree = "<group>"; };
-		7E637A60196E394D0064B085 /* ALListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALListener.h; sourceTree = "<group>"; };
-		7E637A61196E394D0064B085 /* ALListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALListener.m; sourceTree = "<group>"; };
-		7E637A62196E394D0064B085 /* ALSoundSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSoundSource.h; sourceTree = "<group>"; };
-		7E637A63196E394D0064B085 /* ALSoundSourcePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSoundSourcePool.h; sourceTree = "<group>"; };
-		7E637A64196E394D0064B085 /* ALSoundSourcePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSoundSourcePool.m; sourceTree = "<group>"; };
-		7E637A65196E394D0064B085 /* ALSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSource.h; sourceTree = "<group>"; };
-		7E637A66196E394D0064B085 /* ALSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSource.m; sourceTree = "<group>"; };
-		7E637A67196E394D0064B085 /* ALTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTypes.h; sourceTree = "<group>"; };
-		7E637A68196E394D0064B085 /* ALWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALWrapper.h; sourceTree = "<group>"; };
-		7E637A69196E394D0064B085 /* ALWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALWrapper.m; sourceTree = "<group>"; };
-		7E637A6A196E394D0064B085 /* OpenALManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenALManager.h; sourceTree = "<group>"; };
-		7E637A6B196E394D0064B085 /* OpenALManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenALManager.m; sourceTree = "<group>"; };
-		7E637A6D196E394D0064B085 /* OALAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAudioSession.h; sourceTree = "<group>"; };
-		7E637A6E196E394D0064B085 /* OALAudioSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAudioSession.m; sourceTree = "<group>"; };
-		7E637A6F196E394D0064B085 /* OALSuspendHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALSuspendHandler.h; sourceTree = "<group>"; };
-		7E637A70196E394D0064B085 /* OALSuspendHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALSuspendHandler.m; sourceTree = "<group>"; };
-		7E637A72196E394D0064B085 /* ARCSafe_MemMgmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCSafe_MemMgmt.h; sourceTree = "<group>"; };
-		7E637A73196E394D0064B085 /* IOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSVersion.h; sourceTree = "<group>"; };
-		7E637A74196E394D0064B085 /* IOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOSVersion.m; sourceTree = "<group>"; };
-		7E637A75196E394D0064B085 /* mach_timing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mach_timing.c; sourceTree = "<group>"; };
-		7E637A76196E394D0064B085 /* mach_timing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_timing.h; sourceTree = "<group>"; };
-		7E637A77196E394D0064B085 /* NSMutableArray+WeakReferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WeakReferences.h"; sourceTree = "<group>"; };
-		7E637A78196E394D0064B085 /* NSMutableArray+WeakReferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WeakReferences.m"; sourceTree = "<group>"; };
-		7E637A79196E394D0064B085 /* NSMutableDictionary+WeakReferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+WeakReferences.h"; sourceTree = "<group>"; };
-		7E637A7A196E394D0064B085 /* NSMutableDictionary+WeakReferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+WeakReferences.m"; sourceTree = "<group>"; };
-		7E637A7B196E394D0064B085 /* OALAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALAudioFile.h; sourceTree = "<group>"; };
-		7E637A7C196E394D0064B085 /* OALAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALAudioFile.m; sourceTree = "<group>"; };
-		7E637A7D196E394D0064B085 /* OALNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALNotifications.h; sourceTree = "<group>"; };
-		7E637A7E196E394D0064B085 /* OALTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALTools.h; sourceTree = "<group>"; };
-		7E637A7F196E394D0064B085 /* OALTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALTools.m; sourceTree = "<group>"; };
-		7E637A80196E394D0064B085 /* ObjectALMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectALMacros.h; sourceTree = "<group>"; };
-		7E637A81196E394D0064B085 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		7E637A83196E394D0064B085 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		7E637A84196E394D0064B085 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		7E637A86196E394D0064B085 /* TWTShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTShare.h; sourceTree = "<group>"; };
@@ -2007,6 +1929,29 @@
 		7E637F05196E3B810064B085 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7E637F07196E3B8B0064B085 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7E637F09196E3B910064B085 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		7E8B4EC4198EFE8F00E9CB45 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		7E8B4EC5198EFE8F00E9CB45 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		7E8B4F23198F052300E9CB45 /* libFinch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFinch.a; path = "Finch-master/build/Debug-iphoneos/libFinch.a"; sourceTree = "<group>"; };
+		7E8B4F25198F057C00E9CB45 /* libFinch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFinch.a; path = "Finch-master/build/Debug-iphoneos/libFinch.a"; sourceTree = "<group>"; };
+		7E8B4F56198F0BC200E9CB45 /* FIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIError.h; sourceTree = "<group>"; };
+		7E8B4F57198F0BC200E9CB45 /* FIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIError.m; sourceTree = "<group>"; };
+		7E8B4F58198F0BC200E9CB45 /* FISampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISampleBuffer.h; sourceTree = "<group>"; };
+		7E8B4F59198F0BC200E9CB45 /* FISampleBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISampleBuffer.m; sourceTree = "<group>"; };
+		7E8B4F5B198F0BC200E9CB45 /* FISampleDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISampleDecoder.h; sourceTree = "<group>"; };
+		7E8B4F5C198F0BC200E9CB45 /* FISampleDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISampleDecoder.m; sourceTree = "<group>"; };
+		7E8B4F5E198F0BC200E9CB45 /* FISampleFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISampleFormat.h; sourceTree = "<group>"; };
+		7E8B4F5F198F0BC200E9CB45 /* FISampleFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISampleFormat.m; sourceTree = "<group>"; };
+		7E8B4F60198F0BC200E9CB45 /* FISound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISound.h; sourceTree = "<group>"; };
+		7E8B4F61198F0BC200E9CB45 /* FISound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISound.m; sourceTree = "<group>"; };
+		7E8B4F62198F0BC200E9CB45 /* FISoundContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISoundContext.h; sourceTree = "<group>"; };
+		7E8B4F63198F0BC200E9CB45 /* FISoundContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISoundContext.m; sourceTree = "<group>"; };
+		7E8B4F65198F0BC200E9CB45 /* FISoundDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISoundDevice.h; sourceTree = "<group>"; };
+		7E8B4F66198F0BC200E9CB45 /* FISoundDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISoundDevice.m; sourceTree = "<group>"; };
+		7E8B4F68198F0BC200E9CB45 /* FISoundEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISoundEngine.h; sourceTree = "<group>"; };
+		7E8B4F69198F0BC200E9CB45 /* FISoundEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISoundEngine.m; sourceTree = "<group>"; };
+		7E8B4F6A198F0BC200E9CB45 /* FISoundSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISoundSource.h; sourceTree = "<group>"; };
+		7E8B4F6B198F0BC200E9CB45 /* FISoundSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISoundSource.m; sourceTree = "<group>"; };
 		7EB49148193D1D60008DE2EA /* carton_six_13.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = carton_six_13.fnt; path = Resources/carton_six_13.fnt; sourceTree = "<group>"; };
 		7EB49149193D1D60008DE2EA /* carton_six_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = carton_six_13.png; path = Resources/carton_six_13.png; sourceTree = "<group>"; };
 		7EB4914A193D1D60008DE2EA /* carton_six_30.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = carton_six_30.fnt; path = Resources/carton_six_30.fnt; sourceTree = "<group>"; };
@@ -2038,6 +1983,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8B4F55198F0B3800E9CB45 /* OpenAL.framework in Frameworks */,
+				7E8B4EC2198EFCF800E9CB45 /* CoreAudio.framework in Frameworks */,
 				7E637F0A196E3B910064B085 /* Twitter.framework in Frameworks */,
 				7E637F08196E3B8B0064B085 /* SystemConfiguration.framework in Frameworks */,
 				7E637F06196E3B810064B085 /* StoreKit.framework in Frameworks */,
@@ -2052,7 +1999,6 @@
 				7E637EF4196E3B480064B085 /* CoreTelephony.framework in Frameworks */,
 				7E637EF2196E3B410064B085 /* iAd.framework in Frameworks */,
 				7EB48B6E193C9956008DE2EA /* libcocos2d-noarc-libs.a in Frameworks */,
-				7E16A97218FAB6B80039A93F /* OpenAL.framework in Frameworks */,
 				7E16A97818FAB6B80039A93F /* UIKit.framework in Frameworks */,
 				7E16A96E18FAB6B80039A93F /* QuartzCore.framework in Frameworks */,
 				7E16A97618FAB6B80039A93F /* AVFoundation.framework in Frameworks */,
@@ -2060,7 +2006,6 @@
 				7E16A97E18FAB6B80039A93F /* CoreText.framework in Frameworks */,
 				7E16A97018FAB6B80039A93F /* OpenGLES.framework in Frameworks */,
 				7E16A97A18FAB6B80039A93F /* Foundation.framework in Frameworks */,
-				7E16A97418FAB6B80039A93F /* AudioToolbox.framework in Frameworks */,
 				7E16A98018FAB6B80039A93F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2097,6 +2042,9 @@
 		7E16A96C18FAB6B80039A93F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E8B4F25198F057C00E9CB45 /* libFinch.a */,
+				7E8B4F23198F052300E9CB45 /* libFinch.a */,
+				7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */,
 				7E637F09196E3B910064B085 /* Twitter.framework */,
 				7E637F07196E3B8B0064B085 /* SystemConfiguration.framework */,
 				7E637F05196E3B810064B085 /* StoreKit.framework */,
@@ -2553,6 +2501,7 @@
 		7E6378A8196E394D0064B085 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7E8B4EC3198EFE8F00E9CB45 /* SoundManager */,
 				7E6378A9196E394D0064B085 /* ads */,
 				7E6378AF196E394D0064B085 /* facebook */,
 				7E6378B3196E394D0064B085 /* game */,
@@ -2562,7 +2511,6 @@
 				7E6379E9196E394D0064B085 /* intro */,
 				7E6379F8196E394D0064B085 /* loading */,
 				7E6379FB196E394D0064B085 /* menu */,
-				7E637A3E196E394D0064B085 /* ObjectAL (iOS) */,
 				7E637A82196E394D0064B085 /* rating */,
 				7E637A85196E394D0064B085 /* twitter */,
 				7E637A88196E394D0064B085 /* user */,
@@ -3134,115 +3082,6 @@
 				7E637A2F196E394D0064B085 /* NMenuWorldSelectPage.m */,
 			);
 			path = nmenu_pages;
-			sourceTree = "<group>";
-		};
-		7E637A3E196E394D0064B085 /* ObjectAL (iOS) */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A3F196E394D0064B085 /* Actions */,
-				7E637A49196E394D0064B085 /* AudioTrack */,
-				7E637A50196E394D0064B085 /* OALSimpleAudio.h */,
-				7E637A51196E394D0064B085 /* OALSimpleAudio.m */,
-				7E637A52196E394D0064B085 /* ObjectAL (iOS)-Prefix.pch */,
-				7E637A53196E394D0064B085 /* ObjectAL.h */,
-				7E637A54196E394D0064B085 /* ObjectALConfig.h */,
-				7E637A55196E394D0064B085 /* OpenAL */,
-				7E637A6C196E394D0064B085 /* Session */,
-				7E637A71196E394D0064B085 /* Support */,
-			);
-			path = "ObjectAL (iOS)";
-			sourceTree = "<group>";
-		};
-		7E637A3F196E394D0064B085 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A40196E394D0064B085 /* OALAction+Private.h */,
-				7E637A41196E394D0064B085 /* OALAction.h */,
-				7E637A42196E394D0064B085 /* OALAction.m */,
-				7E637A43196E394D0064B085 /* OALActionManager.h */,
-				7E637A44196E394D0064B085 /* OALActionManager.m */,
-				7E637A45196E394D0064B085 /* OALAudioActions.h */,
-				7E637A46196E394D0064B085 /* OALAudioActions.m */,
-				7E637A47196E394D0064B085 /* OALUtilityActions.h */,
-				7E637A48196E394D0064B085 /* OALUtilityActions.m */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
-		7E637A49196E394D0064B085 /* AudioTrack */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A4A196E394D0064B085 /* OALAudioTrack.h */,
-				7E637A4B196E394D0064B085 /* OALAudioTrack.m */,
-				7E637A4C196E394D0064B085 /* OALAudioTrackNotifications.h */,
-				7E637A4D196E394D0064B085 /* OALAudioTrackNotifications.m */,
-				7E637A4E196E394D0064B085 /* OALAudioTracks.h */,
-				7E637A4F196E394D0064B085 /* OALAudioTracks.m */,
-			);
-			path = AudioTrack;
-			sourceTree = "<group>";
-		};
-		7E637A55196E394D0064B085 /* OpenAL */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A56196E394D0064B085 /* ALBuffer.h */,
-				7E637A57196E394D0064B085 /* ALBuffer.m */,
-				7E637A58196E394D0064B085 /* ALCaptureDevice.h */,
-				7E637A59196E394D0064B085 /* ALCaptureDevice.m */,
-				7E637A5A196E394D0064B085 /* ALChannelSource.h */,
-				7E637A5B196E394D0064B085 /* ALChannelSource.m */,
-				7E637A5C196E394D0064B085 /* ALContext.h */,
-				7E637A5D196E394D0064B085 /* ALContext.m */,
-				7E637A5E196E394D0064B085 /* ALDevice.h */,
-				7E637A5F196E394D0064B085 /* ALDevice.m */,
-				7E637A60196E394D0064B085 /* ALListener.h */,
-				7E637A61196E394D0064B085 /* ALListener.m */,
-				7E637A62196E394D0064B085 /* ALSoundSource.h */,
-				7E637A63196E394D0064B085 /* ALSoundSourcePool.h */,
-				7E637A64196E394D0064B085 /* ALSoundSourcePool.m */,
-				7E637A65196E394D0064B085 /* ALSource.h */,
-				7E637A66196E394D0064B085 /* ALSource.m */,
-				7E637A67196E394D0064B085 /* ALTypes.h */,
-				7E637A68196E394D0064B085 /* ALWrapper.h */,
-				7E637A69196E394D0064B085 /* ALWrapper.m */,
-				7E637A6A196E394D0064B085 /* OpenALManager.h */,
-				7E637A6B196E394D0064B085 /* OpenALManager.m */,
-			);
-			path = OpenAL;
-			sourceTree = "<group>";
-		};
-		7E637A6C196E394D0064B085 /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A6D196E394D0064B085 /* OALAudioSession.h */,
-				7E637A6E196E394D0064B085 /* OALAudioSession.m */,
-				7E637A6F196E394D0064B085 /* OALSuspendHandler.h */,
-				7E637A70196E394D0064B085 /* OALSuspendHandler.m */,
-			);
-			path = Session;
-			sourceTree = "<group>";
-		};
-		7E637A71196E394D0064B085 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A72196E394D0064B085 /* ARCSafe_MemMgmt.h */,
-				7E637A73196E394D0064B085 /* IOSVersion.h */,
-				7E637A74196E394D0064B085 /* IOSVersion.m */,
-				7E637A75196E394D0064B085 /* mach_timing.c */,
-				7E637A76196E394D0064B085 /* mach_timing.h */,
-				7E637A77196E394D0064B085 /* NSMutableArray+WeakReferences.h */,
-				7E637A78196E394D0064B085 /* NSMutableArray+WeakReferences.m */,
-				7E637A79196E394D0064B085 /* NSMutableDictionary+WeakReferences.h */,
-				7E637A7A196E394D0064B085 /* NSMutableDictionary+WeakReferences.m */,
-				7E637A7B196E394D0064B085 /* OALAudioFile.h */,
-				7E637A7C196E394D0064B085 /* OALAudioFile.m */,
-				7E637A7D196E394D0064B085 /* OALNotifications.h */,
-				7E637A7E196E394D0064B085 /* OALTools.h */,
-				7E637A7F196E394D0064B085 /* OALTools.m */,
-				7E637A80196E394D0064B085 /* ObjectALMacros.h */,
-				7E637A81196E394D0064B085 /* SynthesizeSingleton.h */,
-			);
-			path = Support;
 			sourceTree = "<group>";
 		};
 		7E637A82196E394D0064B085 /* rating */ = {
@@ -4080,6 +3919,41 @@
 			path = ingame_ui;
 			sourceTree = "<group>";
 		};
+		7E8B4EC3198EFE8F00E9CB45 /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				7E8B4F27198F0AC200E9CB45 /* Finch */,
+				7E8B4EC4198EFE8F00E9CB45 /* SoundManager.h */,
+				7E8B4EC5198EFE8F00E9CB45 /* SoundManager.m */,
+			);
+			path = SoundManager;
+			sourceTree = "<group>";
+		};
+		7E8B4F27198F0AC200E9CB45 /* Finch */ = {
+			isa = PBXGroup;
+			children = (
+				7E8B4F56198F0BC200E9CB45 /* FIError.h */,
+				7E8B4F57198F0BC200E9CB45 /* FIError.m */,
+				7E8B4F58198F0BC200E9CB45 /* FISampleBuffer.h */,
+				7E8B4F59198F0BC200E9CB45 /* FISampleBuffer.m */,
+				7E8B4F5B198F0BC200E9CB45 /* FISampleDecoder.h */,
+				7E8B4F5C198F0BC200E9CB45 /* FISampleDecoder.m */,
+				7E8B4F5E198F0BC200E9CB45 /* FISampleFormat.h */,
+				7E8B4F5F198F0BC200E9CB45 /* FISampleFormat.m */,
+				7E8B4F60198F0BC200E9CB45 /* FISound.h */,
+				7E8B4F61198F0BC200E9CB45 /* FISound.m */,
+				7E8B4F62198F0BC200E9CB45 /* FISoundContext.h */,
+				7E8B4F63198F0BC200E9CB45 /* FISoundContext.m */,
+				7E8B4F65198F0BC200E9CB45 /* FISoundDevice.h */,
+				7E8B4F66198F0BC200E9CB45 /* FISoundDevice.m */,
+				7E8B4F68198F0BC200E9CB45 /* FISoundEngine.h */,
+				7E8B4F69198F0BC200E9CB45 /* FISoundEngine.m */,
+				7E8B4F6A198F0BC200E9CB45 /* FISoundSource.h */,
+				7E8B4F6B198F0BC200E9CB45 /* FISoundSource.m */,
+			);
+			path = Finch;
+			sourceTree = "<group>";
+		};
 		7EC04D1D197906F400898FA2 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -4651,37 +4525,35 @@
 				7E637AF5196E394D0064B085 /* LabWall.m in Sources */,
 				7E637B04196E394D0064B085 /* TreatPickup.m in Sources */,
 				7E637B4F196E394D0064B085 /* IntroAnimFrame3.m in Sources */,
-				7E637B83196E394D0064B085 /* ALWrapper.m in Sources */,
 				7E637B97196E394D0064B085 /* DataStore.m in Sources */,
 				7E637B92196E394D0064B085 /* GameItemCommon.m in Sources */,
 				7E637AC7196E394D0064B085 /* CapeGameEnd.m in Sources */,
 				7E637B3E196E394D0064B085 /* IngameUI.m in Sources */,
-				7E637B7B196E394D0064B085 /* ALBuffer.m in Sources */,
 				7E637B2C196E394D0064B085 /* DashEffect.m in Sources */,
 				7E637AC1196E394D0064B085 /* World1BGLayerSet.m in Sources */,
 				7E637AF2196E394D0064B085 /* LabEntrance.m in Sources */,
 				7E637B16196E394D0064B085 /* MapSection.m in Sources */,
 				7E637B50196E394D0064B085 /* IntroAnimFrame4.m in Sources */,
 				7E637B29196E394D0064B085 /* Player.m in Sources */,
+				7E8B4F7C198F0BC200E9CB45 /* FISoundDevice.m in Sources */,
 				7E637B52196E394D0064B085 /* IntroAnimFrame6.m in Sources */,
 				7E637B71196E394D0064B085 /* ShopTabTouchButton.m in Sources */,
 				7E637B44196E394D0064B085 /* UIAnim.m in Sources */,
 				7E637AC0196E394D0064B085 /* LabBGObject.m in Sources */,
 				7E637B5D196E394D0064B085 /* ExtrasUnlockPopup.m in Sources */,
-				7E637B7C196E394D0064B085 /* ALCaptureDevice.m in Sources */,
 				7E637ABC196E394D0064B085 /* CloudGenerator.m in Sources */,
 				7E637B2F196E394D0064B085 /* HitEffect.m in Sources */,
 				7E637B00196E394D0064B085 /* SpikeVine.m in Sources */,
 				7E637B68196E394D0064B085 /* MenuCommon.m in Sources */,
 				7E637ADA196E394D0064B085 /* BreakableWall.m in Sources */,
 				7E637B72196E394D0064B085 /* SpinButton.m in Sources */,
-				7E637B78196E394D0064B085 /* OALAudioTrackNotifications.m in Sources */,
 				7E637B9F196E394D0064B085 /* TouchTrackingLayer.m in Sources */,
 				7E637B64196E394D0064B085 /* InventoryLayerTab.m in Sources */,
-				7E637B84196E394D0064B085 /* OpenALManager.m in Sources */,
 				7E637BA3196E394D0064B085 /* WeightedSorter.m in Sources */,
+				7E8B4F7A198F0BC200E9CB45 /* FISoundContext.m in Sources */,
 				7E637B6A196E394D0064B085 /* NMenuPlayPage.m in Sources */,
 				7E637AEF196E394D0064B085 /* IslandFill.m in Sources */,
+				7E8B4F73198F0BC200E9CB45 /* FIError.m in Sources */,
 				7E637B35196E394D0064B085 /* TutorialProf.m in Sources */,
 				7E637B4E196E394D0064B085 /* IntroAnimFrame2.m in Sources */,
 				7E637AF0196E394D0064B085 /* ItemGen.m in Sources */,
@@ -4694,18 +4566,18 @@
 				7E637ACB196E394D0064B085 /* CapeGameSpikeVine.m in Sources */,
 				7E637AB9196E394D0064B085 /* BackgroundObject.m in Sources */,
 				7E637B61196E394D0064B085 /* InventoryTabPane_Prizes.m in Sources */,
+				7E8B4F74198F0BC200E9CB45 /* FISampleBuffer.m in Sources */,
 				7E637B47196E394D0064B085 /* UILayer.m in Sources */,
 				7E637B34196E394D0064B085 /* TutorialLauncher.m in Sources */,
 				7E637BA0196E394D0064B085 /* TrackingUtil.m in Sources */,
 				7E637AE6196E394D0064B085 /* DogShadow.m in Sources */,
 				7E637B60196E394D0064B085 /* InventoryTabPane_Inventory.m in Sources */,
+				7E8B4F78198F0BC200E9CB45 /* FISampleFormat.m in Sources */,
 				7E637B54196E394D0064B085 /* BasePopup.m in Sources */,
 				7E637B95196E394D0064B085 /* BatchDraw.m in Sources */,
-				7E637B89196E394D0064B085 /* NSMutableArray+WeakReferences.m in Sources */,
 				7E637B11196E394D0064B085 /* AutoLevelState_World1.m in Sources */,
 				7E637B91196E394D0064B085 /* FreeRunStartAtManager.m in Sources */,
 				7E637AB5196E394D0064B085 /* AdColony_integration.m in Sources */,
-				7E637B73196E394D0064B085 /* OALAction.m in Sources */,
 				7E637AE5196E394D0064B085 /* DogCapeEffect.m in Sources */,
 				7E637AB6196E394D0064B085 /* iAds_integration.m in Sources */,
 				7E637AE0196E394D0064B085 /* Coin.m in Sources */,
@@ -4723,9 +4595,7 @@
 				7E637B6F196E394D0064B085 /* ShopListTouchButton.m in Sources */,
 				7E637B6E196E394D0064B085 /* ShopBuyFlyoffTextParticle.m in Sources */,
 				7E637B46196E394D0064B085 /* UIIngameAnimation.m in Sources */,
-				7E637B82196E394D0064B085 /* ALSource.m in Sources */,
 				7E637AD0196E394D0064B085 /* GameControlImplementation.m in Sources */,
-				7E637B8B196E394D0064B085 /* OALAudioFile.m in Sources */,
 				7E637B43196E394D0064B085 /* ScoreComboAnimation.m in Sources */,
 				7E637AC9196E394D0064B085 /* CapeGameEngineLayer_CreditsScene.m in Sources */,
 				7E637B31196E394D0064B085 /* SplashEffect.m in Sources */,
@@ -4733,15 +4603,14 @@
 				7E637AE1196E394D0064B085 /* CopterRobot.m in Sources */,
 				7E637B32196E394D0064B085 /* TutorialAnim.m in Sources */,
 				7E637BA1196E394D0064B085 /* Vec3D.m in Sources */,
-				7E637B85196E394D0064B085 /* OALAudioSession.m in Sources */,
 				7E637B01196E394D0064B085 /* SubBoss.m in Sources */,
 				7E637B96196E394D0064B085 /* Common.m in Sources */,
 				7E637AC3196E394D0064B085 /* World3BGLayerSet.m in Sources */,
 				7E637B8F196E394D0064B085 /* DailyLoginPrizeManager.m in Sources */,
 				7E637B41196E394D0064B085 /* GameStartAnim.m in Sources */,
-				7E637B86196E394D0064B085 /* OALSuspendHandler.m in Sources */,
 				7E637B0E196E394D0064B085 /* LineIsland.m in Sources */,
 				7E637B0D196E394D0064B085 /* LabLineIsland.m in Sources */,
+				7E8B4EC6198EFE8F00E9CB45 /* SoundManager.m in Sources */,
 				7E637B1D196E394D0064B085 /* ExplosionParticle.m in Sources */,
 				7E637B3F196E394D0064B085 /* PauseUI.m in Sources */,
 				7E637B2E196E394D0064B085 /* FlashEffect.m in Sources */,
@@ -4756,34 +4625,29 @@
 				7E637B62196E394D0064B085 /* InventoryTabPane_Settings.m in Sources */,
 				7E637AFC196E394D0064B085 /* RobotBossLoader.m in Sources */,
 				7E637AF8196E394D0064B085 /* MinionRobot.m in Sources */,
-				7E637B76196E394D0064B085 /* OALUtilityActions.m in Sources */,
 				7E637AF3196E394D0064B085 /* LabExit.m in Sources */,
 				7E637B1C196E394D0064B085 /* DazedParticle.m in Sources */,
 				7E637AFD196E394D0064B085 /* RocketWall.m in Sources */,
-				7E637B8C196E394D0064B085 /* OALTools.m in Sources */,
 				7E637B23196E394D0064B085 /* Particle.m in Sources */,
 				7E637ACE196E394D0064B085 /* CreditsFlybyObject.m in Sources */,
 				7E637ACD196E394D0064B085 /* CapeTutorialLauncher.m in Sources */,
 				7E637B08196E394D0064B085 /* Water.m in Sources */,
 				7E637AFF196E394D0064B085 /* Spike.m in Sources */,
 				7E637B21196E394D0064B085 /* JumpParticle.m in Sources */,
-				7E637B7F196E394D0064B085 /* ALDevice.m in Sources */,
 				7E637AE3196E394D0064B085 /* DogBone.m in Sources */,
 				7E637B42196E394D0064B085 /* ItemUseUIAnimation.m in Sources */,
 				7E637B10196E394D0064B085 /* AutoLevelState.m in Sources */,
 				7E637B55196E394D0064B085 /* ChallengeModeSelect.m in Sources */,
-				7E637B8A196E394D0064B085 /* NSMutableDictionary+WeakReferences.m in Sources */,
 				7E637B98196E394D0064B085 /* FileCache.m in Sources */,
 				7E637AD7196E394D0064B085 /* FreePupsAnim.m in Sources */,
+				7E8B4F7E198F0BC200E9CB45 /* FISoundEngine.m in Sources */,
 				7E637ADE196E394D0064B085 /* ChallengeEnd.m in Sources */,
 				7E637B66196E394D0064B085 /* MainMenuInventoryLayer.m in Sources */,
 				7E637B53196E394D0064B085 /* LoadingScene.m in Sources */,
-				7E637B87196E394D0064B085 /* IOSVersion.m in Sources */,
 				7E637B63196E394D0064B085 /* InventoryTabPane_Upgrades.m in Sources */,
 				7E637B27196E394D0064B085 /* WaveParticle.m in Sources */,
 				7E637B3D196E394D0064B085 /* GameOverUI.m in Sources */,
 				7E637B38196E394D0064B085 /* CoinCollectUIAnimation.m in Sources */,
-				7E637B88196E394D0064B085 /* mach_timing.c in Sources */,
 				7E637AFE196E394D0064B085 /* SpeedUp.m in Sources */,
 				7E637B19196E394D0064B085 /* BreakableWallRockParticle.m in Sources */,
 				7E637AD8196E394D0064B085 /* BirdFlock.m in Sources */,
@@ -4807,7 +4671,6 @@
 				7E637B0B196E394D0064B085 /* CaveLineIsland.m in Sources */,
 				7E637AD1196E394D0064B085 /* GameEngineLayer.m in Sources */,
 				7E637AE4196E394D0064B085 /* DogCape.m in Sources */,
-				7E637B80196E394D0064B085 /* ALListener.m in Sources */,
 				7E637B09196E394D0064B085 /* World1ParticleGenerator.m in Sources */,
 				7E637ABF196E394D0064B085 /* Lab3BGLayerSet.m in Sources */,
 				7E637B1F196E394D0064B085 /* FloatingSweatParticle.m in Sources */,
@@ -4815,16 +4678,13 @@
 				7E637B90196E394D0064B085 /* ExtrasManager.m in Sources */,
 				7E637AF9196E394D0064B085 /* NRobotBoss.m in Sources */,
 				7E637BA2196E394D0064B085 /* WebRequest.m in Sources */,
-				7E637B75196E394D0064B085 /* OALAudioActions.m in Sources */,
 				7E637AE7196E394D0064B085 /* ElectricWall.m in Sources */,
 				7E637B45196E394D0064B085 /* UICommon.m in Sources */,
 				7E637B18196E394D0064B085 /* BGSubBossRocketParticle.m in Sources */,
 				7E637B30196E394D0064B085 /* PlayerEffectParams.m in Sources */,
 				7E637AF6196E394D0064B085 /* LauncherRobot.m in Sources */,
+				7E8B4F79198F0BC200E9CB45 /* FISound.m in Sources */,
 				7E637B07196E394D0064B085 /* VolleyRobotBossFistProjectile.m in Sources */,
-				7E637B77196E394D0064B085 /* OALAudioTrack.m in Sources */,
-				7E637B74196E394D0064B085 /* OALActionManager.m in Sources */,
-				7E637B7E196E394D0064B085 /* ALContext.m in Sources */,
 				7E637ACF196E394D0064B085 /* Challenge.m in Sources */,
 				7E637B3C196E394D0064B085 /* ChallengeEndUI.m in Sources */,
 				7E637AB8196E394D0064B085 /* FBShare.m in Sources */,
@@ -4846,7 +4706,6 @@
 				7E637B59196E394D0064B085 /* CharSelAnim.m in Sources */,
 				7E637AE8196E394D0064B085 /* EnemyAlert.m in Sources */,
 				7E637AC6196E394D0064B085 /* CapeGameBossCat.m in Sources */,
-				7E637B79196E394D0064B085 /* OALAudioTracks.m in Sources */,
 				7E637B70196E394D0064B085 /* ShopRecord.m in Sources */,
 				7E637B6C196E394D0064B085 /* NMenuTabShopPage.m in Sources */,
 				7E637B26196E394D0064B085 /* StreamParticle.m in Sources */,
@@ -4857,21 +4716,20 @@
 				7E637AEE196E394D0064B085 /* GroundDetail.m in Sources */,
 				7E637B9B196E394D0064B085 /* ObjectPool.m in Sources */,
 				7E637B51196E394D0064B085 /* IntroAnimFrame5.m in Sources */,
-				7E637B7A196E394D0064B085 /* OALSimpleAudio.m in Sources */,
 				7E637ADD196E394D0064B085 /* CaveWall.m in Sources */,
 				7E637ADB196E394D0064B085 /* CameraArea.m in Sources */,
-				7E637B81196E394D0064B085 /* ALSoundSourcePool.m in Sources */,
 				7E637AF7196E394D0064B085 /* LauncherRocket.m in Sources */,
 				7E637B15196E394D0064B085 /* MapLoader.m in Sources */,
 				7E637B6D196E394D0064B085 /* ShopBuyBoneFlyoutParticle.m in Sources */,
+				7E8B4F7F198F0BC200E9CB45 /* FISoundSource.m in Sources */,
 				7E637B5E196E394D0064B085 /* InventoryLayerTabScrollList.m in Sources */,
 				7E637B24196E394D0064B085 /* RocketParticle.m in Sources */,
 				7E637ACC196E394D0064B085 /* CapeGameUILayer.m in Sources */,
 				7E637AD3196E394D0064B085 /* GamePhysicsImplementation.m in Sources */,
 				7E637B57196E394D0064B085 /* DailyLoginPopup.m in Sources */,
 				7E637B4D196E394D0064B085 /* IntroAnimFrame1.m in Sources */,
+				7E8B4F76198F0BC200E9CB45 /* FISampleDecoder.m in Sources */,
 				7E637B2D196E394D0064B085 /* DogRocketEffect.m in Sources */,
-				7E637B7D196E394D0064B085 /* ALChannelSource.m in Sources */,
 				7E637B02196E394D0064B085 /* SubBossLoader.m in Sources */,
 				7E637B2B196E394D0064B085 /* BlockerEffect.m in Sources */,
 				7E637B1A196E394D0064B085 /* BrokenMachineParticle.m in Sources */,
@@ -5069,6 +4927,10 @@
 				HEADER_SEARCH_PATHS = "\"speedypups_ccv2/libs/kazmath/include\"";
 				INFOPLIST_FILE = speedypups_ccv2/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Finch-master/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -5100,6 +4962,10 @@
 				HEADER_SEARCH_PATHS = "\"speedypups_ccv2/libs/kazmath/include\"";
 				INFOPLIST_FILE = speedypups_ccv2/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Finch-master/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",

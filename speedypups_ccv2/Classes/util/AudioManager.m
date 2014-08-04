@@ -1,60 +1,124 @@
 #import "AudioManager.h"
-#import "ObjectAL.h"
 #import "Common.h"
 #import "BGTimeManager.h"
+#import "FISoundEngine.h"
+#import "SoundManager.h"
 
 #if 1
 @implementation AudioManager : NSObject
 
+static NSMutableDictionary *_sounds;
+static FISoundEngine *_sound_engine;
+static NSDictionary *_bgm_groups;
+
 +(void)begin_load{
-	CDSoundEngine *sse = [CDAudioManager sharedManager].soundEngine;
+	_sounds = [NSMutableDictionary dictionary];
+	_sound_engine = [FISoundEngine sharedEngine];
 	
-	/**
-	 A source group is another name for a channel
-	 Here I have 2 channels, the first index allows for only a single effect... my background music
-	 The second channel I have reserved for my sound effects.  This is set to 31 because you can
-	 have up to 32 effects at once
-	 */
-	NSArray *sourceGroups = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:31], nil];
-	[sse defineSourceGroups:sourceGroups];
+	#define enumkey(x) [NSNumber numberWithInt:x]
+	_bgm_groups = @{
+		enumkey(BGM_GROUP_WORLD1):@[
+			   BGMUSIC_GAMELOOP1,
+			   BGMUSIC_GAMELOOP1_NIGHT
+			   ],
+		enumkey(BGM_GROUP_LAB):@[
+			   BGMUSIC_LAB1
+			   ],
+		enumkey(BGM_GROUP_MENU):@[
+			   BGMUSIC_MENU1
+			   ],
+		enumkey(BGM_GROUP_BOSS1):@[
+			   BGMUSIC_BOSS1
+			   ],
+		enumkey(BGM_GROUP_JINGLE):@[
+			   BGMUSIC_JINGLE
+			   ],
+		enumkey(BGM_GROUP_WORLD2):@[
+			   BGMUSIC_GAMELOOP2,
+			   BGMUSIC_GAMELOOP2_NIGHT
+			   ],
+		enumkey(BGM_GROUP_WORLD3):@[
+			   BGMUSIC_GAMELOOP3,
+			   BGMUSIC_GAMELOOP3_NIGHT
+			   ],
+		enumkey(BGM_GROUP_CAPEGAME):@[
+			   BGMUSIC_CAPEGAMELOOP
+			   ],
+		enumkey(BGM_GROUP_INTRO):@[
+			   BGMUSIC_INTRO
+			   ]
+	};
 	
-	//Initialise audio manager asynchronously as it can take a few seconds
-	/** Different modes of the engine
-	 typedef enum {
-	 kAMM_FxOnly,					//!Other apps will be able to play audio
-	 kAMM_FxPlusMusic,				//!Only this app will play audio
-	 kAMM_FxPlusMusicIfNoOtherAudio,	//!If another app is playing audio at start up then allow it to continue and don't play music
-	 kAMM_MediaPlayback,				//!This app takes over audio e.g music player app
-	 kAMM_PlayAndRecord				//!App takes over audio and has input and output
-	 } tAudioManagerMode;*/
-	[CDAudioManager initAsynchronously:kAMM_FxPlusMusicIfNoOtherAudio];
-	
-	//Load sound buffers asynchrounously
-	NSMutableArray *loadRequests = [[NSMutableArray alloc] init];
-	
-	/**
-	 Here we set up an array of sounds to load
-	 Each CDBufferLoadRequest takes an integer as an identifier (to call later)
-	 and the file path.  Pretty straightforward here.
-	 */
-	[loadRequests addObject:[[CDBufferLoadRequest alloc] init:1 filePath:SFX_CAT_LAUGH]];
-	[loadRequests addObject:[[CDBufferLoadRequest alloc] init:2 filePath:SFX_SPIN]];
-	[sse loadBuffersAsynchronously:loadRequests];
-	
+	#define BUFFERMAPGEN(x) [_sounds setObject:[_sound_engine soundNamed:x maxPolyphony:4 error:NULL] forKey:x]
+	BUFFERMAPGEN(SFX_BONE);
+	BUFFERMAPGEN(SFX_BONE_2);
+	BUFFERMAPGEN(SFX_BONE_3);
+	BUFFERMAPGEN(SFX_BONE_4);
+	BUFFERMAPGEN(SFX_EXPLOSION);
+	BUFFERMAPGEN(SFX_HIT);
+	BUFFERMAPGEN(SFX_JUMP);
+	BUFFERMAPGEN(SFX_SPIN);
+	BUFFERMAPGEN(SFX_SPLASH),
+	BUFFERMAPGEN(SFX_BIRD_FLY);
+	BUFFERMAPGEN(SFX_ROCKBREAK);
+	BUFFERMAPGEN(SFX_ELECTRIC);
+	BUFFERMAPGEN(SFX_JUMPPAD);
+	BUFFERMAPGEN(SFX_ROCKET_SPIN);
+	BUFFERMAPGEN(SFX_SPEEDUP);
+	BUFFERMAPGEN(SFX_BOP);
+	BUFFERMAPGEN(SFX_CHECKPOINT);
+	BUFFERMAPGEN(SFX_SWING);
+	BUFFERMAPGEN(SFX_POWERUP);
+	//BUFFERMAPGEN(SFX_POWERDOWN);
+	//BUFFERMAPGEN(SFX_WHIMPER);
+	//BUFFERMAPGEN(SFX_ROCKET_LAUNCH);
+	BUFFERMAPGEN(SFX_GOAL);
+	//BUFFERMAPGEN(SFX_ROCKET);
+	BUFFERMAPGEN(SFX_SPIKEBREAK);
+	//BUFFERMAPGEN(SFX_BUY);
+	BUFFERMAPGEN(SFX_1UP);
+	//BUFFERMAPGEN(SFX_BIG_EXPLOSION);
+	//BUFFERMAPGEN(SFX_FAIL);
+	//BUFFERMAPGEN(SFX_BARK_LOW);
+	//BUFFERMAPGEN(SFX_BARK_MID);
+	//BUFFERMAPGEN(SFX_BARK_HIGH);
+	//BUFFERMAPGEN(SFX_READY);
+	//BUFFERMAPGEN(SFX_GO);
+	//BUFFERMAPGEN(SFX_BOSS_ENTER);
+	//BUFFERMAPGEN(SFX_COPTER_FLYBY);
+	BUFFERMAPGEN(SFX_MENU_DOWN);
+	BUFFERMAPGEN(SFX_MENU_UP);
+	//BUFFERMAPGEN(SFX_FANFARE_WIN);
+	//BUFFERMAPGEN(SFX_FANFARE_LOSE);
+	//BUFFERMAPGEN(SFX_INTRO_NIGHT);
+	//BUFFERMAPGEN(SFX_INTRO_SNORE);
+	//BUFFERMAPGEN(SFX_INTRO_SURPRISE);
+	BUFFERMAPGEN(SFX_CAT_LAUGH);
+	BUFFERMAPGEN(SFX_CAT_HIT);
+	BUFFERMAPGEN(SFX_CAPE_UP);
+	BUFFERMAPGEN(SFX_HOMING_BEEP);
+	BUFFERMAPGEN(SFX_THUNDER);
+	BUFFERMAPGEN(SFX_FIREWORKS);
+	BUFFERMAPGEN(SFX_CHEER);
 }
-+(void)schedule_update{}
+
+
++(void)schedule_update{
+	[[CCScheduler sharedScheduler] scheduleSelector:@selector(update:) forTarget:self interval:0.01 paused:NO];
+}
 +(void)playbgm_imm:(BGM_GROUP)tar{
-	//[[CDAudioManager sharedManager].soundEngine playSound:1 sourceGroupId:kASC_Right pitch:1.0f pan:0.0f gain:1.0f loop:NO];
-	[[CDAudioManager sharedManager].soundEngine playSound:2 sourceGroupId:kASC_Right pitch:1.0f pan:0.0f gain:1.0f loop:NO];
-	
-	NSLog(@"loaded %f",[CDAudioManager sharedManager].soundEngine.asynchLoadProgress);
-	
+	[[SoundManager sharedManager] playMusic:BGMUSIC_GAMELOOP1 looping:YES fadeIn:YES];
 	
 }
 +(void)playbgm_file:(NSString*)file{}
+
 +(void)playsfx:(NSString*)tar{
-	
+	FISound *snd = [_sounds objectForKey:tar];
+	if (snd) {
+		[snd play];
+	}
 }
+
 +(void)playsfx:(NSString*)tar after_do:(CallBack*)cb{}
 
 +(void)bgm_stop{}
@@ -81,6 +145,9 @@
 
 +(void)play_invincible_for:(int)t{}
 
++(void)update:(ccTime)dt {
+}
+
 @end
 
 #else
@@ -88,14 +155,11 @@
 @implementation AudioManager
 
 static ALChannelSource* channel;
-
 static OALAudioTrack *bgm_1;
 static OALAudioTrack *bgm_2;
 static OALAudioTrack *bgm_invincible;
-
 static NSMutableDictionary *sfx_buffers;
 static NSDictionary *bgm_groups;
-
 static BOOL playsfx = YES;
 static BOOL playbgm = YES;
 
