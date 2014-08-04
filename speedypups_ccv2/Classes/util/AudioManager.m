@@ -144,18 +144,16 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 		NSArray *srcs = [_bgm_groups objectForKey:enumkey(tar)];
 		if (srcs.count >= 1) {
 			_bgm_1 = [Sound soundNamed:srcs[0]];
-			[_bgm_1 play];
 		} else {
 			_bgm_1 = NULL;
 		}
 		if (srcs.count >= 2) {
 			_bgm_2 = [Sound soundNamed:srcs[1]];
-			[_bgm_2 play];
 		} else {
 			_bgm_2 = NULL;
 		}
 		_bgm_3 = [Sound soundNamed:BGMUSIC_INVINCIBLE];
-		[_bgm_3 play];
+		[self conditional_mute];
 		
 		_bgm_1.looping = YES;
 		_bgm_2.looping = YES;
@@ -178,6 +176,12 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 			_bgm_2.volume = 0;
 			_bgm_3.volume = 0;
 		}
+		
+		if (_playbgm) {
+			[_bgm_1 play];
+			[_bgm_2 play];
+			[_bgm_3 play];
+		}
 
 	}
 }
@@ -185,10 +189,12 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 	[self bgm_stop];
 	_bgm_1 = [Sound soundNamed:file];
 	[_bgm_1 play];
+	[self conditional_mute];
 }
 
 
 +(void)playsfx:(NSString*)tar{
+	if (!_playsfx) return;
 	FISound *snd = [_sounds objectForKey:tar];
 	if (snd) [snd play];
 }
@@ -197,7 +203,7 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 	FISound *snd = [_sounds objectForKey:tar];
 	if (snd) {
 		[_queued_callbacks addObject:[QueuedSfxCallback cons_sound:snd callback:cb]];
-		[snd play];
+		if (_playsfx) [snd play];
 	}
 }
 
@@ -244,6 +250,16 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 	_bgm_1.volume = drp(_bgm_1.volume, use_bgm_1_tar_gain, 10);
 	_bgm_2.volume = drp(_bgm_2.volume, use_bgm_2_tar_gain, 10);
 	_bgm_3.volume = drp(_bgm_3.volume, use_bgm_3_tar_gain, 10);
+	
+	[self conditional_mute];
+}
+
++(void)conditional_mute {
+	if (!_playbgm) {
+		_bgm_1.volume = 0;
+		_bgm_2.volume = 0;
+		_bgm_3.volume = 0;
+	}
 }
 
 +(void)bgm_stop{
@@ -258,6 +274,9 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 
 +(void)set_play_bgm:(BOOL)t{
 	_playbgm = t;
+	if (_playbgm && !_bgm_1.playing) {
+		[_bgm_1 play];
+	}
 }
 +(void)set_play_sfx:(BOOL)t{
 	_playsfx = t;

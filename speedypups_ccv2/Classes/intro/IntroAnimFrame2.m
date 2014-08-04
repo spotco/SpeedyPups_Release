@@ -38,21 +38,21 @@ static int GROUND_TEX_WID;
 								   rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_ground"]
 									rep:6];
 	[ground setScale:CC_CONTENT_SCALE_FACTOR()];
-	[ground setPosition:[Common screen_pctwid:0 pcthei:-0.24]];
+	[ground setPosition:[Common screen_pctwid:0 pcthei:0.55]];
 	[self addChild:ground];
 	
 	robot1 = [CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-									rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_robolauncher"]];
+										rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_robolauncher"]];
 	[robot1 setPosition:[Common screen_pctwid:1.42 pcthei:0.7]];
 	[self addChild:robot1];
 	
 	robot2 = [CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-									rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_copter"]];
+										rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_copter"]];
 	[robot2 setPosition:[Common screen_pctwid:1.7 pcthei:0.76]];
 	[self addChild:robot2];
 	
 	robot3 = [CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-									rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_robominion"]];
+										rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"frame2_robominion"]];
 	[robot3 setPosition:[Common screen_pctwid:1.9 pcthei:0.68]];
 	[self addChild:robot3];
 	

@@ -1,7 +1,7 @@
 #import "FreePupsAnim.h"
 #import "Lab1BGLayerSet.h"
 #import "Lab2BGLayerSet.h"
-#import "Lab3BGLayerSet.h" 
+#import "Lab3BGLayerSet.h"
 #import "LabLineIsland.h"
 #import "RepeatFillSprite.h"
 #import "LabHandRail.h"
@@ -48,7 +48,7 @@ static float GROUNDLEVEL;
 			[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD2];
 			worldunlock_anim = [FreeRunStartAtUnlockUIAnimation cons_for_unlocking:FreeRunStartAt_WORLD2];
 		}
-	
+		
 	} else if (labnum == WorldNum_2) {
 		BGLayerSet *set = [Lab2BGLayerSet cons];
 		[set update:NULL curx:0 cury:0];
@@ -71,7 +71,7 @@ static float GROUNDLEVEL;
 											 rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_lab_groundtex"]
 											  rep:6];
 	[ground setScale:0.5*CC_CONTENT_SCALE_FACTOR()];
-	[ground setPosition:ccp(0,GROUNDLEVEL - [FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_lab_groundtex"].size.height*0.5*CC_CONTENT_SCALE_FACTOR() + 7/CC_CONTENT_SCALE_FACTOR())];
+	[ground setPosition:ccp(0,GROUNDLEVEL + 7/CC_CONTENT_SCALE_FACTOR())];
 	[self addChild:ground];
 	
 	LabHandRail *rail = [LabHandRail cons_pt1:ccp(0,0) pt2:ccp([Common SCREEN].width*2,0)];
@@ -81,9 +81,9 @@ static float GROUNDLEVEL;
 	[self addChild:rail z:2];
 	
 	CGPoint cage_start = [Common screen_pctwid:0.65 pcthei:0.7];
-
+	
 	CSF_CCSprite *cage_chain = [CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-												  rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_chain"]];
+														  rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_chain"]];
 	[cage_chain csf_setScale:0.7];
 	[cage_chain setAnchorPoint:ccp(0.5,0)];
 	[cage_chain setPosition:ccp(cage_start.x,cage_start.y+20)];
@@ -96,10 +96,10 @@ static float GROUNDLEVEL;
 	[self addChild:cage_base];
 	
 	cage_bottom = [CCSprite_WithVel spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-												   rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_open_bottom"]];
+												 rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_open_bottom"]];
 	[cage_base addChild:cage_bottom];
 	cage_top = [CCSprite_WithVel spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-												rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_open_top"]];
+											  rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_open_top"]];
 	[cage_top setPosition:ccp(0,55)];
 	[cage_base addChild:cage_top];
 	
@@ -131,16 +131,16 @@ static float GROUNDLEVEL;
 	[menu_ui setVisible:NO];
 	[menu_ui addChild:[CCLayerColor layerWithColor:ccc4(50,50,50,200)]];
 	
-
+	
 	curtains = [MenuCurtains cons];
 	[menu_ui addChild:curtains];
 	
     [menu_ui addChild:[Common cons_label_pos:[Common screen_pctwid:0.5 pcthei:0.8]
-                                        color:ccc3(255, 255, 255)
-                                     fontsize:45
-                                          str:[NSString stringWithFormat:@"World %d Complete!",(worldnum == WorldNum_3 ? 3 : (worldnum == WorldNum_2 ? 2 : 1))]]];
+									   color:ccc3(255, 255, 255)
+									fontsize:45
+										 str:[NSString stringWithFormat:@"World %d Complete!",(worldnum == WorldNum_3 ? 3 : (worldnum == WorldNum_2 ? 2 : 1))]]];
 	
-
+	
 	CCSprite *disp_root = [CCSprite node];
 	[disp_root setPosition:[Common screen_pctwid:0.5 pcthei:0.575]];
 	[disp_root setScale:0.85];
@@ -167,40 +167,40 @@ static float GROUNDLEVEL;
 	}
 	
     CCLabelTTF *pause_time_disp = [[Common cons_label_pos:[Common pct_of_obj:timebg pctx:0.5 pcty:0.5]
-                                       color:ccc3(255, 255, 255)
-                                    fontsize:20
-                                         str:[NSString stringWithFormat:@"Time: %@",[UICommon parse_gameengine_time:[g get_time]]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+													color:ccc3(255, 255, 255)
+												 fontsize:20
+													  str:[NSString stringWithFormat:@"Time: %@",[UICommon parse_gameengine_time:[g get_time]]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
     [timebg addChild:pause_time_disp];
     
     CCLabelTTF *pause_bones_disp= [[Common cons_label_pos:[Common pct_of_obj:bonesbg pctx:0.5 pcty:0.5]
-                                       color:ccc3(255, 255, 255)
-                                    fontsize:30
-                                         str:[NSString stringWithFormat:@"%d",[g get_num_bones]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+													color:ccc3(255, 255, 255)
+												 fontsize:30
+													  str:[NSString stringWithFormat:@"%d",[g get_num_bones]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
     [bonesbg addChild:pause_bones_disp];
     
     CCLabelTTF *pause_lives_disp= [[Common cons_label_pos:[Common pct_of_obj:livesbg pctx:0.5 pcty:0.5]
-                                       color:ccc3(255, 255, 255)
-                                    fontsize:30
-                                         str:[NSString stringWithFormat:@"%d",[g get_lives]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+													color:ccc3(255, 255, 255)
+												 fontsize:30
+													  str:[NSString stringWithFormat:@"%d",[g get_lives]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
     [livesbg addChild:pause_lives_disp];
 	
 	CCLabelTTF *pause_points_disp = [[Common cons_label_pos:[Common pct_of_obj:pointsbg pctx:0.5 pcty:0.5]
-										 color:ccc3(255,255,255)
-									  fontsize:20
-										   str:[NSString stringWithFormat:@"Points: %d",[g.score get_score]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+													  color:ccc3(255,255,255)
+												   fontsize:20
+														str:[NSString stringWithFormat:@"Points: %d",[g.score get_score]]] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
 	[pointsbg addChild:pause_points_disp];
 	
 	CCLabelTTF *new_high_score_disp = [[[Common cons_label_pos:[Common pct_of_obj:pointsbg pctx:1 pcty:1]
-											color:ccc3(255,200,20)
-										 fontsize:10
-											  str:@"New Highscore!"] anchor_pt:ccp(1,1)] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+														 color:ccc3(255,200,20)
+													  fontsize:10
+														   str:@"New Highscore!"] anchor_pt:ccp(1,1)] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
 	[pointsbg addChild:new_high_score_disp];
 	[new_high_score_disp setVisible:[ScoreManager get_world_highscore:g.world_mode.cur_world] < [g.score get_score]];
 	[ScoreManager set_world:worldnum highscore:[g.score get_score]];
 	
     
     CCMenuItem *nextbutton = [MenuCommon item_from:TEX_UI_INGAMEUI_SS rect:@"nextbutton" tar:self sel:@selector(next)
-                                                pos:[Common screen_pctwid:0.7 pcthei:0.45]];
+											   pos:[Common screen_pctwid:0.7 pcthei:0.45]];
     
     CCMenuItem *backbutton = [MenuCommon item_from:TEX_UI_INGAMEUI_SS rect:@"homebutton" tar:self sel:@selector(exit_to_menu)
                                                pos:[Common screen_pctwid:0.3 pcthei:0.45]];
@@ -318,7 +318,7 @@ static float GROUNDLEVEL;
 				[AudioManager playsfx:SFX_FANFARE_WIN after_do:[Common cons_callback:self sel:@selector(open_menu)]];
 				
 				[cage_base addChild:[CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_INTRO_ANIM_SS]
-														   rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_empty_bars"]]];
+															   rect:[FileCache get_cgrect_from_plist:TEX_INTRO_ANIM_SS idname:@"pupcage_empty_bars"]]];
 				
 			}
 			

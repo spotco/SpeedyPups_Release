@@ -324,7 +324,6 @@
 		7E637B70196E394D0064B085 /* ShopRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A39196E394D0064B085 /* ShopRecord.m */; };
 		7E637B71196E394D0064B085 /* ShopTabTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A3B196E394D0064B085 /* ShopTabTouchButton.m */; };
 		7E637B72196E394D0064B085 /* SpinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A3D196E394D0064B085 /* SpinButton.m */; };
-		7E637B8D196E394D0064B085 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A84196E394D0064B085 /* iRate.m */; };
 		7E637B8E196E394D0064B085 /* TWTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A87196E394D0064B085 /* TWTShare.m */; };
 		7E637B8F196E394D0064B085 /* DailyLoginPrizeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A8A196E394D0064B085 /* DailyLoginPrizeManager.m */; };
 		7E637B90196E394D0064B085 /* ExtrasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A8C196E394D0064B085 /* ExtrasManager.m */; };
@@ -770,6 +769,7 @@
 		7E8B4F7F198F0BC200E9CB45 /* FISoundSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B4F6B198F0BC200E9CB45 /* FISoundSource.m */; };
 		7E8B4F85198F16C700E9CB45 /* sfx_fanfare_lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E8B4F83198F16C700E9CB45 /* sfx_fanfare_lose.wav */; };
 		7E8B4F86198F16C700E9CB45 /* sfx_fanfare_win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E8B4F84198F16C700E9CB45 /* sfx_fanfare_win.wav */; };
+		7E8B4F89198F439500E9CB45 /* libFacebookSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8B4F88198F439500E9CB45 /* libFacebookSDK.a */; };
 		7EB48B6E193C9956008DE2EA /* libcocos2d-noarc-libs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E16B10618FAB8180039A93F /* libcocos2d-noarc-libs.a */; };
 		7EB4914C193D1D60008DE2EA /* carton_six_13.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 7EB49148193D1D60008DE2EA /* carton_six_13.fnt */; };
 		7EB4914D193D1D60008DE2EA /* carton_six_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB49149193D1D60008DE2EA /* carton_six_13.png */; };
@@ -804,6 +804,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7E16B10518FAB8180039A93F;
 			remoteInfo = "cocos2d-noarc-libs";
+		};
+		7E8B4F92198F44AE00E9CB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E8B4F8D198F44AD00E9CB45 /* FacebookSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4A1CFA4D17FB96AB006CF252;
+			remoteInfo = FacebookSDK;
+		};
+		7E8B4F94198F44BC00E9CB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E8B4F8D198F44AD00E9CB45 /* FacebookSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A1CFA4C17FB96AB006CF252;
+			remoteInfo = FacebookSDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1472,8 +1486,6 @@
 		7E637A3B196E394D0064B085 /* ShopTabTouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTabTouchButton.m; sourceTree = "<group>"; };
 		7E637A3C196E394D0064B085 /* SpinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinButton.h; sourceTree = "<group>"; };
 		7E637A3D196E394D0064B085 /* SpinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinButton.m; sourceTree = "<group>"; };
-		7E637A83196E394D0064B085 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		7E637A84196E394D0064B085 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		7E637A86196E394D0064B085 /* TWTShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTShare.h; sourceTree = "<group>"; };
 		7E637A87196E394D0064B085 /* TWTShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTShare.m; sourceTree = "<group>"; };
 		7E637A89196E394D0064B085 /* DailyLoginPrizeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyLoginPrizeManager.h; sourceTree = "<group>"; };
@@ -1952,6 +1964,8 @@
 		7E8B4F6B198F0BC200E9CB45 /* FISoundSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISoundSource.m; sourceTree = "<group>"; };
 		7E8B4F83198F16C700E9CB45 /* sfx_fanfare_lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_fanfare_lose.wav; sourceTree = "<group>"; };
 		7E8B4F84198F16C700E9CB45 /* sfx_fanfare_win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_fanfare_win.wav; sourceTree = "<group>"; };
+		7E8B4F88198F439500E9CB45 /* libFacebookSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFacebookSDK.a; path = "../../Library/Developer/Xcode/DerivedData/speedypups_ccv2-elbzrrjdlaeeukepgrsnxfaxpbhx/Build/Products/Debug-iphoneos/libFacebookSDK.a"; sourceTree = "<group>"; };
+		7E8B4F8D198F44AD00E9CB45 /* FacebookSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FacebookSDK.xcodeproj; path = "ApportableFacebookSDK-master/FacebookSDK.xcodeproj"; sourceTree = "<group>"; };
 		7EB49148193D1D60008DE2EA /* carton_six_13.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = carton_six_13.fnt; path = Resources/carton_six_13.fnt; sourceTree = "<group>"; };
 		7EB49149193D1D60008DE2EA /* carton_six_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = carton_six_13.png; path = Resources/carton_six_13.png; sourceTree = "<group>"; };
 		7EB4914A193D1D60008DE2EA /* carton_six_30.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = carton_six_30.fnt; path = Resources/carton_six_30.fnt; sourceTree = "<group>"; };
@@ -1983,6 +1997,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8B4F89198F439500E9CB45 /* libFacebookSDK.a in Frameworks */,
 				7E8B4F55198F0B3800E9CB45 /* OpenAL.framework in Frameworks */,
 				7E8B4EC2198EFCF800E9CB45 /* CoreAudio.framework in Frameworks */,
 				7E637F0A196E3B910064B085 /* Twitter.framework in Frameworks */,
@@ -2024,6 +2039,7 @@
 		7E16A96118FAB6B80039A93F = {
 			isa = PBXGroup;
 			children = (
+				7E8B4F8D198F44AD00E9CB45 /* FacebookSDK.xcodeproj */,
 				7E16A98118FAB6B80039A93F /* speedypups_ccv2 */,
 				7E16A96C18FAB6B80039A93F /* Frameworks */,
 				7E16A96B18FAB6B80039A93F /* Products */,
@@ -2042,6 +2058,7 @@
 		7E16A96C18FAB6B80039A93F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E8B4F88198F439500E9CB45 /* libFacebookSDK.a */,
 				7E8B4F25198F057C00E9CB45 /* libFinch.a */,
 				7E8B4F23198F052300E9CB45 /* libFinch.a */,
 				7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */,
@@ -2511,7 +2528,6 @@
 				7E6379E9196E394D0064B085 /* intro */,
 				7E6379F8196E394D0064B085 /* loading */,
 				7E6379FB196E394D0064B085 /* menu */,
-				7E637A82196E394D0064B085 /* rating */,
 				7E637A85196E394D0064B085 /* twitter */,
 				7E637A88196E394D0064B085 /* user */,
 				7E637A93196E394D0064B085 /* util */,
@@ -3082,15 +3098,6 @@
 				7E637A2F196E394D0064B085 /* NMenuWorldSelectPage.m */,
 			);
 			path = nmenu_pages;
-			sourceTree = "<group>";
-		};
-		7E637A82196E394D0064B085 /* rating */ = {
-			isa = PBXGroup;
-			children = (
-				7E637A83196E394D0064B085 /* iRate.h */,
-				7E637A84196E394D0064B085 /* iRate.m */,
-			);
-			path = rating;
 			sourceTree = "<group>";
 		};
 		7E637A85196E394D0064B085 /* twitter */ = {
@@ -3954,6 +3961,14 @@
 			path = Finch;
 			sourceTree = "<group>";
 		};
+		7E8B4F8E198F44AD00E9CB45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E8B4F93198F44AE00E9CB45 /* libFacebookSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7EC04D1D197906F400898FA2 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -4012,6 +4027,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7E8B4F95198F44BC00E9CB45 /* PBXTargetDependency */,
 				7E16B2B618FAB88F0039A93F /* PBXTargetDependency */,
 			);
 			name = speedypups_ccv2;
@@ -4060,6 +4076,12 @@
 			mainGroup = 7E16A96118FAB6B80039A93F;
 			productRefGroup = 7E16A96B18FAB6B80039A93F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7E8B4F8E198F44AD00E9CB45 /* Products */;
+					ProjectRef = 7E8B4F8D198F44AD00E9CB45 /* FacebookSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7E16A96918FAB6B80039A93F /* speedypups_ccv2 */,
@@ -4067,6 +4089,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7E8B4F93198F44AE00E9CB45 /* libFacebookSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFacebookSDK.a;
+			remoteRef = 7E8B4F92198F44AE00E9CB45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7E16A96818FAB6B80039A93F /* Resources */ = {
@@ -4585,7 +4617,6 @@
 				7E637AD4196E394D0064B085 /* GameRenderImplementation.m in Sources */,
 				7E637B5F196E394D0064B085 /* InventoryTabPane_Extras.m in Sources */,
 				7E637ABE196E394D0064B085 /* Lab2BGLayerSet.m in Sources */,
-				7E637B8D196E394D0064B085 /* iRate.m in Sources */,
 				7E637AEC196E394D0064B085 /* FreeRunProgressDisplay.m in Sources */,
 				7E637B69196E394D0064B085 /* NMenuCharSelectPage.m in Sources */,
 				7E637AC5196E394D0064B085 /* CapeGameBossBomb.m in Sources */,
@@ -4864,6 +4895,11 @@
 			target = 7E16B10518FAB8180039A93F /* cocos2d-noarc-libs */;
 			targetProxy = 7E16B2B518FAB88F0039A93F /* PBXContainerItemProxy */;
 		};
+		7E8B4F95198F44BC00E9CB45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FacebookSDK;
+			targetProxy = 7E8B4F94198F44BC00E9CB45 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -4924,12 +4960,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = speedypups_ccv2/Prefix.pch;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				HEADER_SEARCH_PATHS = "\"speedypups_ccv2/libs/kazmath/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"speedypups_ccv2/libs/kazmath/include\"",
+					"ApportableFacebookSDK-master/include/FacebookSDK",
+				);
 				INFOPLIST_FILE = speedypups_ccv2/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finch-master/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/speedypups_ccv2-elbzrrjdlaeeukepgrsnxfaxpbhx/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -4959,12 +4999,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = speedypups_ccv2/Prefix.pch;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				HEADER_SEARCH_PATHS = "\"speedypups_ccv2/libs/kazmath/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"speedypups_ccv2/libs/kazmath/include\"",
+					"ApportableFacebookSDK-master/include/FacebookSDK",
+				);
 				INFOPLIST_FILE = speedypups_ccv2/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finch-master/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/speedypups_ccv2-elbzrrjdlaeeukepgrsnxfaxpbhx/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = (
 					"-lz",

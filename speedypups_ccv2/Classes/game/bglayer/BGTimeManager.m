@@ -16,11 +16,11 @@
 #define SUN_Y_PCT 0.81
 
 //0 night, 100 day
-//#define DAYNIGHT_LENGTH 10000
-//#define TRANSITION_LENGTH 600
+#define DAYNIGHT_LENGTH 10000
+#define TRANSITION_LENGTH 600
 
-#define DAYNIGHT_LENGTH 50
-#define TRANSITION_LENGTH 100
+//#define DAYNIGHT_LENGTH 50
+//#define TRANSITION_LENGTH 100
 
 static int bgtime_delayct;
 static BGTimeManagerMode bgtime_curmode;

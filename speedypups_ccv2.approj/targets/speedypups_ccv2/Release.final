@@ -3621,7 +3621,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpvR_NIE/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpTmLA9G/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -3629,11 +3629,15 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpvR_NIE/DERIVED_FILE_DIR/armv7", 
+            "header_path": "ApportableFacebookSDK-master/include/FacebookSDK", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpvR_NIE/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpTmLA9G/DERIVED_FILE_DIR/armv7", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpTmLA9G/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
@@ -3647,16 +3651,29 @@
     "libs": [
         "z", 
         "sqlite3", 
+        "FacebookSDK", 
         "z", 
         "cocos2d-noarc-libs"
     ], 
     "link_flags": [], 
     "modules": [
         {
+            "build_cwd": "ApportableFacebookSDK-master", 
+            "project": "FacebookSDK", 
+            "project_config": "Release", 
+            "target": "FacebookSDK"
+        }, 
+        {
             "build_cwd": "./", 
             "project": "speedypups_ccv2", 
             "project_config": "Release", 
             "target": "cocos2d-noarc-libs"
+        }, 
+        {
+            "build_cwd": "ApportableFacebookSDK-master/ApportableWebViewController", 
+            "project": "ApportableWebViewController", 
+            "project_config": "Release", 
+            "target": "ApportableWebViewController"
         }
     ], 
     "pchs": [

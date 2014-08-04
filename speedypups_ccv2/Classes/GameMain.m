@@ -26,10 +26,6 @@
 #define DRAW_HITBOX		 0
 
 /**
- todo:
- fbshare
- introanim frame2 ground missing
- freepupsanim crash
  **/
 
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
@@ -122,7 +118,7 @@
 	*/
 	//[ChallengeRecord set_beaten_challenge:35 to:YES];
 	
-	[UserInventory set_equipped_gameitem:Item_Shield];
+	//[UserInventory set_equipped_gameitem:Item_Shield];
 	//[UserInventory add_bones:5000];
 	//[UserInventory add_coins:25];
 }
