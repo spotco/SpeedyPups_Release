@@ -79,8 +79,8 @@ typedef enum {
 #define SFX_MENU_UP @"sfx_menu_up.wav" 
 #define SFX_MENU_DOWN @"sfx_menu_down.wav"
 
-#define SFX_FANFARE_WIN @"fanfare_win.mp3"
-#define SFX_FANFARE_LOSE @"fanfare_lose.mp3"
+#define SFX_FANFARE_WIN @"sfx_fanfare_win.wav"
+#define SFX_FANFARE_LOSE @"sfx_fanfare_lose.wav"
 
 #define SFX_INTRO_NIGHT @"sfx_intro_night.wav"
 #define SFX_INTRO_SNORE @"sfx_intro_snore.wav"
@@ -115,13 +115,8 @@ typedef enum {
 +(void)set_play_bgm:(BOOL)t;
 +(void)set_play_sfx:(BOOL)t;
 
-+(void)stop_bgm;
-
 +(BOOL)get_play_bgm;
 +(BOOL)get_play_sfx;
-
-+(void)transition_mode1;
-+(void)transition_mode2;
 
 +(void)mute_music_for:(int)ct;
 

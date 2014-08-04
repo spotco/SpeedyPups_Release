@@ -106,9 +106,6 @@
     } else if (e.type == GEventType_DAY_NIGHT_UPDATE) {
 		[normal_set set_day_night_color:e.i1];
 		[lab_set set_day_night_color:e.i1];
-		if ([BGTimeManager get_global_time] == MODE_NIGHT) {
-			[AudioManager transition_mode2];
-		}
         
     } else if (e.type == GEventType_MENU_SCROLLBGUP_PCT) {
 		[normal_set set_scrollup_pct:e.f1];

@@ -368,8 +368,7 @@ NSString *const SoundDidFinishPlayingNotification = @"SoundDidFinishPlayingNotif
 
 @interface SoundManager ()
 
-@property (nonatomic, strong) Sound *currentMusic;
-@property (nonatomic, strong) NSMutableArray *currentSounds;
+
 
 @end
 

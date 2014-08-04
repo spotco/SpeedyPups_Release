@@ -98,6 +98,9 @@ typedef void (^SoundCompletionHandler)(BOOL didFinish);
 @property (nonatomic, assign) NSTimeInterval soundFadeDuration;
 @property (nonatomic, assign) NSTimeInterval musicFadeDuration;
 
+@property (nonatomic, strong) Sound *currentMusic;
+@property (nonatomic, strong) NSMutableArray *currentSounds;
+
 + (instancetype)sharedManager;
 
 - (void)prepareToPlayWithSound:(id)soundOrName;

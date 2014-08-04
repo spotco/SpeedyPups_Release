@@ -157,10 +157,6 @@
 		lives = GAMEENGINE_INF_LIVES;
 	}
 	
-	 
-	if ([BGTimeManager get_global_time] == MODE_NIGHT || [BGTimeManager get_global_time] == MODE_DAY_TO_NIGHT) {
-		[AudioManager transition_mode2];
-	}
     
     [GameControlImplementation reset_control_state];
     [GEventDispatcher add_listener:self];
@@ -581,7 +577,7 @@
 		if (fadeoutlayer.opacity >= 255) {
 			current_mode = GameEngineLayerMode_GAMEEND;
 			[[CCDirector sharedDirector] pushScene:[FreePupsAnim scene_with:world_mode.cur_world g:self]];
-			[AudioManager stop_bgm];
+			[AudioManager bgm_stop];
 			[GameControlImplementation reset_control_state];
 			[Common unset_dt];
 		}

@@ -16,11 +16,11 @@
 #define SUN_Y_PCT 0.81
 
 //0 night, 100 day
-#define DAYNIGHT_LENGTH 10000
-#define TRANSITION_LENGTH 600
+//#define DAYNIGHT_LENGTH 10000
+//#define TRANSITION_LENGTH 600
 
-//#define DAYNIGHT_LENGTH 50
-//#define TRANSITION_LENGTH 100
+#define DAYNIGHT_LENGTH 50
+#define TRANSITION_LENGTH 100
 
 static int bgtime_delayct;
 static BGTimeManagerMode bgtime_curmode;
@@ -52,7 +52,6 @@ static BGTimeManagerMode bgtime_curmode;
 		
 	} else if (bgtime_curmode == MODE_NIGHT) {
 		[GEventDispatcher push_event:[[GEvent cons_type:GEventType_DAY_NIGHT_UPDATE] add_i1:0 i2:0]];
-        [AudioManager transition_mode2];
 		
 	} else if (bgtime_curmode == MODE_DAY_TO_NIGHT) {
         int pctval = (((float)bgtime_delayct)/TRANSITION_LENGTH)*100;
@@ -100,10 +99,7 @@ static BGTimeManagerMode bgtime_curmode;
 		
         [sun setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:SUN_Y_PCT-((100-fpctval)/100.0)]];
         [moon setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:SUN_Y_PCT+(fpctval/100.0)]];
-        
-		if (bgtime_delayct == TRANSITION_LENGTH/2) {
-			[AudioManager transition_mode2];
-		}
+
 		
         if (bgtime_delayct <= 0) {
             bgtime_curmode = MODE_NIGHT;
@@ -133,10 +129,6 @@ static BGTimeManagerMode bgtime_curmode;
 		
 		[sun setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:((fpctval)/100.0)*SUN_Y_PCT]];
         [moon setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:SUN_Y_PCT+(fpctval/100.0)]];
-        
-		if (bgtime_delayct == TRANSITION_LENGTH/2) {
-            [AudioManager transition_mode1];
-		}
 		
         if (bgtime_delayct <= 0) {
             bgtime_curmode = MODE_DAY;
