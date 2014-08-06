@@ -1050,6 +1050,11 @@
                     "prefix": "speedypups_ccv2/Classes/game/playereffect/", 
                     "suffix": "HitEffect.h"
                 }, 
+                "IAPHelper.h": {
+                    "key": "IAPHelper.h", 
+                    "prefix": "speedypups_ccv2/Classes/iap/", 
+                    "suffix": "IAPHelper.h"
+                }, 
                 "IngameUI.h": {
                     "key": "IngameUI.h", 
                     "prefix": "speedypups_ccv2/Classes/game/uilayer/game_ui/", 
@@ -1450,6 +1455,11 @@
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
                     "suffix": "SpeedUp.h"
                 }, 
+                "SpeedyPupsIAP.h": {
+                    "key": "SpeedyPupsIAP.h", 
+                    "prefix": "speedypups_ccv2/Classes/iap/", 
+                    "suffix": "SpeedyPupsIAP.h"
+                }, 
                 "Spike.h": {
                     "key": "Spike.h", 
                     "prefix": "speedypups_ccv2/Classes/game/gameobject/", 
@@ -1785,6 +1795,11 @@
                     "prefix": "speedypups_ccv2/Classes/ads/", 
                     "suffix": "iAds_integration.h"
                 }, 
+                "iRate.h": {
+                    "key": "iRate.h", 
+                    "prefix": "speedypups_ccv2/Classes/util/", 
+                    "suffix": "iRate.h"
+                }, 
                 "kazmath.h": {
                     "key": "kazmath.h", 
                     "prefix": "speedypups_ccv2/libs/kazmath/", 
@@ -1864,7 +1879,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpBV1wXP/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -1872,11 +1887,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpBV1wXP/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpBV1wXP/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 

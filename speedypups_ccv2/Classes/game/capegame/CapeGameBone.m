@@ -5,7 +5,7 @@
 #import "AudioManager.h"
 #import "FileCache.h"
 #import "DogBone.h"
-#import "GameEngineLayer.h" 
+#import "GameEngineLayer.h"
 #import "ScoreManager.h"
 #import "Vec3D.h"
 #import "OneUpParticle.h"
@@ -29,9 +29,16 @@
 	if (!active) return;
 	
 	float dist = [Common distanceBetween:[self position] and:g.player.position];
+	
+	if (dist > 400 || !active) {
+		[self setVisible:NO];
+	} else {
+		[self setVisible:YES];
+	}
+	
 	if (!follow && dist < 85) {
         follow = YES;
-    
+		
 	} else if (follow) {
         Vec3D vel = [VecLib cons_x:g.player.position.x-[self position].x y:g.player.position.y-[self position].y z:0];
         vel = [VecLib normalize:vel];

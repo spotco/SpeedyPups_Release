@@ -1,5 +1,5 @@
 #import "BirdFlock.h"
-#import "AudioManager.h" 
+#import "AudioManager.h"
 
 @interface Bird: CCSprite {
     float vx,vy;
@@ -126,8 +126,15 @@
             b.scaleX = -1;
         }
         [birds addObject:b];
-        [self addChild:b];
     }
+	
+	[birds sortUsingComparator:^NSComparisonResult(id a, id b) {
+		return ((Bird*)b).position.y - ((Bird*)a).position.y ;
+	}];
+	
+	for (Bird *b in birds) {
+		[self addChild:b];
+	}
 }
 
 -(void)set_active:(BOOL)t_active {

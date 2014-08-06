@@ -1,5 +1,6 @@
 #import "cocos2d.h"
 #import "Common.h"
+#import "GEventDispatcher.h"
 
 @class BackgroundObject;
 @class CapeGamePlayer;
@@ -17,7 +18,7 @@ typedef enum {
 	CapeGameMode_BOSS3_DEFEATED_FLYOUT
 } CapeGameMode;
 
-@interface CapeGameEngineLayer : CCLayer {
+@interface CapeGameEngineLayer : CCLayer <GEventListener> {
 	CCSprite *top_scroll, *bottom_scroll;
 	BackgroundObject *thunder_bg;
 	float thunder_flash_ct;

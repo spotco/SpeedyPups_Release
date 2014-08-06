@@ -53,4 +53,7 @@
 
 -(void)itembar_set_visible:(BOOL)b;
 
+-(void)pause;
+-(void)unpause;
+
 @end

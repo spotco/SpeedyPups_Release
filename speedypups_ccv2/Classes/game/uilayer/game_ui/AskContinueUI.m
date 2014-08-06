@@ -8,8 +8,12 @@
 #import "UICommon.h"
 #import "UILayer.h"
 #import "BoneCollectUIAnimation.h"
-//#import "SpeedyPupsIAP.h"
 #import "GEventDispatcher.h" 
+
+#ifdef ANDROID
+#else
+#import "SpeedyPupsIAP.h"
+#endif
 
 @implementation AskContinueUI
 
@@ -206,8 +210,12 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (streq(alertView.title, ALERT_TITLE_NOT_ENOUGH)) {
 		if (buttonIndex == 0) {
-			//[[IAPHelper sharedInstance] buyProduct:[SpeedyPupsIAP product_for_key:SPEEDYPUPS_10_COINS]];
+#ifdef ANDROID
+			curmode = AskContinueUI_COUNTDOWN;
+#else
+			[[IAPHelper sharedInstance] buyProduct:[SpeedyPupsIAP product_for_key:SPEEDYPUPS_10_COINS]];
 			curmode = AskContinueUI_IAP;
+#endif
 		} else {
 			curmode = AskContinueUI_COUNTDOWN;
 		}

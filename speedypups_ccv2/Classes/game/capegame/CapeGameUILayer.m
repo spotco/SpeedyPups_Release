@@ -40,9 +40,9 @@
 																	 selector:@selector(pause)];
 	[ingamepause setScale:CC_CONTENT_SCALE_FACTOR()];
     [ingamepause setPosition:ccp(
-		[Common SCREEN].width-([pauseicon boundingBox].size.width)*CC_CONTENT_SCALE_FACTOR()+10,
-		[Common SCREEN].height-([pauseicon boundingBox].size.height)*CC_CONTENT_SCALE_FACTOR()+10
-	)];
+								 [Common SCREEN].width-([pauseicon boundingBox].size.width)*CC_CONTENT_SCALE_FACTOR()+10,
+								 [Common SCREEN].height-([pauseicon boundingBox].size.height)*CC_CONTENT_SCALE_FACTOR()+10
+								 )];
 	
     CCMenu *ingame_ui_m = [CCMenu menuWithItems:ingamepause,nil];
     
@@ -78,7 +78,7 @@
 		[i setOpacity:175];
 	}
 	itemlenbaricon =
-		[CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_ITEM_SS]
+	[CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_ITEM_SS]
 							   rect:[FileCache get_cgrect_from_plist:TEX_ITEM_SS idname:[g is_boss_capegame]?@"item_rocket":@"item_dogcape"]];
 	[itemlenbaricon setPosition:ccp(52.5/CC_CONTENT_SCALE_FACTOR(),0)];
 	[itemlenbaricon setScale:0.8];
@@ -87,8 +87,8 @@
 	
 	//challenge disp
 	challengedescbg = [[CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_UI_INGAMEUI_SS]
-											  rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS
-																			 idname:@"challengedescbg"]]
+												  rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS
+																				 idname:@"challengedescbg"]]
 					   pos:[Common screen_pctwid:0.01 pcthei:0.98]];
 	[challengedescbg setAnchorPoint:ccp(0,1)];
 	[challengedescbg csf_setScaleX:0.8];
@@ -130,15 +130,15 @@
 	[score_disp_back setOpacity:80];
 	
 	scoredisp = [[Common cons_bmlabel_pos:[Common pct_of_obj:score_disp_back pctx:0.075 pcty:0.95-1]
-								  color:ccc3(200,30,30)
-							   fontsize:24
-									str:@""] anchor_pt:ccp(0,1)];
+									color:ccc3(200,30,30)
+								 fontsize:24
+									  str:@""] anchor_pt:ccp(0,1)];
 	[scoredispbg addChild:scoredisp];
 	
 	//combo disp
 	CCSprite *combo_disp_back = [CSF_CCSprite spriteWithTexture:[Resource get_tex:TEX_UI_INGAMEUI_SS]
-													   rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS
-																					  idname:@"challengedescbg"]];
+														   rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS
+																						  idname:@"challengedescbg"]];
 	[combo_disp_back setPosition:[Common pct_of_obj:score_disp_back pctx:1.05*0.8 pcty:0]];
 	[combo_disp_back setScaleX:0.3];
 	[combo_disp_back setScaleY:0.75];
@@ -147,22 +147,22 @@
 	[combo_disp_back setOpacity:80];
 	
 	[scoredispbg addChild:[[Common cons_label_pos:[Common pct_of_obj:score_disp_back pctx:1.05*0.8+0.09 pcty:0.7-1-0.06]
-										   color:ccc3(200,30,30)
-										fontsize:10
-											 str:@"x"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
+											color:ccc3(200,30,30)
+										 fontsize:10
+											  str:@"x"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
 	
 	multdisp = [[Common cons_bmlabel_pos:[Common pct_of_obj:score_disp_back pctx:1.05*0.8+0.15 pcty:0.95-1]
-								 color:ccc3(200,30,30)
-							  fontsize:24
-								   str:@""] anchor_pt:ccp(0,1)];
+								   color:ccc3(200,30,30)
+								fontsize:24
+									 str:@""] anchor_pt:ccp(0,1)];
 	[scoredispbg addChild:multdisp];
 	[self addChild:scoredispbg];
 	
 	
 	CGPoint disp_icon_pos = ccp(
-		scoredispbg.position.x,
-		scoredispbg.position.y-(score_disp_back.boundingBox.size.height)*CC_CONTENT_SCALE_FACTOR() - 5
-	);
+								scoredispbg.position.x,
+								scoredispbg.position.y-(score_disp_back.boundingBox.size.height)*CC_CONTENT_SCALE_FACTOR() - 5
+								);
 	bones_disp = [self cons_icon_section_pos:disp_icon_pos icon:@"ingame_ui_bone_icon"];
 	disp_icon_pos.y -= 24;
 	lives_disp = [self cons_icon_section_pos:disp_icon_pos icon:@"ingame_ui_lives_icon"];
@@ -204,10 +204,10 @@
 	[bone_disp_section addChild:bone_disp_icon];
 	
 	CCLabelBMFont *bones_text_disp = [[Common cons_bmlabel_pos:[Common pct_of_obj:bone_disp_bg pctx:0.4*0.5 pcty:-0.5*0.5]
-													color:ccc3(200,30,30)
-												 fontsize:13
-													  str:@""]
-								   anchor_pt:ccp(0,0.5)];
+														 color:ccc3(200,30,30)
+													  fontsize:13
+														   str:@""]
+									  anchor_pt:ccp(0,0.5)];
 	[bone_disp_section addChild:bones_text_disp];
 	return bones_text_disp;
 }
@@ -257,33 +257,33 @@
 	}
     
     pause_time_disp = [[Common cons_label_pos:[Common pct_of_obj:timebg pctx:0.5 pcty:0.5]
-                                       color:ccc3(255, 255, 255)
-                                    fontsize:20
-                                         str:@"Time: 0:00"] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+										color:ccc3(255, 255, 255)
+									 fontsize:20
+										  str:@"Time: 0:00"] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
     [timebg addChild:pause_time_disp];
     
     pause_bones_disp= [[Common cons_label_pos:[Common pct_of_obj:bonesbg pctx:0.5 pcty:0.5]
-                                       color:ccc3(255, 255, 255)
-                                    fontsize:30
-                                         str:@"0"] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+										color:ccc3(255, 255, 255)
+									 fontsize:30
+										  str:@"0"] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
     [bonesbg addChild:pause_bones_disp];
     
     pause_lives_disp= [[Common cons_label_pos:[Common pct_of_obj:livesbg pctx:0.5 pcty:0.5]
-                                       color:ccc3(255, 255, 255)
-                                    fontsize:30
-                                         str:@"0"] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+										color:ccc3(255, 255, 255)
+									 fontsize:30
+										  str:@"0"] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
     [livesbg addChild:pause_lives_disp];
 	
 	pause_points_disp = [[Common cons_label_pos:[Common pct_of_obj:pointsbg pctx:0.5 pcty:0.5]
-										 color:ccc3(255,255,255)
-									  fontsize:20
-										   str:@""] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+										  color:ccc3(255,255,255)
+									   fontsize:20
+											str:@""] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
 	[pointsbg addChild:pause_points_disp];
 	
 	pause_new_high_score_disp = [[[Common cons_label_pos:[Common pct_of_obj:pointsbg pctx:1 pcty:1]
-											color:ccc3(255,200,20)
-										 fontsize:10
-											  str:@"New Highscore!"] anchor_pt:ccp(1,1)] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
+												   color:ccc3(255,200,20)
+												fontsize:10
+													 str:@"New Highscore!"] anchor_pt:ccp(1,1)] set_scale:1/CC_CONTENT_SCALE_FACTOR()];
 	[pointsbg addChild:pause_new_high_score_disp];
     
     CCMenuItem *retrybutton = [MenuCommon item_from:TEX_UI_INGAMEUI_SS rect:@"retrybutton" tar:self sel:@selector(retry)
@@ -307,7 +307,7 @@
 													target: self
 												  selector:@selector(update_pause_menu)
 												  userInfo: nil repeats:YES];
-
+	
 }
 
 -(void)update {
@@ -424,8 +424,15 @@
 	[pause_time_disp setString:[time_disp string]];
 	[pause_points_disp setString:strf("Score \u00B7 %d",[cape_game.get_main_game.score get_score])];
 	[pause_new_high_score_disp setVisible:[ScoreManager get_world_highscore:cape_game.get_main_game.world_mode.cur_world] < [cape_game.get_main_game.score get_score]];
-
+	
 	[cape_game pause:YES];
+}
+
+-(void)unpause {
+	[AudioManager playsfx:SFX_MENU_DOWN];
+	[ingame_ui setVisible:YES];
+	[pause_ui setVisible:NO];
+	[cape_game pause:NO];
 }
 
 -(void)retry {
@@ -442,13 +449,6 @@
 		[GEventDispatcher push_event:[[GEvent cons_type:GEventType_RETRY_WITH_CALLBACK] add_key:@"callback" value:cbv]];
 	}
 	
-}
-
--(void)unpause {
-	[AudioManager playsfx:SFX_MENU_DOWN];
-	[ingame_ui setVisible:YES];
-	[pause_ui setVisible:NO];
-	[cape_game pause:NO];
 }
 
 -(void)exit_to_menu {

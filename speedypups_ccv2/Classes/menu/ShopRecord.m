@@ -10,7 +10,7 @@
 #import "ExtrasUnlockPopup.h"
 #import "DailyLoginPopup.h"
 #import "TrackingUtil.h"
-//#import "SpeedyPupsIAP.h"
+#import "SpeedyPupsIAP.h"
 
 @implementation ItemInfo
 @synthesize tex;
@@ -209,7 +209,9 @@
 }
 
 +(void)fill_realmoney_tab:(NSMutableArray*)a {
-	/*for (IAPObject *o in [SpeedyPupsIAP get_all_loaded_iaps]) {
+#ifdef ANDROID
+#else
+	for (IAPObject *o in [SpeedyPupsIAP get_all_loaded_iaps]) {
 		NSString *rectid = @"coin";
 		if (streq(o.identifier, SPEEDYPUPS_AD_FREE)) {
 			rectid = @"money_icon";
@@ -235,7 +237,8 @@
 			i.short_name = [o.name componentsSeparatedByString:@" "][1];
 		}
 		[a insertObject:i atIndex:0];
-	}*/
+	}
+#endif
 }
 
 +(NSString*)gameitem_to_texid:(GameItem)i upgrade:(BOOL)upgrade {
@@ -262,8 +265,12 @@
 	if (price > [UserInventory get_current_coins]) return NO;
 	[TrackingUtil track_evt:TrackingEvt_ShopBuy val1:val];
 	
-	if (NO /*[[SpeedyPupsIAP get_all_requested_iaps] containsObject:val]*/) {
-		//[[IAPHelper sharedInstance] buyProduct:[SpeedyPupsIAP product_for_key:val]];
+#ifdef ANDROID
+	if (0) {
+#else
+	if ([[SpeedyPupsIAP get_all_requested_iaps] containsObject:val]) {
+		[[IAPHelper sharedInstance] buyProduct:[SpeedyPupsIAP product_for_key:val]];
+#endif
 		
 	} else if (streq(val, SHOP_ITEM_MAGNET)) {
 		if ([UserInventory get_item_owned:Item_Magnet]) return NO;

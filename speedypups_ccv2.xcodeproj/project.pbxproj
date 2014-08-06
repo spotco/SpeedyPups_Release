@@ -130,6 +130,10 @@
 		7E16B2B118FAB8660039A93F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16B2B018FAB8660039A93F /* AppDelegate.m */; };
 		7E16B2B418FAB87E0039A93F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16B2B218FAB87E0039A93F /* main.m */; };
 		7E22F1D5193DE1AA004F4746 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22F1D4193DE1AA004F4746 /* JSONKit.m */; };
+		7E24B5201992123E00AC6F61 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24B51F1992123E00AC6F61 /* IAPHelper.m */; };
+		7E24B5231992124900AC6F61 /* SpeedyPupsIAP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24B5221992124900AC6F61 /* SpeedyPupsIAP.m */; };
+		7E24B5251992128C00AC6F61 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E24B5241992128C00AC6F61 /* AdColony.framework */; };
+		7E24B5281992147200AC6F61 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24B5271992147200AC6F61 /* iRate.m */; };
 		7E3A8BC8196E6BD000D0ECCC /* CCRibbon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A8BC7196E6BD000D0ECCC /* CCRibbon.m */; };
 		7E594D12198B65BC00D78315 /* nmenu_bg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D0E198B65BC00D78315 /* nmenu_bg_0.png */; };
 		7E594D13198B65BC00D78315 /* nmenu_bg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D0F198B65BC00D78315 /* nmenu_bg_1.png */; };
@@ -1104,6 +1108,13 @@
 		7E16B2B318FAB87E0039A93F /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		7E22F1D3193DE1AA004F4746 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		7E22F1D4193DE1AA004F4746 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		7E24B51E1992123E00AC6F61 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		7E24B51F1992123E00AC6F61 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		7E24B5211992124900AC6F61 /* SpeedyPupsIAP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedyPupsIAP.h; sourceTree = "<group>"; };
+		7E24B5221992124900AC6F61 /* SpeedyPupsIAP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedyPupsIAP.m; sourceTree = "<group>"; };
+		7E24B5241992128C00AC6F61 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
+		7E24B5261992147200AC6F61 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		7E24B5271992147200AC6F61 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		7E3A8BC6196E6B9700D0ECCC /* CCRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRibbon.h; sourceTree = "<group>"; };
 		7E3A8BC7196E6BD000D0ECCC /* CCRibbon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRibbon.m; sourceTree = "<group>"; };
 		7E594D0E198B65BC00D78315 /* nmenu_bg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nmenu_bg_0.png; sourceTree = "<group>"; };
@@ -2020,6 +2031,7 @@
 				7E16A97C18FAB6B80039A93F /* CoreGraphics.framework in Frameworks */,
 				7E16A97E18FAB6B80039A93F /* CoreText.framework in Frameworks */,
 				7E16A97018FAB6B80039A93F /* OpenGLES.framework in Frameworks */,
+				7E24B5251992128C00AC6F61 /* AdColony.framework in Frameworks */,
 				7E16A97A18FAB6B80039A93F /* Foundation.framework in Frameworks */,
 				7E16A98018FAB6B80039A93F /* GameKit.framework in Frameworks */,
 			);
@@ -2538,6 +2550,7 @@
 		7E6378A9196E394D0064B085 /* ads */ = {
 			isa = PBXGroup;
 			children = (
+				7E24B5241992128C00AC6F61 /* AdColony.framework */,
 				7E6378AB196E394D0064B085 /* AdColony_integration.h */,
 				7E6378AC196E394D0064B085 /* AdColony_integration.m */,
 				7E6378AD196E394D0064B085 /* iAds_integration.h */,
@@ -2965,6 +2978,10 @@
 		7E6379E4196E394D0064B085 /* iap */ = {
 			isa = PBXGroup;
 			children = (
+				7E24B51E1992123E00AC6F61 /* IAPHelper.h */,
+				7E24B51F1992123E00AC6F61 /* IAPHelper.m */,
+				7E24B5211992124900AC6F61 /* SpeedyPupsIAP.h */,
+				7E24B5221992124900AC6F61 /* SpeedyPupsIAP.m */,
 			);
 			path = iap;
 			sourceTree = "<group>";
@@ -3161,6 +3178,8 @@
 				7E637AB1196E394D0064B085 /* WebRequest.m */,
 				7E637AB2196E394D0064B085 /* WeightedSorter.h */,
 				7E637AB3196E394D0064B085 /* WeightedSorter.m */,
+				7E24B5261992147200AC6F61 /* iRate.h */,
+				7E24B5271992147200AC6F61 /* iRate.m */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -4574,6 +4593,7 @@
 				7E637AC0196E394D0064B085 /* LabBGObject.m in Sources */,
 				7E637B5D196E394D0064B085 /* ExtrasUnlockPopup.m in Sources */,
 				7E637ABC196E394D0064B085 /* CloudGenerator.m in Sources */,
+				7E24B5201992123E00AC6F61 /* IAPHelper.m in Sources */,
 				7E637B2F196E394D0064B085 /* HitEffect.m in Sources */,
 				7E637B00196E394D0064B085 /* SpikeVine.m in Sources */,
 				7E637B68196E394D0064B085 /* MenuCommon.m in Sources */,
@@ -4650,6 +4670,7 @@
 				7E637AD9196E394D0064B085 /* Blocker.m in Sources */,
 				7E637B67196E394D0064B085 /* MainMenuLayer.m in Sources */,
 				7E637B48196E394D0064B085 /* UIWaterAlert.m in Sources */,
+				7E24B5281992147200AC6F61 /* iRate.m in Sources */,
 				7E637B40196E394D0064B085 /* UIEnemyAlert.m in Sources */,
 				7E637AD6196E394D0064B085 /* ScoreManager.m in Sources */,
 				7E637ABD196E394D0064B085 /* Lab1BGLayerSet.m in Sources */,
@@ -4719,6 +4740,7 @@
 				7E637ACF196E394D0064B085 /* Challenge.m in Sources */,
 				7E637B3C196E394D0064B085 /* ChallengeEndUI.m in Sources */,
 				7E637AB8196E394D0064B085 /* FBShare.m in Sources */,
+				7E24B5231992124900AC6F61 /* SpeedyPupsIAP.m in Sources */,
 				7E637B8E196E394D0064B085 /* TWTShare.m in Sources */,
 				7E637B3B196E394D0064B085 /* AskContinueUI.m in Sources */,
 				7E637B22196E394D0064B085 /* OneUpParticle.m in Sources */,

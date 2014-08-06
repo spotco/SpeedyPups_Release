@@ -8,12 +8,12 @@
 #import "TrackingUtil.h"
 #import "AdColony_integration.h"
 
-//#import "SpeedyPupsIAP.h"
-//#import "iRate.h"
+#import "SpeedyPupsIAP.h"
+#import "iRate.h"
 
 @implementation GameMain
 
-#define VERSION_STRING @"SpeedyPups Retina RC1 - July 2014"
+#define VERSION_STRING @"SpeedyPups RC2 - August 2014"
 #define STARTING_LIVES 10
 
 #define TESTLEVEL @"capegame_launcher"
@@ -51,12 +51,12 @@
 	[DataStore set_key:KEY_NTH_MENU int_value:0];
 	NSLog(@"UUID:%@ ADS:%d",[Common unique_id], [UserInventory get_ads_disabled]);
 	[TrackingUtil track_evt:TrackingEvt_Login];
+	
+#ifdef ANDROID
+#else
 	[AdColony_integration preload];
-	
-	
-	
-	
-	//[SpeedyPupsIAP preload];
+	[SpeedyPupsIAP preload];
+#endif
 
 	LoadingScene *loader = [LoadingScene cons];
 	[self run_scene:loader];
@@ -124,8 +124,11 @@
 }
 
 +(void)initialize {
-	//[iRate sharedInstance].daysUntilPrompt = 3;
-    //[iRate sharedInstance].usesUntilPrompt = 10;
+#ifdef ANDROID
+#else
+	[iRate sharedInstance].daysUntilPrompt = 3;
+    [iRate sharedInstance].usesUntilPrompt = 10;
+#endif
 }
 
 +(void)start_introanim {
@@ -145,13 +148,15 @@
 +(void)start_menu {
 	[self run_scene:[MainMenuLayer scene]];
 	
-	/*
+#ifdef ANDROID
+#else
 	if ([[iRate sharedInstance] shouldPromptForRating]) {
 		[[iRate sharedInstance] promptForRating];
 	} else if ([AdColony_integration is_ads_loaded] && [DataStore get_int_for_key:KEY_NTH_MENU] > 0) {
 		[AdColony_integration show_ad];
 	}
-	 */
+#endif
+	
 	[DataStore set_key:KEY_NTH_MENU int_value:[DataStore get_int_for_key:KEY_NTH_MENU]+1];
 
 }

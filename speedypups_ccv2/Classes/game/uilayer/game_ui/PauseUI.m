@@ -7,21 +7,33 @@
 #import "UICommon.h"
 #import "UILayer.h"
 
+#ifdef ANDROID
+#else
 #import "iAds_integration.h"
+#endif
 
 @implementation PauseUI {
+#ifdef ANDROID
+#else
 	iAds_integration *iads;
+#endif
 }
 
 -(void)onEnter {
 	[super onEnter];
+#ifdef ANDROID
+#else
 	iads = [[iAds_integration alloc] init_landscape_bottom];
 	[iads onEnter];
 	[iads setVisible:NO];
+#endif
 }
 
 -(void)onExit {
+#ifdef ANDROID
+#else
 	[iads onExit];
+#endif
 	[super onExit];
 }
 
@@ -151,7 +163,10 @@
 -(void)setVisible:(BOOL)visible {
 	[curtains set_curtain_animstart_positions];
 	[super setVisible:visible];
+#ifdef ANDROID
+#else
 	[iads setVisible:visible];
+#endif
 }
 
 -(void)update_labels_lives:(NSString *)lives bones:(NSString *)bones time:(NSString *)time score:(NSString*)score highscore:(BOOL)highscore {

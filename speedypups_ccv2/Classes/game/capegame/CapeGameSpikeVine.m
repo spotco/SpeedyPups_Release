@@ -27,6 +27,15 @@
 
 -(void)update:(CapeGameEngineLayer *)g {
 	if (!active) return;
+	
+	float dist = [Common distanceBetween:[self position] and:g.player.position];
+	if (dist > 600) {
+		[self setVisible:NO];
+	} else {
+		[self setVisible:YES];
+		
+	}
+	
 	SATPoly r_vine = [self get_hitpoly];
 	float min_x = INFINITY;
 	float max_x = -INFINITY;
@@ -56,6 +65,7 @@
 }
 
 -(void)draw {
+	[super draw];
     [Common draw_renderobj:top n_vtx:4];
     [Common draw_renderobj:bottom n_vtx:4];
     [Common draw_renderobj:center n_vtx:4];

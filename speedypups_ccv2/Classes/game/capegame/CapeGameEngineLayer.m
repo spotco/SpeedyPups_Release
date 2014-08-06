@@ -84,7 +84,7 @@ static NSString *blank = @"";
 		[self addChild:thunder_bg];
 		thunder_bg.opacity = 0;
 	};
-	 
+	
 	
 	player = [CapeGamePlayer cons];
 	[player setPosition:END_TARPOS];
@@ -152,6 +152,14 @@ static NSString *blank = @"";
 	return self;
 }
 
+-(void)dispatch_event:(GEvent *)e {
+	if (e.type == GEventType_PAUSE) {
+		[[self get_ui] pause];
+	} else if (e.type == GEventType_UNPAUSE) {
+		[[self get_ui] unpause];
+	}
+}
+
 -(CapeGamePlayer*)player {
 	return player;
 }
@@ -195,6 +203,7 @@ static NSString *blank = @"";
 
 -(void)update:(ccTime)dt {
 	[Common set_dt:dt];
+	[GEventDispatcher dispatch_events];
 	if (pause) return;
 	if (shake_ct > 0) {
 		shake_ct -= [Common get_dt_Scale];
@@ -249,9 +258,9 @@ static NSString *blank = @"";
 		CGPoint tar = START_TARPOS;
 		CGPoint last_pos = player.position;
 		CGPoint neu_pos = ccp(
-			last_pos.x + (tar.x - last_pos.x)/10.0,
-			last_pos.y + (tar.y - last_pos.y)/10.0
-		);
+							  last_pos.x + (tar.x - last_pos.x)/10.0,
+							  last_pos.y + (tar.y - last_pos.y)/10.0
+							  );
 		player.vy = neu_pos.y - last_pos.y;
 		[player set_rotation];
 		[player setPosition:neu_pos];
@@ -293,8 +302,8 @@ static NSString *blank = @"";
 			[ui itembar_set_visible:YES];
 			float total_dist = ([Common SCREEN].width*1.1-START_TARPOS.x) + 50 + START_TARPOS.x;
 			[ui update_pct:1-(behind_catchup?
-				(([Common SCREEN].width*1.1-START_TARPOS.x) + 50 + player.position.x)/total_dist:
-				(player.position.x-START_TARPOS.x)/total_dist)];
+							  (([Common SCREEN].width*1.1-START_TARPOS.x) + 50 + player.position.x)/total_dist:
+							  (player.position.x-START_TARPOS.x)/total_dist)];
 			
 			if (!behind_catchup) {
 				player.position = ccp(player.position.x+[Common get_dt_Scale] * 4,player.position.y);
@@ -322,7 +331,7 @@ static NSString *blank = @"";
 	
 	
 	float speed = gameend_constant_speed != 0 ? gameend_constant_speed :
- 		(is_boss_capegame || is_credits_scene ? 7 : (1-duration/GAME_DURATION)*6 + 4);
+	(is_boss_capegame || is_credits_scene ? 7 : (1-duration/GAME_DURATION)*6 + 4);
 	
 	bgclouds_scroll_x += speed;
 	[bgclouds update_posx:bgclouds_scroll_x posy:0];
@@ -375,8 +384,8 @@ static NSString *blank = @"";
 													  vx:0
 													  vy:float_random(6,14)
 													  ct:int_random(4, 25)]];
-	);
-
+		   );
+	
 	
 }
 
@@ -434,7 +443,7 @@ static NSString *blank = @"";
 	touch_down = YES;
 	initial_hold = NO;
 }
--(void) ccTouchesMoved:(NSSet *)pTouches withEvent:(UIEvent *)event {    
+-(void) ccTouchesMoved:(NSSet *)pTouches withEvent:(UIEvent *)event {
     CGPoint touch;
     for (UITouch *t in pTouches) {
         touch = [t locationInView:[t view]];
@@ -453,6 +462,7 @@ static NSString *blank = @"";
 }
 
 -(void)exit {
+	[GEventDispatcher remove_listener:self];
 	[self removeAllChildrenWithCleanup:YES];
 	for (Particle *p in particles) {
 		[particleholder removeChild:p cleanup:YES];
