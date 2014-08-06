@@ -1,7 +1,7 @@
 {
     "assets": [
         {
-            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp09M_g9/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
+            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
             "target": "../../../../../../../../Users/spotco/Documents/speedypups_ccv2_android/normal"
         }
     ], 
@@ -1783,11 +1783,6 @@
                     "prefix": "speedypups_ccv2/Classes/ads/", 
                     "suffix": "iAds_integration.h"
                 }, 
-                "iRate.h": {
-                    "key": "iRate.h", 
-                    "prefix": "speedypups_ccv2/Classes/rating/", 
-                    "suffix": "iRate.h"
-                }, 
                 "kazmath.h": {
                     "key": "kazmath.h", 
                     "prefix": "speedypups_ccv2/libs/kazmath/", 
@@ -1867,7 +1862,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp09M_g9/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -1875,11 +1870,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp09M_g9/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmp09M_g9/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpGKDpTW/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 

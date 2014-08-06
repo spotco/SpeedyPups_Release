@@ -89,6 +89,10 @@
 	
 	director_.wantsFullScreenLayout = YES;
 	
+#ifdef APPORTABLE
+	[[CCDirector sharedDirector] becomeFirstResponder];
+#endif
+	
 	// Display FSP and SPF
 	[director_ setDisplayStats:YES];
 	

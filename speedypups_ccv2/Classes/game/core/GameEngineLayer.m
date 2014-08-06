@@ -650,7 +650,7 @@
 		}
         
     } else if (e.type == GEventType_PAUSE) {
-		stored_mode = current_mode;
+		if (current_mode != GameEngineLayerMode_PAUSED) stored_mode = current_mode;
         current_mode = GameEngineLayerMode_PAUSED;
 		[CCDirectorDisplayLink set_framemodct:1];
         

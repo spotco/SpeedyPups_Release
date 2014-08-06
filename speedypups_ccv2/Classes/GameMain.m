@@ -188,3 +188,29 @@
 +(NSString*)GET_VERSION_STRING { return VERSION_STRING; }
 +(BOOL)GET_DEBUG_UI { return DEBUG_UI; }
 @end
+
+@interface CCDirector (Apportable)
+@end
+@implementation CCDirector (Apportable)
+
+#ifdef APPORTABLE
+- (void)buttonUpWithEvent:(UIEvent *)event {
+    switch (event.buttonCode)
+    {
+		case UIEventButtonCodeBack:
+			[GEventDispatcher push_event:[GEvent cons_type:GEventType_PAUSE]];
+			break;
+		case UIEventButtonCodeMenu:
+			// show menu if possible.
+			break;
+		default:
+			break;
+	}
+}
+
+- (BOOL)canBecomeFirstResponder {
+	return YES;
+}
+#endif
+
+@end

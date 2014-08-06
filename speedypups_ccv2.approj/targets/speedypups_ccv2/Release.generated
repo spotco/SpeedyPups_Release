@@ -3531,11 +3531,6 @@
                     "prefix": "speedypups_ccv2/Classes/ads/", 
                     "suffix": "iAds_integration.h"
                 }, 
-                "iRate.h": {
-                    "key": "iRate.h", 
-                    "prefix": "speedypups_ccv2/Classes/rating/", 
-                    "suffix": "iRate.h"
-                }, 
                 "kazmath.h": {
                     "key": "kazmath.h", 
                     "prefix": "speedypups_ccv2/libs/kazmath/", 
@@ -3615,7 +3610,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpTmLA9G/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmppwEZOe/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -3627,11 +3622,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpTmLA9G/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmppwEZOe/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpTmLA9G/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmppwEZOe/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
@@ -5047,13 +5042,6 @@
             "header_paths": [], 
             "language": "objc", 
             "source": "speedypups_ccv2/Classes/menu/nmenu_pages/NMenuWorldSelectPage.m"
-        }, 
-        {
-            "defines": {}, 
-            "flags": [], 
-            "header_paths": [], 
-            "language": "objc", 
-            "source": "speedypups_ccv2/Classes/rating/iRate.m"
         }, 
         {
             "defines": {}, 
