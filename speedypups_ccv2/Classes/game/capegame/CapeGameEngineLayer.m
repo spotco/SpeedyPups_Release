@@ -68,6 +68,7 @@ static NSString *blank = @"";
 	main_game = g;
 	is_credits_scene = NO;
 	pause = NO;
+	[GEventDispatcher add_listener:self];
 	
 	bg = [BackgroundObject backgroundFromTex:[Resource get_tex:is_boss_capegame?TEX_CLOUDGAME_BOSS_BG:TEX_CLOUDGAME_BG] scrollspd_x:0.1 scrollspd_y:0];
 	if (!boss)[Common scale_to_fit_screen_x:bg];

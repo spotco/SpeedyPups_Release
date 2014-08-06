@@ -30,7 +30,7 @@
 	
 	float dist = [Common distanceBetween:[self position] and:g.player.position];
 	
-	if (dist > 400 || !active) {
+	if (dist > 650 || !active) {
 		[self setVisible:NO];
 	} else {
 		[self setVisible:YES];

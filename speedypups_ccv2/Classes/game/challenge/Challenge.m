@@ -59,26 +59,31 @@ static NSArray* _CHALLENGES;
         [ChallengeInfo cons_name:@"tutorial_spikevine" type:ChallengeType_TIMED ct:1000 reward:1],
         [ChallengeInfo cons_name:@"tutorial_swipeget" type:ChallengeType_COLLECT_BONES ct:39 reward:1],
 		[ChallengeInfo cons_name:@"capegame_easy_challenge" type:ChallengeType_FIND_SECRET ct:1 reward:1],
+		
         [ChallengeInfo cons_name:@"easy_world1" type:ChallengeType_FIND_SECRET ct:1 reward:1],
         [ChallengeInfo cons_name:@"tutorial_swingvine" type:ChallengeType_COLLECT_BONES ct:36 reward:1 world:WorldNum_2],
         [ChallengeInfo cons_name:@"classic_trickytreas" type:ChallengeType_COLLECT_BONES ct:28 reward:2],
         [ChallengeInfo cons_name:@"easy_gottagofast" type:ChallengeType_COLLECT_BONES ct:60 reward:1],
         [ChallengeInfo cons_name:@"filler_directdrop" type:ChallengeType_FIND_SECRET ct:1 reward:1 world:WorldNum_2],
+		
         [ChallengeInfo cons_name:@"classic_smgislands" type:ChallengeType_COLLECT_BONES ct:52 reward:1 world:WorldNum_2],
         [ChallengeInfo cons_name:@"swingvine_bounswindodg" type:ChallengeType_TIMED ct:1000 reward:2 world:WorldNum_2],
 		[ChallengeInfo cons_name:@"classic_nubcave" type:ChallengeType_FIND_SECRET ct:1 reward:1],
 		[ChallengeInfo cons_name:@"swingvine_awesome" type:ChallengeType_COLLECT_BONES ct:67 reward:3 world:WorldNum_2],
 		[ChallengeInfo cons_name:@"swingvine_hillvine" type:ChallengeType_FIND_SECRET ct:1 reward:1 world:WorldNum_2],
-		[ChallengeInfo cons_name:@"classic_nubcave" type:ChallengeType_COLLECT_BONES ct:77 reward:1],
+		
+		[ChallengeInfo cons_name:@"classic_nubcave" type:ChallengeType_COLLECT_BONES ct:90 reward:1],
 		[ChallengeInfo cons_name:@"classic_manyoptredux" type:ChallengeType_TIMED ct:1550 reward:3 world:WorldNum_3],
 		[ChallengeInfo cons_name:@"filler_genome" type:ChallengeType_COLLECT_BONES ct:57 reward:2],
 		[ChallengeInfo cons_name:@"jumppad_crazyloop" type:ChallengeType_FIND_SECRET ct:1 reward:1 world:WorldNum_1],
 		[ChallengeInfo cons_name:@"swingvine_totalmix" type:ChallengeType_COLLECT_BONES ct:54 reward:1 world:WorldNum_2],
+		
 		[ChallengeInfo cons_name:@"labintro_tutoriallauncher" type:ChallengeType_COLLECT_BONES ct:80 reward:2],
 		[ChallengeInfo cons_name:@"jumppad_spikeceil" type:ChallengeType_FIND_SECRET ct:1 reward:1 world:WorldNum_1],
 		[ChallengeInfo cons_name:@"lab_alladat_challenge" type:ChallengeType_TIMED ct:2600 reward:2 world:WorldNum_3],
 		[ChallengeInfo cons_name:@"capegame_test_challenge" type:ChallengeType_FIND_SECRET ct:1 reward:1],
 		[ChallengeInfo cons_name:@"lab_rocketarmy_challenge" type:ChallengeType_COLLECT_BONES ct:87 reward:2 world:WorldNum_3],
+		
 		[ChallengeInfo cons_name:@"jumppad_jumpgap" type:ChallengeType_FIND_SECRET ct:1 reward:1 world:WorldNum_2],
 		[ChallengeInfo cons_name:@"hard_compilation" type:ChallengeType_TIMED ct:1830 reward:2 world:WorldNum_3],
 		[ChallengeInfo cons_name:@"capegame_creative_challenge" type:ChallengeType_FIND_SECRET ct:1 reward:1],

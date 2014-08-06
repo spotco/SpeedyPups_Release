@@ -38,14 +38,11 @@
 }
 
 -(void)cons {
-    ingameui = [IngameUI cons];
-    [self addChild:ingameui];
-    [ingameui setVisible:NO];
-    
+	
     pauseui = [PauseUI cons];
     [self addChild:pauseui];
     [pauseui setVisible:NO];
-    
+	
     askcontinueui = [AskContinueUI cons];
     [self addChild:askcontinueui];
     [askcontinueui setVisible:NO];
@@ -57,6 +54,10 @@
     challengeendui = [ChallengeEndUI cons];
     [self addChild:challengeendui];
     [challengeendui setVisible:NO];
+	
+    ingameui = [IngameUI cons];
+    [self addChild:ingameui];
+    [ingameui setVisible:NO];
     
     ingameuianimholder = [CCSprite node];
     [self addChild:ingameuianimholder];

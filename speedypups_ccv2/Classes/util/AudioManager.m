@@ -263,6 +263,7 @@ static float _bgm_1_tar_gain, _bgm_2_tar_gain, _bgm_3_tar_gain;
 }
 
 +(void)bgm_stop{
+	_curgroup = -1;
 	if (_bgm_1) [_bgm_1 stop];
 	if (_bgm_2) [_bgm_2 stop];
 	if (_bgm_3) [_bgm_3 stop];

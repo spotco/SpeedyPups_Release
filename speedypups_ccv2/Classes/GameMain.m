@@ -26,6 +26,7 @@
 #define DRAW_HITBOX		 0
 
 /**
+ capegame exit go to game over page (currently exits)
  **/
 
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
