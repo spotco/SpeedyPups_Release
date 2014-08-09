@@ -650,9 +650,11 @@
 		}
         
     } else if (e.type == GEventType_PAUSE) {
-		if (current_mode != GameEngineLayerMode_PAUSED) stored_mode = current_mode;
-        current_mode = GameEngineLayerMode_PAUSED;
-		[CCDirectorDisplayLink set_framemodct:1];
+		if (current_mode == GameEngineLayerMode_GAMEPLAY) {
+			stored_mode = current_mode;
+			current_mode = GameEngineLayerMode_PAUSED;
+			[CCDirectorDisplayLink set_framemodct:1];
+		}
         
     } else if (e.type == GEventType_UNPAUSE) {
         current_mode = stored_mode;

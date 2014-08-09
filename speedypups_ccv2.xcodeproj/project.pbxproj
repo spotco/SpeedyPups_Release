@@ -134,6 +134,7 @@
 		7E24B5231992124900AC6F61 /* SpeedyPupsIAP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24B5221992124900AC6F61 /* SpeedyPupsIAP.m */; };
 		7E24B5251992128C00AC6F61 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E24B5241992128C00AC6F61 /* AdColony.framework */; };
 		7E24B5281992147200AC6F61 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24B5271992147200AC6F61 /* iRate.m */; };
+		7E3885021996986C00E48476 /* BatchSpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3885011996986C00E48476 /* BatchSpriteManager.m */; };
 		7E3A8BC8196E6BD000D0ECCC /* CCRibbon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A8BC7196E6BD000D0ECCC /* CCRibbon.m */; };
 		7E594D12198B65BC00D78315 /* nmenu_bg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D0E198B65BC00D78315 /* nmenu_bg_0.png */; };
 		7E594D13198B65BC00D78315 /* nmenu_bg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D0F198B65BC00D78315 /* nmenu_bg_1.png */; };
@@ -1115,6 +1116,8 @@
 		7E24B5241992128C00AC6F61 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
 		7E24B5261992147200AC6F61 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		7E24B5271992147200AC6F61 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		7E3885001996986C00E48476 /* BatchSpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatchSpriteManager.h; sourceTree = "<group>"; };
+		7E3885011996986C00E48476 /* BatchSpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatchSpriteManager.m; sourceTree = "<group>"; };
 		7E3A8BC6196E6B9700D0ECCC /* CCRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRibbon.h; sourceTree = "<group>"; };
 		7E3A8BC7196E6BD000D0ECCC /* CCRibbon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRibbon.m; sourceTree = "<group>"; };
 		7E594D0E198B65BC00D78315 /* nmenu_bg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nmenu_bg_0.png; sourceTree = "<group>"; };
@@ -3180,6 +3183,8 @@
 				7E637AB3196E394D0064B085 /* WeightedSorter.m */,
 				7E24B5261992147200AC6F61 /* iRate.h */,
 				7E24B5271992147200AC6F61 /* iRate.m */,
+				7E3885001996986C00E48476 /* BatchSpriteManager.h */,
+				7E3885011996986C00E48476 /* BatchSpriteManager.m */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -4644,6 +4649,7 @@
 				7E637AC8196E394D0064B085 /* CapeGameEngineLayer.m in Sources */,
 				7E637AEA196E394D0064B085 /* FadeOutLabWall.m in Sources */,
 				7E637B6F196E394D0064B085 /* ShopListTouchButton.m in Sources */,
+				7E3885021996986C00E48476 /* BatchSpriteManager.m in Sources */,
 				7E637B6E196E394D0064B085 /* ShopBuyFlyoffTextParticle.m in Sources */,
 				7E637B46196E394D0064B085 /* UIIngameAnimation.m in Sources */,
 				7E637AD0196E394D0064B085 /* GameControlImplementation.m in Sources */,

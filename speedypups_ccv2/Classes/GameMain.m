@@ -26,7 +26,15 @@
 #define DRAW_HITBOX		 0
 
 /**
+ (verify)
+ gameenginelayer pause only if cur mode == gameplay
+ **/
+
+/**
  capegame exit go to game over page (currently exits)
+ 
+ back unpause
+ put in batchspritemanager
  **/
 
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
