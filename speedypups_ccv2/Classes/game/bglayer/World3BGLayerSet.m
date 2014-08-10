@@ -17,7 +17,7 @@
     [starsbg setOpacity:0];
 	
 	time = [BGTimeManager cons];
-	clouds = [[[CloudGenerator cons_texkey:TEX_BG2_CLOUDS_SS scaley:0.003] set_speedmult:0.3] set_generate_speed:140];
+	clouds = [[[CloudGenerator cons] set_speedmult:0.3] set_generate_speed:140];
 	backmountains = [BackgroundObject backgroundFromTex:[Resource get_tex:TEX_BG3_BACKMOUNTAINS] scrollspd_x:0.025 scrollspd_y:0.005];
 	castle = [BackgroundObject backgroundFromTex:[Resource get_tex:TEX_BG3_CASTLE] scrollspd_x:0.03 scrollspd_y:0.0075];
 	backhills = [BackgroundObject backgroundFromTex:[Resource get_tex:TEX_BG3_BACKHILLS] scrollspd_x:0.05 scrollspd_y:0.015];

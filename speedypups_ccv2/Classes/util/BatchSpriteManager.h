@@ -8,6 +8,13 @@
 -(int)get_render_ord;
 @end
 
-@interface BatchSpriteManager : CCNode
-+(BatchSpriteManager*)cons;
+@interface BatchSpriteManager : NSObject
++(BatchSpriteManager*)cons:(CCNode*)sur;
+
+-(void)addChild:(CCNode *)node;
+-(void)addChild:(CCNode *)node z:(NSInteger)z;
+-(void)removeChild:(CCNode *)child;
+-(void)removeChild:(CCNode *)node cleanup:(BOOL)cleanup;
+
+-(void)setColor:(ccColor3B)color;
 @end

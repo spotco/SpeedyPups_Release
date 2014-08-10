@@ -1,10 +1,11 @@
 #import "BackgroundObject.h"
 #import "cocos2d.h"
+#import "BatchSpriteManager.h" 
 
-@interface Cloud : CSF_CCSprite {
+@interface Cloud : CSF_CCSprite <BatchableSprite> {
 	float movspd;
 }
-+(Cloud*)cons_pt:(CGPoint)pt sc:(float)sc texkey:(NSString*)texkey scaley:(float)sy;
++(Cloud*)cons_pt:(CGPoint)pt sc:(float)sc scaley:(float)sy;
 -(void)update_dv:(CGPoint)dv;
 -(void)repool;
 @property(readwrite,assign) float scaley;
@@ -16,15 +17,12 @@
     float prevx,prevy;
     
     int nextct,alternator;
-	
-	NSString* texkey;
 	float scaley;
 	float speedmult;
 	int generatespeed;
     
 }
 +(CloudGenerator*)cons;
-+(CloudGenerator*)cons_texkey:(NSString*)key scaley:(float)sy;
 -(void)random_seed_clouds;
 -(CloudGenerator*)set_speedmult:(float)spd;
 -(CloudGenerator*)set_generate_speed:(int)spd;

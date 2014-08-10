@@ -1,6 +1,7 @@
 #import "Particle.h"
+#import "BatchSpriteManager.h"
 
-@interface StreamParticle : Particle {
+@interface StreamParticle : Particle <BatchableSprite>  {
     float ct;
 	float STREAMPARTICLE_CT_DEFAULT;
 	

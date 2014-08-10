@@ -4,9 +4,21 @@
 #import "FileCache.h"
 #import "ObjectPool.h"
 
+
 @implementation Cloud
 @synthesize scaley;
-+(Cloud*)cons_pt:(CGPoint)pt sc:(float)sc texkey:(NSString *)texkey scaley:(float)sy {
+
+-(BOOL)is_batched_sprite {
+	return YES;
+}
+-(NSString*)get_batch_sprite_tex_key {
+	return TEX_BG2_CLOUDS_SS;
+}
+-(int)get_render_ord {
+	return 0;
+}
+
++(Cloud*)cons_pt:(CGPoint)pt sc:(float)sc scaley:(float)sy {
 	int rnd = int_random(0, 5);
 	NSString *tarcld;
 	if (rnd == 0) {
@@ -26,8 +38,9 @@
 	//TEX_CLOUD_SS
 	//Cloud* b = [Cloud spriteWithTexture:[Resource get_tex:texkey] rect:[FileCache get_cgrect_from_plist:texkey idname:tarcld]];
 	Cloud *b = [ObjectPool depool:[Cloud class]];
-	[b setTexture:[Resource get_tex:texkey]];
-	[b setTextureRect:[FileCache get_cgrect_from_plist:texkey idname:tarcld]];
+	//[b setTexture:[Resource get_tex:TEX_BG2_CLOUDS_SS]];
+	//[b setTextureRect:[FileCache get_cgrect_from_plist:texkey idname:tarcld]];
+	[b setDisplayFrame:[CCSpriteFrame frameWithTexture:[Resource get_tex:TEX_BG2_CLOUDS_SS] rect:[FileCache get_cgrect_from_plist:TEX_BG2_CLOUDS_SS idname:tarcld]]];
 	
 	b.scaley = sy;
 	b.speedmult = 1;
@@ -45,13 +58,14 @@
 }
 -(void)repool {
 	if ([self class] == [Cloud class]) {
-		[self setTexture:[Resource get_tex:TEX_BLANK]];
 		[ObjectPool repool:self class:[Cloud class]];
 	}
 }
 @end
 
-@implementation CloudGenerator
+@implementation CloudGenerator {
+	BatchSpriteManager *cloud_holder;
+}
 
 +(CloudGenerator*)cons {
     CloudGenerator* c = [CloudGenerator node];
@@ -60,34 +74,18 @@
     return c;
 }
 
-+(CloudGenerator*)cons_texkey:(NSString *)key scaley:(float)sy {
-    CloudGenerator* c = [CloudGenerator node];
-    [c cons];
-	[c set_texkey:key];
-	[c set_scaley:sy];
-    [c random_seed_clouds];
-    return c;
-}
-
 -(void)setColor:(ccColor3B)color {
-    [super setColor:color];
-	for(CCSprite *sprite in [self children]) {
-        [sprite setColor:color];
-	}
+	[cloud_holder setColor:color];
 }
 
 -(void)cons {
     clouds = [[NSMutableArray alloc] init];
 	[self setScale:1];
     nextct = 0;
-	texkey = TEX_BG2_CLOUDS_SS;
-	scaley = 0.025;
+	scaley = 0.003;
 	speedmult = 1;
 	generatespeed = 140;
-}
-
--(void)set_texkey:(NSString *)key {
-	texkey = key;
+	cloud_holder = [BatchSpriteManager cons:self];
 }
 
 -(void)set_scaley:(float)sy {
@@ -129,7 +127,7 @@
     }
     [clouds removeObjectsInArray:toremove];
     for (Cloud* tar in toremove) {
-        [self removeChild:tar cleanup:YES];
+		[cloud_holder removeChild:tar cleanup:YES];
 		[tar repool];
 	}
 }
@@ -158,17 +156,17 @@
     }
 	pos.y /= CC_CONTENT_SCALE_FACTOR();
     
-    Cloud* n = [Cloud cons_pt:pos sc:scale texkey:texkey scaley:scaley];
+    Cloud* n = [Cloud cons_pt:pos sc:scale scaley:scaley];
     [n setColor:[self color]];
 	n.speedmult = speedmult;
     [clouds addObject:n];
-    [self addChild:n];
+	[cloud_holder addChild:n];
 	return n;
 }
 
 -(void)dealloc {
     for (Cloud* n in clouds) {
-        [self removeChild:n cleanup:YES];
+        [cloud_holder removeChild:n cleanup:YES];
 		[n repool];
     }
     [clouds removeAllObjects];

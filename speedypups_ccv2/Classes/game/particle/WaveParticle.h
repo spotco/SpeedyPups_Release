@@ -1,6 +1,7 @@
 #import "Particle.h"
+#import "BatchSpriteManager.h"
 
-@interface WaveParticle : Particle {
+@interface WaveParticle : Particle <BatchableSprite> {
     float theta,baseline;
     float vtheta;
     int ct;

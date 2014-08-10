@@ -23,8 +23,7 @@
 	backhills = [BackgroundObject backgroundFromTex:[Resource get_tex:TEX_BG_LAYER_3] scrollspd_x:0.025 scrollspd_y:0.005];
 	[Common scale_to_screen_expected:backhills];
 	
-	
-	clouds = [[[CloudGenerator cons_texkey:TEX_BG2_CLOUDS_SS scaley:0.003] set_speedmult:0.3] set_generate_speed:140];
+	clouds = [[[CloudGenerator cons] set_speedmult:0.3] set_generate_speed:140];
 	//[Common scale_to_screen_expected:clouds];
 	//[CloudGenerator cons];
 	fronthills = [BackgroundObject backgroundFromTex:[Resource get_tex:TEX_BG_LAYER_1] scrollspd_x:0.05 scrollspd_y:0.03];

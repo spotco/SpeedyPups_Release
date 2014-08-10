@@ -33,7 +33,7 @@
     [self addChild:starsbg z:ORD_STARS];
     [starsbg setOpacity:0];
     
-    clouds = [[[CloudGenerator cons_texkey:TEX_BG2_CLOUDS_SS scaley:0.003] set_speedmult:0.3] set_generate_speed:140];
+    clouds = [[[CloudGenerator cons] set_speedmult:0.3] set_generate_speed:140];
 	//[CloudGenerator cons];
     [self addChild:clouds z:ORD_CLOUDS];
     

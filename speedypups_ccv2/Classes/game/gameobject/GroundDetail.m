@@ -127,6 +127,7 @@ static NSArray* ABOVE;
     } else {
         do_render = NO;
     }
+	[self setVisible:do_render];
 }
 
 -(HitRect)get_hit_rect {

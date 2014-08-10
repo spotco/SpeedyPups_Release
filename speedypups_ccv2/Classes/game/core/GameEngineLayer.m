@@ -16,6 +16,7 @@
 #import "ScoreManager.h"
 #import "TrackingUtil.h"
 #import "BossRushAutoLevel.h"
+#import "BatchSpriteManager.h"
 
 @implementation GameEngineLayer {
 	BOOL first_update;
@@ -25,7 +26,7 @@
 	float _camera_y;
 	float _camera_z;
 	
-
+	BatchSpriteManager *particle_holder;
 }
 
 #define tBGLAYER 2
@@ -131,6 +132,8 @@
     if (particles_tba == NULL) {
         particles_tba = [[NSMutableArray alloc] init];
     }
+	
+	particle_holder = [BatchSpriteManager cons:self];
 	
 	_camera_x = 0;
 	_camera_y = 0;
@@ -664,8 +667,10 @@
 		}
         
     } else if (e.type == GEventType_UNPAUSE) {
-        current_mode = stored_mode;
-		[[self get_ui_layer] unpause_action];
+		if (current_mode == GameEngineLayerMode_PAUSED) {
+			current_mode = stored_mode;
+			[[self get_ui_layer] unpause_action];
+		}
         
     } else if (e.type == GEventType_PLAYER_DIE) {
         [stats increment:GEStat_DEATHS];
@@ -821,7 +826,8 @@
 	for (int i = (int)particles.count -1; i >= 0; i--) {
 		Particle *p = particles[i];
 		[p repool];
-		[self removeChild:p cleanup:YES];
+		[particle_holder removeChild:p cleanup:YES];
+		//[self removeChild:p cleanup:YES];
 	}
 	[particles removeAllObjects];
 	[self removeChild:player cleanup:YES];
@@ -922,7 +928,7 @@
 -(void)push_added_particles {
     for (Particle *p in particles_tba) {
         [particles addObject:p];
-        [self addChild:p z:[p get_render_ord]];
+        [particle_holder addChild:p z:[p get_render_ord]];
     }
     [particles_tba removeAllObjects];
 }
@@ -931,7 +937,7 @@
     for (Particle *i in particles) {
         [i update:self];
         if ([i should_remove]) {
-            [self removeChild:i cleanup:YES];
+			[particle_holder removeChild:i cleanup:YES];
             [toremove addObject:i];
 			[i repool];
         }

@@ -1,9 +1,11 @@
 #import "BatchSpriteManager.h"
 #import "cocos2d.h"
 #import "Resource.h"
+#import "GameEngineLayer.h"
 
 @implementation BatchSpriteManager {
 	NSMutableDictionary *tex_key_to_batch_node;
+	CCNode __unsafe_unretained *sur;
 }
 
 static NSMutableDictionary *_cached_sprite_frames;
@@ -17,13 +19,13 @@ static NSMutableDictionary *_cached_sprite_frames;
 	cache_sprite_frame(TEX_PARTICLES);
 }
 
-+(BatchSpriteManager*)cons {
-	return [BatchSpriteManager node];
++(BatchSpriteManager*)cons:(CCNode *)sur {
+	return [[[BatchSpriteManager alloc] init] cons_sur:sur];
 }
 
--(id)init {
-	self = [super init];
+-(id)cons_sur:(CCNode*)_sur {
 	tex_key_to_batch_node = [NSMutableDictionary dictionary];
+	sur = _sur;
 	return self;
 }
 
@@ -41,14 +43,14 @@ static NSMutableDictionary *_cached_sprite_frames;
 		[parent addChild:(CCSprite*)tar];
 		
 	} else {
-		[super addChild:node z:z];
+		[sur addChild:node z:z];
 	}
 }
 
 -(void)make_batchnode_texkey:(NSString*)texkey ord:(int)ord key:(NSString*)key {
 	CCSpriteBatchNode *neu = [CCSpriteBatchNode batchNodeWithTexture:[Resource get_tex:texkey]];
 	[tex_key_to_batch_node setObject:neu forKey:key];
-	[self addChild:neu z:ord];
+	[sur addChild:neu z:ord];
 }
 
 -(void)removeChild:(CCNode *)child { [self removeChild:child cleanup:NO]; }
@@ -61,9 +63,22 @@ static NSMutableDictionary *_cached_sprite_frames;
 		[parent removeChild:(CCSprite*)tar cleanup:YES];
 		
 	} else {
-		[super removeChild:node cleanup:cleanup];
+		[sur removeChild:node cleanup:cleanup];
 	}
 }
 
+-(void)setColor:(ccColor3B)color {
+	for (CCNode* i in [sur children]) {
+		if ([i respondsToSelector:@selector(setColor:)]) {
+			[(CCSprite*)i setColor:color];
+		}
+	}
+	for (NSString *key in [tex_key_to_batch_node keyEnumerator]) {
+		CCSpriteBatchNode *batchnode = tex_key_to_batch_node[key];
+		for (CCSprite *i in [batchnode children]) {
+			[i setColor:color];
+		}
+	}
+}
 
 @end

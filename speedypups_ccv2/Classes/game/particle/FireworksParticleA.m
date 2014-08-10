@@ -3,12 +3,23 @@
 #import "ObjectPool.h"
 
 @implementation SubFireworksParticleA
+
+-(BOOL)is_batched_sprite {
+	return YES;
+}
+-(NSString*)get_batch_sprite_tex_key {
+	return TEX_PARTICLES;
+}
+
 #define SUBCT 25.0
 +(SubFireworksParticleA*)cons_x:(float)x y:(float)y vx:(float)vx vy:(float)vy {
     //SubFireworksParticleA* p = [SubFireworksParticleA spriteWithTexture:[Resource get_tex:TEX_PARTICLES] rect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]];
     SubFireworksParticleA *p = [ObjectPool depool:[SubFireworksParticleA class]];
-	[p setTexture:[Resource get_tex:TEX_PARTICLES]];
-	[p setTextureRect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]];
+	//[p setTexture:[Resource get_tex:TEX_PARTICLES]];
+	//[p setTextureRect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]];
+	
+	[p setDisplayFrame:[CCSpriteFrame frameWithTexture:[Resource get_tex:TEX_PARTICLES] rect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]]];
+	
 	p.position = ccp(x,y);
     [p cons_vx:vx vy:vy];
     return p;
@@ -40,11 +51,21 @@
 
 @implementation FireworksParticleA
 
+-(BOOL)is_batched_sprite {
+	return YES;
+}
+-(NSString*)get_batch_sprite_tex_key {
+	return TEX_PARTICLES;
+}
+
 +(FireworksParticleA*)cons_x:(float)x y:(float)y vx:(float)vx vy:(float)vy ct:(int)ct {
     //FireworksParticleA* p = [FireworksParticleA spriteWithTexture:[Resource get_tex:TEX_PARTICLES] rect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]];
 	FireworksParticleA *p = [ObjectPool depool:[FireworksParticleA class]];
-	[p setTexture:[Resource get_tex:TEX_PARTICLES]];
-	[p setTextureRect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]];
+	//[p setTexture:[Resource get_tex:TEX_PARTICLES]];
+	//[p setTextureRect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]];
+	
+	[p setDisplayFrame:[CCSpriteFrame frameWithTexture:[Resource get_tex:TEX_PARTICLES] rect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]]];
+	
 	p.position = ccp(x,y);
     [p cons_vx:vx vy:vy ct:ct];
     return p;
@@ -108,6 +129,7 @@ static int _time_since_last_sfx_play = 0;
 @end
 
 @implementation FireworksGroundFlower
+
 #define FWGFCT 60.0
 +(FireworksGroundFlower*)cons_pt:(CGPoint)pt {
 	return [[FireworksGroundFlower spriteWithTexture:[Resource get_tex:TEX_PARTICLES] rect:[FileCache get_cgrect_from_plist:TEX_PARTICLES idname:@"grey_particle"]] cons_pt:pt];
