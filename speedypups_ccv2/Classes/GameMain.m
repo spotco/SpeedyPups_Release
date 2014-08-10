@@ -28,12 +28,11 @@
 /**
  (verify)
  gameenginelayer pause only if cur mode == gameplay
+ back unpause
+ capegame exit go to game over page (currently exits)
  **/
 
 /**
- capegame exit go to game over page (currently exits)
- 
- back unpause
  put in batchspritemanager
  **/
 

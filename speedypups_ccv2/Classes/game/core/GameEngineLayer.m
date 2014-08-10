@@ -24,6 +24,8 @@
 	float _camera_x;
 	float _camera_y;
 	float _camera_z;
+	
+
 }
 
 #define tBGLAYER 2
@@ -654,10 +656,16 @@
 			stored_mode = current_mode;
 			current_mode = GameEngineLayerMode_PAUSED;
 			[CCDirectorDisplayLink set_framemodct:1];
+			[[self get_ui_layer] pause_action];
+			
+		} else if (current_mode == GameEngineLayerMode_PAUSED) {
+			[GEventDispatcher push_event:[GEvent cons_type:GEventType_UNPAUSE]];
+			
 		}
         
     } else if (e.type == GEventType_UNPAUSE) {
         current_mode = stored_mode;
+		[[self get_ui_layer] unpause_action];
         
     } else if (e.type == GEventType_PLAYER_DIE) {
         [stats increment:GEStat_DEATHS];

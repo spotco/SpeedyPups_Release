@@ -142,17 +142,6 @@
 	}  else if (e.type == GEventType_IAP_FAIL || e.type == GEventType_IAP_SUCCESS) {
 		if (askcontinueui.visible) [askcontinueui dispatch_event:e];
 		
-	} else if (e.type == GEventType_PAUSE) {
-		[pauseui update_labels_lives:ingameui.lives_disp.string
-							   bones:ingameui.bones_disp.string
-								time:[NSString stringWithFormat:@"Time: %@",ingameui.time_disp.string]
-							   score:strf("Score \u00B7 %d",[game_engine_layer.score get_score])
-						   highscore:[ScoreManager get_world_highscore:game_engine_layer.world_mode.cur_world] < [game_engine_layer.score get_score]];
-		[self set_this_visible:pauseui];
-		
-	} else if (e.type == GEventType_UNPAUSE) {
-		[self set_this_visible:ingameui];
-		
 	}
 }
 
@@ -257,6 +246,19 @@
 
 -(void)unpause {
     [GEventDispatcher push_event:[GEvent cons_type:GEventType_UNPAUSE]];
+}
+
+-(void)pause_action {
+	[pauseui update_labels_lives:ingameui.lives_disp.string
+						   bones:ingameui.bones_disp.string
+							time:[NSString stringWithFormat:@"Time: %@",ingameui.time_disp.string]
+						   score:strf("Score \u00B7 %d",[game_engine_layer.score get_score])
+					   highscore:[ScoreManager get_world_highscore:game_engine_layer.world_mode.cur_world] < [game_engine_layer.score get_score]];
+	[self set_this_visible:pauseui];
+}
+
+-(void)unpause_action {
+	[self set_this_visible:ingameui];
 }
 
 -(void)exit_to_menu {

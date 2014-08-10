@@ -35,6 +35,8 @@
 	float multdisp_anim_t;
 	
 	float current_disp_score;
+	
+	BOOL exit_to_gameover_menu;
 }
 
 +(CapeGameUILayer*)cons_g:(CapeGameEngineLayer*)g;

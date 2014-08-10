@@ -28,6 +28,7 @@
 	cape_game = g;
 	last_mult = [[g get_main_game].score get_multiplier];
 	ingame_ui = [CCNode node];
+	exit_to_gameover_menu = NO;
 	
 	CCSprite *pauseicon = [CCSprite spriteWithTexture:[Resource get_tex:TEX_UI_INGAMEUI_SS] rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS idname:@"pauseicon"]];
 	CCSprite *pauseiconzoom = [CCSprite spriteWithTexture:[Resource get_tex:TEX_UI_INGAMEUI_SS] rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS idname:@"pauseicon"]];
@@ -292,7 +293,7 @@
     CCMenuItem *playbutton = [MenuCommon item_from:TEX_UI_INGAMEUI_SS rect:@"playbutton" tar:self sel:@selector(unpause)
                                                pos:[Common screen_pctwid:0.94 pcthei:0.9]];
     
-    CCMenuItem *backbutton = [MenuCommon item_from:TEX_UI_INGAMEUI_SS rect:@"homebutton" tar:self sel:@selector(exit_to_menu)
+    CCMenuItem *backbutton = [MenuCommon item_from:TEX_UI_INGAMEUI_SS rect:@"prevbutton" tar:self sel:@selector(exit_to_menu)
                                                pos:[Common screen_pctwid:0.3 pcthei:0.6]];
     
     CCMenu *pausebuttons = [CCMenu menuWithItems:retrybutton,playbutton,backbutton, nil];
@@ -301,7 +302,7 @@
     
 	[UICommon button:playbutton add_desctext:@"unpause" color:ccc3(255,255,255) fntsz:12];
 	[UICommon button:retrybutton add_desctext:@"retry" color:ccc3(255,255,255) fntsz:12];
-	[UICommon button:backbutton add_desctext:@"to menu" color:ccc3(255,255,255) fntsz:12];
+	[UICommon button:backbutton add_desctext:@"quit" color:ccc3(255,255,255) fntsz:12];
 	
 	update_timer = [NSTimer scheduledTimerWithTimeInterval: 1/30.0
 													target: self
@@ -385,6 +386,16 @@
 
 -(void)update_pause_menu {
 	[curtains update];
+	if (exit_to_gameover_menu) {
+		for (CCNode *i in pause_ui.children) if ([i class] != [MenuCurtains class]) [i setVisible:NO];
+		if ([Common fuzzyeq_a:curtains.bg_curtain.position.y b:curtains.bg_curtain_tpos.y delta:1]) {
+			cape_game.get_main_game.current_mode = GameEngineLayerMode_GAMEEND;
+			[update_timer invalidate];
+			[[CCDirector sharedDirector] popScene];
+			[cape_game.get_main_game.get_ui_layer to_gameover_menu];
+			return;
+		}
+	}
 }
 
 -(CCLabelBMFont*)bones_disp { return bones_disp; }
@@ -452,12 +463,10 @@
 }
 
 -(void)exit_to_menu {
-	cape_game.get_main_game.current_mode = GameEngineLayerMode_GAMEEND;
 	[AudioManager playsfx:SFX_MENU_DOWN];
 	[[CCDirector sharedDirector] resume];
-	[update_timer invalidate];
-	[[CCDirector sharedDirector] popScene];
-	[GEventDispatcher push_event:[GEvent cons_type:GEventType_QUIT]];
+	curtains.bg_curtain_tpos = ccp([Common SCREEN].width/2.0,0);
+	exit_to_gameover_menu = YES;
 }
 
 -(void)exit {

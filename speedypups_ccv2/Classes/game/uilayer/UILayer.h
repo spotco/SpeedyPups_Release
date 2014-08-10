@@ -39,6 +39,10 @@
 -(void)start_oneup_anim;
 -(void)pause;
 -(void)unpause;
+
+-(void)pause_action;
+-(void)unpause_action;
+
 -(void)itemslot_use;
 
 -(void)exit_to_menu;

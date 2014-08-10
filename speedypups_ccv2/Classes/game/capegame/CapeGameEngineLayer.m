@@ -155,7 +155,11 @@ static NSString *blank = @"";
 
 -(void)dispatch_event:(GEvent *)e {
 	if (e.type == GEventType_PAUSE) {
-		[[self get_ui] pause];
+		if (!pause) {
+			[[self get_ui] pause];
+		} else {
+			[GEventDispatcher push_event:[GEvent cons_type:GEventType_UNPAUSE]];
+		}
 	} else if (e.type == GEventType_UNPAUSE) {
 		[[self get_ui] unpause];
 	}
