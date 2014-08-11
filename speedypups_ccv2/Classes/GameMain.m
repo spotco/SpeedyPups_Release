@@ -13,7 +13,7 @@
 
 @implementation GameMain
 
-#define VERSION_STRING @"SpeedyPups RC2 - August 2014"
+#define VERSION_STRING @"SpeedyPups RC3 - August 2014"
 #define STARTING_LIVES 10
 
 #define TESTLEVEL @"capegame_launcher"
