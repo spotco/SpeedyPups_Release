@@ -1,5 +1,3 @@
-#ifdef ANDROID
-#else
 #import <Foundation/Foundation.h>
 #import <AdColony/AdColony.h>
 
@@ -10,4 +8,3 @@
 +(void)show_ad;
 
 @end
-#endif

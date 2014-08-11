@@ -52,10 +52,11 @@
 	[DataStore set_key:KEY_NTH_MENU int_value:0];
 	NSLog(@"UUID:%@ ADS:%d",[Common unique_id], [UserInventory get_ads_disabled]);
 	[TrackingUtil track_evt:TrackingEvt_Login];
+
+	[AdColony_integration preload];
 	
 #ifdef ANDROID
 #else
-	[AdColony_integration preload];
 	[SpeedyPupsIAP preload];
 #endif
 
@@ -150,6 +151,11 @@
 	[self run_scene:[MainMenuLayer scene]];
 	
 #ifdef ANDROID
+	NSLog(@"is_ads_loaded:%d nth_menu:%d",[AdColony_integration is_ads_loaded],[DataStore get_int_for_key:KEY_NTH_MENU]);
+	if ([AdColony_integration is_ads_loaded] && [DataStore get_int_for_key:KEY_NTH_MENU] > 0) {
+		NSLog(@"show ad");
+		[AdColony_integration show_ad];
+	}
 #else
 	if ([[iRate sharedInstance] shouldPromptForRating]) {
 		[[iRate sharedInstance] promptForRating];
