@@ -54,11 +54,7 @@
 	[TrackingUtil track_evt:TrackingEvt_Login];
 
 	[AdColony_integration preload];
-	
-#ifdef ANDROID
-#else
 	[SpeedyPupsIAP preload];
-#endif
 
 	LoadingScene *loader = [LoadingScene cons];
 	[self run_scene:loader];

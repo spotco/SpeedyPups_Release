@@ -1,5 +1,3 @@
-#ifdef ANDROID
-#else
 #import "IAPHelper.h"
 #import <StoreKit/StoreKit.h>
 #import "SpeedyPupsIAP.h"
@@ -46,6 +44,11 @@
 -(void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
     NSLog(@"IAP Product list loaded");
     _productsRequest = nil;
+	
+	for (NSString *bad in response.invalidProductIdentifiers) {
+		NSLog(@"INVALID IAP IDENTIFIER(%@)",bad);
+	}
+	
     NSArray * skProducts = response.products;
     for (SKProduct * skProduct in skProducts) {
         NSLog(@"Found product: %@ %@ %0.2f",
@@ -131,4 +134,3 @@
 }
 
 @end
-#endif

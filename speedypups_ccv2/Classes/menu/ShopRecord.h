@@ -44,7 +44,7 @@ typedef enum {
 @end
 
 @interface IAPItemInfo : ItemInfo
-@property(readwrite,assign) NSDecimalNumber *iap_price;
+@property(readwrite,assign) NSString *iap_price;
 @property(readwrite,assign) NSString *iap_identifier;
 +(IAPItemInfo*)cons_tex:(NSString*)texn
 			  rectid:(NSString*)rectid

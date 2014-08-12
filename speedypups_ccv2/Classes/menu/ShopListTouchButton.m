@@ -66,7 +66,7 @@
 	
 	if ([info class] == [IAPItemInfo class]) {
 		[name_disp set_label:info.short_name];
-		[price_disp set_label:((IAPItemInfo*)info).iap_price.stringValue];
+		[price_disp set_label:((IAPItemInfo*)info).iap_price];
 		[disp_sprite setTexture:info.tex];
 		[disp_sprite setTextureRect:info.rect];
 		

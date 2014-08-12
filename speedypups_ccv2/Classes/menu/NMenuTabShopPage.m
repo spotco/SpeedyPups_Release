@@ -267,7 +267,7 @@
 	if ([tar.sto_info class] == [IAPItemInfo class]) {
 		[itemprice_x setVisible:NO];
 		[itemprice_icon setTextureRect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"money_icon"]];
-		itemprice.string = ((IAPItemInfo*)tar.sto_info).iap_price.stringValue;
+		itemprice.string = ((IAPItemInfo*)tar.sto_info).iap_price;
 		[itemprice setPosition:[Common pct_of_obj:tabbedpane pctx:0.51 pcty:0.385]];
 		
 	} else {

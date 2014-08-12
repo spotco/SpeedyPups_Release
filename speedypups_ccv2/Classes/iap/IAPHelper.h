@@ -1,5 +1,3 @@
-#ifdef ANDROID
-#else
 #import <StoreKit/StoreKit.h>
 UIKIT_EXTERN NSString *const IAPHelperProductPurchasedNotification;
 typedef void (^RequestProductsCompletionHandler)(BOOL success, NSArray * products);
@@ -13,4 +11,3 @@ typedef void (^RequestProductsCompletionHandler)(BOOL success, NSArray * product
 - (BOOL)productPurchased:(NSString *)productIdentifier;
 
 @end
-#endif

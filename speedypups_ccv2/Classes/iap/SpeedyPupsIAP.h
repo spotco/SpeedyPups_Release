@@ -1,8 +1,5 @@
-#ifdef ANDROID
-#else
 #import <Foundation/Foundation.h>
 #import "IAPHelper.h"
-
 
 #define SPEEDYPUPS_AD_FREE @"speedypups_ccv2_adfree"
 #define SPEEDYPUPS_10_COINS @"speedypups_ccv2_10_coins"
@@ -21,4 +18,3 @@
 @property(readwrite,strong) NSDecimalNumber *price;
 @property(readwrite,strong) SKProduct *product;
 @end
-#endif

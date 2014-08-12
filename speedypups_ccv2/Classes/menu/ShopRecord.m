@@ -209,8 +209,6 @@
 }
 
 +(void)fill_realmoney_tab:(NSMutableArray*)a {
-#ifdef ANDROID
-#else
 	for (IAPObject *o in [SpeedyPupsIAP get_all_loaded_iaps]) {
 		NSString *rectid = @"coin";
 		if (streq(o.identifier, SPEEDYPUPS_AD_FREE)) {
@@ -229,8 +227,12 @@
 										  desc:o.desc
 										 price:0
 										   val:o.identifier];
-		
-		i.iap_price = o.price;
+
+#ifdef ANDROID
+		i.iap_price = @"1.00";
+#else
+		i.iap_price = @"0.99";
+#endif
 		i.iap_identifier = o.identifier;
 		
 		if ([o.name rangeOfString:@" "].length > 0) {
@@ -238,7 +240,6 @@
 		}
 		[a insertObject:i atIndex:0];
 	}
-#endif
 }
 
 +(NSString*)gameitem_to_texid:(GameItem)i upgrade:(BOOL)upgrade {
@@ -265,12 +266,8 @@
 	if (price > [UserInventory get_current_coins]) return NO;
 	[TrackingUtil track_evt:TrackingEvt_ShopBuy val1:val];
 	
-#ifdef ANDROID
-	if (0) {
-#else
 	if ([[SpeedyPupsIAP get_all_requested_iaps] containsObject:val]) {
 		[[IAPHelper sharedInstance] buyProduct:[SpeedyPupsIAP product_for_key:val]];
-#endif
 		
 	} else if (streq(val, SHOP_ITEM_MAGNET)) {
 		if ([UserInventory get_item_owned:Item_Magnet]) return NO;

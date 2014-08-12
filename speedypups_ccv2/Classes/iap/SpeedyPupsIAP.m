@@ -1,5 +1,3 @@
-#ifdef ANDROID
-#else
 #import "SpeedyPupsIAP.h"
 #import "DataStore.h"
 #import "Common.h"
@@ -20,6 +18,7 @@ static NSMutableArray *iap_objects;
 +(void)preload {
 	iap_objects = [NSMutableArray array];
 	[[IAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
+		NSLog(@"BEGIN IAP");
 		for (SKProduct *i in products) {
 			IAPObject *o = [[IAPObject alloc] init];
 			o.identifier = i.productIdentifier;
@@ -28,6 +27,8 @@ static NSMutableArray *iap_objects;
 			o.price = i.price;
 			o.product = i;
 			[iap_objects addObject:o];
+			
+			NSLog(@"IAP %@,%@,%@",o.identifier,o.name,o.desc);
 		}
 	}];
 }
@@ -55,7 +56,11 @@ static NSMutableArray *iap_objects;
 }
 
 +(NSSet*)get_all_requested_iaps {
+#ifdef ANDROID
 	return [NSSet setWithObjects:SPEEDYPUPS_AD_FREE, SPEEDYPUPS_10_COINS,nil];
+#else
+	return [NSSet setWithObjects:SPEEDYPUPS_AD_FREE, SPEEDYPUPS_10_COINS,nil];
+#endif
 }
 
 +(NSArray*)get_all_loaded_iaps {
@@ -63,4 +68,3 @@ static NSMutableArray *iap_objects;
 }
 
 @end
-#endif
