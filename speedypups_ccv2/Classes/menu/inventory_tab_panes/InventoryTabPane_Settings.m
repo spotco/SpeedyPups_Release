@@ -13,6 +13,7 @@
 #import "DailyLoginPrizeManager.h"
 #import "UserInventory.h"
 #import "TrackingUtil.h"
+#import "IAPHelper.h"
 
 @implementation InventoryTabPane_Settings {
 	CCLabelTTF *version;
@@ -23,6 +24,7 @@
 }
 -(id)cons:(CCSprite*)parent {
 	touches = [NSMutableArray array];
+	[GEventDispatcher add_listener:self];
 	
 	PollingButton *playbgmb = [PollingButton cons_pt:CGPointZero
 											  texkey:TEX_NMENU_ITEMS
@@ -73,48 +75,34 @@
 	[self addChild:[MenuCommon cons_descaler_for:replay_intro pos:[Common pct_of_obj:parent pctx:0.16 pcty:0.25]]];
 	[touches addObject:replay_intro];
 	
-
-	if ([GameMain GET_DEBUG_UI]) {
-		TouchButton *next_day = [AnimatedTouchButton cons_pt:CGPointZero
-															 tex:[Resource get_tex:TEX_NMENU_ITEMS]
-														 texrect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"nmenu_shoptab"]
-															  cb:[Common cons_callback:self sel:@selector(none)]];
-		[next_day addChild:[[Common cons_label_pos:[Common pct_of_obj:next_day pctx:0.5 pcty:0.5]
-												color:ccc3(0,0,0)
-											 fontsize:13
-												  str:@"(DBG) None"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
-		[self addChild:[MenuCommon cons_descaler_for:next_day pos:[Common pct_of_obj:parent pctx:0.64 pcty:0.25]]];
-		[touches addObject:next_day];
-		
-		
-		TouchButton *unlock_all = [AnimatedTouchButton cons_pt:CGPointZero
+	TouchButton *restore_purchases = [AnimatedTouchButton cons_pt:CGPointZero
 														 tex:[Resource get_tex:TEX_NMENU_ITEMS]
 													 texrect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"nmenu_shoptab"]
-														  cb:[Common cons_callback:self sel:@selector(debug_unlock_all)]];
-		[unlock_all addChild:[[Common cons_label_pos:[Common pct_of_obj:next_day pctx:0.5 pcty:0.5]
-											color:ccc3(0,0,0)
-										 fontsize:13
-											  str:@"(DBG) Unlock All"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
-		[self addChild:[MenuCommon cons_descaler_for:unlock_all pos:[Common pct_of_obj:parent pctx:0.88 pcty:0.25]]];
-		[touches addObject:unlock_all];
-		
-	} else {
-		TouchButton *spotcos_website = [AnimatedTouchButton cons_pt:CGPointZero
-																tex:[Resource get_tex:TEX_NMENU_ITEMS]
-															texrect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"tshop_itemdisppane"]
-																 cb:[Common cons_callback:self sel:@selector(open_spotcos_website)]];
-		[self addChild:[MenuCommon cons_descaler_for:spotcos_website pos:[Common pct_of_obj:parent pctx:0.7 pcty:0.25]]];
-		[touches addObject:spotcos_website];
-		CCSprite *goober = [CCSprite node];
-		[goober runAction:[Common cons_anim:@[@"goober1",@"goober2"] speed:0.3 tex_key:TEX_SPOTCOS_LOGO_SS]];
-		[goober setPosition:[Common pct_of_obj:spotcos_website pctx:0.5 pcty:0.65]];
-		[goober setScale:0.5];
-		[spotcos_website addChild:goober];
-		CCSprite *spotcos_logo = [CCSprite spriteWithTexture:[Resource get_tex:TEX_SPOTCOS_LOGO_SS] rect:[FileCache get_cgrect_from_plist:TEX_SPOTCOS_LOGO_SS idname:@"spotcos"]];
-		[spotcos_logo setScale:0.3];
-		[spotcos_logo setPosition:[Common pct_of_obj:spotcos_website pctx:0.5 pcty:0.05]];
-		[spotcos_website addChild:spotcos_logo];
-	}
+														  cb:[Common cons_callback:self sel:@selector(restore_purchases)]];
+	[restore_purchases addChild:[[Common cons_label_pos:[Common pct_of_obj:replay_intro pctx:0.5 pcty:0.5]
+											 color:ccc3(0,0,0)
+										  fontsize:10
+											   str:@"Restore Purchases"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
+	[self addChild:[MenuCommon cons_descaler_for:restore_purchases pos:[Common pct_of_obj:parent pctx:0.64 pcty:0.25]]];
+	[touches addObject:restore_purchases];
+	
+
+	TouchButton *spotcos_website = [AnimatedTouchButton cons_pt:CGPointZero
+															tex:[Resource get_tex:TEX_NMENU_ITEMS]
+														texrect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"tshop_itemdisppane"]
+															 cb:[Common cons_callback:self sel:@selector(open_spotcos_website)]];
+	[self addChild:[MenuCommon cons_descaler_for:spotcos_website pos:[Common pct_of_obj:parent pctx:0.875 pcty:0.2]]];
+	[touches addObject:spotcos_website];
+	CCSprite *goober = [CCSprite node];
+	[goober runAction:[Common cons_anim:@[@"goober1",@"goober2"] speed:0.3 tex_key:TEX_SPOTCOS_LOGO_SS]];
+	[goober setPosition:[Common pct_of_obj:spotcos_website pctx:0.5 pcty:0.65]];
+	[goober setScale:0.5];
+	[spotcos_website addChild:goober];
+	CCSprite *spotcos_logo = [CCSprite spriteWithTexture:[Resource get_tex:TEX_SPOTCOS_LOGO_SS] rect:[FileCache get_cgrect_from_plist:TEX_SPOTCOS_LOGO_SS idname:@"spotcos"]];
+	[spotcos_logo setScale:0.3];
+	[spotcos_logo setPosition:[Common pct_of_obj:spotcos_website pctx:0.5 pcty:0.05]];
+	[spotcos_website addChild:spotcos_logo];
+	
 	
 	
 	NSString *maxstr = @"000000000000000000000000000000000000\n000000000000000000000000000000000000\n000000000000000000000000000000000000\n000000000000000000000000000000000000\n000000000000000000000000000000000000\n000000000000000000000000000000000000\n";
@@ -137,7 +125,18 @@
 	return self;
 }
 
+-(void)dispatch_event:(GEvent *)e {
+	if (e.type == GEventType_IAP_SUCCESS) {
+		[self update_version_string];
+		
+	}
+}
+
 -(void)none {
+}
+
+-(void)restore_purchases {
+	[[IAPHelper sharedInstance] restoreCompletedTransactions];
 }
 
 -(void)open_spotcos_website {
@@ -146,7 +145,10 @@
 
 -(void)set_pane_open:(BOOL)t {
 	[self setVisible:t];
-	
+	[self update_version_string];
+}
+
+-(void)update_version_string {
 	[version setString:[NSString stringWithFormat:
 		@"%@\n%@\n%@\n\nUUID:\n%@ ",
 		[GameMain GET_VERSION_STRING],
@@ -154,7 +156,6 @@
 		[UserInventory get_ads_disabled]?@"Thanks for buying Ad Free!":@"Unlock Ad Free at the store for $0.99!",
 		[Common unique_id]
 	]];
-	
 }
 
 -(void)toggle_play_bgm {

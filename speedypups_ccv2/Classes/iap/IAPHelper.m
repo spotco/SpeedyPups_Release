@@ -34,6 +34,10 @@
     return self;
 }
 
+-(void)restoreCompletedTransactions {
+	[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+}
+
 -(void)requestProductsWithCompletionHandler:(RequestProductsCompletionHandler)completionHandler {
     _completionHandler = [completionHandler copy];
     _productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:_productIdentifiers];
@@ -87,20 +91,33 @@
 }
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions {
-    for (SKPaymentTransaction * transaction in transactions) {
-        switch (transaction.transactionState) {
-            case SKPaymentTransactionStatePurchased:
-                [self completeTransaction:transaction];
-                break;
-            case SKPaymentTransactionStateFailed:
-                [self failedTransaction:transaction];
-                break;
-            case SKPaymentTransactionStateRestored:
-                [self restoreTransaction:transaction];
-            default:
-                break;
-        }
+    NSLog(@"IAP::paymentqueue update");
+	for (SKPaymentTransaction * transaction in transactions) {
+		
+		if (transaction.transactionState == SKPaymentTransactionStatePurchased) {
+			[self completeTransaction:transaction];
+			
+		} else if (transaction.transactionState == SKPaymentTransactionStateFailed) {
+			[self failedTransaction:transaction];
+			
+		} else if (transaction.transactionState == SKPaymentTransactionStateRestored) {
+			[self restoreTransaction:transaction];
+			
+		} else {
+			NSLog(@"paymentQueue update error(%d)",transaction.transactionState);
+		}
     };
+}
+
+-(void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error {
+	if (error.code != SKErrorPaymentCancelled) {
+		[[[UIAlertView alloc] initWithTitle:@"No purchases to restore." message:@"Buy SpeedyPups AdFree from the store!" delegate:NULL cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+	}
+}
+
+
+-(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue {
+	if (queue.transactions.count == 0) [[[UIAlertView alloc] initWithTitle:@"No purchases to restore." message:@"Buy SpeedyPups AdFree from the store!" delegate:NULL cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 -(void)completeTransaction:(SKPaymentTransaction *)transaction {
@@ -114,13 +131,15 @@
     NSLog(@"IAP RESTORE FOR (%@)",transaction.payment.productIdentifier);
     [self provideContentForProductIdentifier:transaction.originalTransaction.payment.productIdentifier];
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+	
+	[GEventDispatcher push_event:[GEvent cons_type:GEventType_IAP_SUCCESS]];
 }
 
 -(void)failedTransaction:(SKPaymentTransaction *)transaction {
     NSLog(@"IAP FAIL FOR (%@)",transaction.payment.productIdentifier);
 	
+	NSLog(@"ERROR: %@", transaction.error.description);	
     if (transaction.error.code != SKErrorPaymentCancelled) {
-        NSLog(@"ERROR: %@", transaction.error.description);
 		[GEventDispatcher push_event:[[GEvent cons_type:GEventType_IAP_FAIL] add_i1:1 i2:0]];
     } else {
 		[GEventDispatcher push_event:[GEvent cons_type:GEventType_IAP_FAIL]];

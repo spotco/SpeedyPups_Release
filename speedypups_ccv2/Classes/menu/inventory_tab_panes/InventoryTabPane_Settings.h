@@ -1,6 +1,6 @@
 #import "MainMenuInventoryLayer.h"
 
-@interface InventoryTabPane_Settings : InventoryTabPane {
+@interface InventoryTabPane_Settings : InventoryTabPane <GEventListener> {
 	NSMutableArray *touches;
 }
 

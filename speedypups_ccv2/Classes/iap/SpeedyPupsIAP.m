@@ -35,11 +35,17 @@ static NSMutableArray *iap_objects;
 
 +(void)content_for_key:(NSString*)key {
 	if (streq(key, SPEEDYPUPS_AD_FREE)) {
-		if ([DataStore get_int_for_key:IAP_DATASTORE_KEY(SPEEDYPUPS_AD_FREE)] == 0) {
-			[UserInventory add_coins:10];
+		if ([UserInventory get_ads_disabled]) {
+			[[[UIAlertView alloc] initWithTitle:@"Purchase Already Active!" message:@"Thanks for buying SpeedyPups AdFree!" delegate:NULL cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+			
+		} else {
+			if ([DataStore get_int_for_key:IAP_DATASTORE_KEY(SPEEDYPUPS_AD_FREE)] == 0) {
+				[UserInventory add_coins:10];
+				[[[UIAlertView alloc] initWithTitle:@"AdFree Enabled!" message:@"Thanks for buying SpeedyPups AdFree!" delegate:NULL cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+			}
+			[UserInventory set_ads_disabled:YES];
+			[DataStore set_key:IAP_DATASTORE_KEY(SPEEDYPUPS_AD_FREE) int_value:1];
 		}
-		[UserInventory set_ads_disabled:YES];
-		[DataStore set_key:IAP_DATASTORE_KEY(SPEEDYPUPS_AD_FREE) int_value:1];
 		
 	} else if (streq(key, SPEEDYPUPS_10_COINS)) {
 		[UserInventory add_coins:10];

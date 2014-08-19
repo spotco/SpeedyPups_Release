@@ -1,8 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "IAPHelper.h"
 
-#define SPEEDYPUPS_AD_FREE @"speedypups_ccv2_adfree"
+#ifdef ANDROID
+#define SPEEDYPUPS_AD_FREE @"speedypups_ccv2_adfree2"
 #define SPEEDYPUPS_10_COINS @"speedypups_ccv2_10_coins"
+#else
+#define SPEEDYPUPS_AD_FREE @"speedypups_ccv2_adfree2"
+#define SPEEDYPUPS_10_COINS @"speedypups_ccv2_10_coins"
+#endif
 
 @interface SpeedyPupsIAP : NSObject
 +(void)preload;

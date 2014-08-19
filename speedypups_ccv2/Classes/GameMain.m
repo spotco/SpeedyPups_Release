@@ -13,7 +13,7 @@
 
 @implementation GameMain
 
-#define VERSION_STRING @"SpeedyPups RC3 - August 2014"
+#define VERSION_STRING @"SpeedyPups RC4 - August 2014"
 #define STARTING_LIVES 10
 
 #define TESTLEVEL @"capegame_launcher"
@@ -26,7 +26,6 @@
 #define DRAW_HITBOX		 0
 
 /**
- apportable android ads and IAPs
  **/
 
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
