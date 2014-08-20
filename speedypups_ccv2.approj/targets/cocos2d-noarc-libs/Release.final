@@ -6,6 +6,7 @@
             "opengles2", 
             "landscape"
         ], 
+        "GOOGLEIABV3": true, 
         "ICON": "./speedypups_ccv2/Resources/icons/Icon-60@2x.png", 
         "ICU_CONFIG": "normal"
     }, 

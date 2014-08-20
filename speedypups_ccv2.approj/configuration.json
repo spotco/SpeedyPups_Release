@@ -27,6 +27,7 @@
 
     // If you're using Google Play Game Services, put in the client id (a numerical value)
     // "GOOGLE_PLAY_CLIENT_ID": "1234567"
+    "GOOGLEIABV3":true,
 
     // A list of features needed on the target platform.
     // Common features include:

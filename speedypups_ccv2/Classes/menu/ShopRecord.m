@@ -217,8 +217,6 @@
 		
 		if ([UserInventory get_ads_disabled]) {
 			if (streq(o.identifier, SPEEDYPUPS_AD_FREE)) continue;
-		} else {
-			if (!streq(o.identifier, SPEEDYPUPS_AD_FREE)) continue;
 		}
 		
 		IAPItemInfo *i = [IAPItemInfo cons_tex:TEX_NMENU_ITEMS

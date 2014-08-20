@@ -3,6 +3,14 @@
 #import "SpeedyPupsIAP.h"
 #import "GEventDispatcher.h"
 
+#ifdef ANDROID
+@interface SKPaymentQueue(Apportable)
+- (BOOL)consumePurchase:(SKPaymentTransaction *)transaction;
+@end
+#endif
+
+//https://github.com/apportable/IABV3Example/blob/master/Spin/SpinIAPView.m
+
 //http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial
 @interface IAPHelper () <SKProductsRequestDelegate, SKPaymentTransactionObserver>
 @end
@@ -121,24 +129,31 @@
 }
 
 -(void)completeTransaction:(SKPaymentTransaction *)transaction {
-    NSLog(@"IAP SUCCESS FOR (%@)",transaction.payment.productIdentifier);
+    NSLog(@"IAP COMPLETE FOR (%@)",transaction.payment.productIdentifier);
     [GEventDispatcher push_event:[GEvent cons_type:GEventType_IAP_SUCCESS]];
 	[self provideContentForProductIdentifier:transaction.payment.productIdentifier];
+	
+#ifdef ANDROID
+	[[SKPaymentQueue defaultQueue] consumePurchase:transaction];
+#endif
+
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
 -(void)restoreTransaction:(SKPaymentTransaction *)transaction {
-    NSLog(@"IAP RESTORE FOR (%@)",transaction.payment.productIdentifier);
+    NSLog(@"IAP::Restore FOR (%@)",transaction.payment.productIdentifier);
     [self provideContentForProductIdentifier:transaction.originalTransaction.payment.productIdentifier];
+	
+#ifdef ANDROID
+	[[SKPaymentQueue defaultQueue] consumePurchase:transaction];
+#endif
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 	
 	[GEventDispatcher push_event:[GEvent cons_type:GEventType_IAP_SUCCESS]];
 }
 
 -(void)failedTransaction:(SKPaymentTransaction *)transaction {
-    NSLog(@"IAP FAIL FOR (%@)",transaction.payment.productIdentifier);
-	
-	NSLog(@"ERROR: %@", transaction.error.description);	
+    NSLog(@"IAP::FAILED FOR (%@) (%@)",transaction.payment.productIdentifier,transaction.error.description);
     if (transaction.error.code != SKErrorPaymentCancelled) {
 		[GEventDispatcher push_event:[[GEvent cons_type:GEventType_IAP_FAIL] add_i1:1 i2:0]];
     } else {
@@ -148,7 +163,7 @@
 }
 
 -(void)provideContentForProductIdentifier:(NSString*)pid {
-	NSLog(@"content for %@",pid);
+	NSLog(@"IAP::provideContent for %@",pid);
 	[SpeedyPupsIAP content_for_key:pid];
 }
 
