@@ -52,6 +52,9 @@ static BGTimeManagerMode bgtime_curmode;
 		
 	} else if (bgtime_curmode == MODE_NIGHT) {
 		[GEventDispatcher push_event:[[GEvent cons_type:GEventType_DAY_NIGHT_UPDATE] add_i1:0 i2:0]];
+#ifndef ANDROID
+		[AudioManager transition_mode2];
+#endif
 		
 	} else if (bgtime_curmode == MODE_DAY_TO_NIGHT) {
         int pctval = (((float)bgtime_delayct)/TRANSITION_LENGTH)*100;
@@ -100,6 +103,11 @@ static BGTimeManagerMode bgtime_curmode;
         [sun setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:SUN_Y_PCT-((100-fpctval)/100.0)]];
         [moon setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:SUN_Y_PCT+(fpctval/100.0)]];
 
+#ifndef ANDROID
+		if (bgtime_delayct == TRANSITION_LENGTH/2) {
+			[AudioManager transition_mode2];
+		}
+#endif
 		
         if (bgtime_delayct <= 0) {
             bgtime_curmode = MODE_NIGHT;
@@ -126,6 +134,12 @@ static BGTimeManagerMode bgtime_curmode;
 		[moon setVisible:YES];
         
         cons_daynight_event(pctval);
+		
+#ifndef ANDROID
+		if (bgtime_delayct == TRANSITION_LENGTH/2) {
+            [AudioManager transition_mode1];
+		}
+#endif
 		
 		[sun setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:((fpctval)/100.0)*SUN_Y_PCT]];
         [moon setPosition:[Common screen_pctwid:SUN_X_PCT pcthei:SUN_Y_PCT+(fpctval/100.0)]];

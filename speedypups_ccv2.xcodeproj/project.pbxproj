@@ -1982,8 +1982,6 @@
 		7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		7E8B4EC4198EFE8F00E9CB45 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		7E8B4EC5198EFE8F00E9CB45 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
-		7E8B4F23198F052300E9CB45 /* libFinch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFinch.a; path = "Finch-master/build/Debug-iphoneos/libFinch.a"; sourceTree = "<group>"; };
-		7E8B4F25198F057C00E9CB45 /* libFinch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFinch.a; path = "Finch-master/build/Debug-iphoneos/libFinch.a"; sourceTree = "<group>"; };
 		7E8B4F56198F0BC200E9CB45 /* FIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIError.h; sourceTree = "<group>"; };
 		7E8B4F57198F0BC200E9CB45 /* FIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIError.m; sourceTree = "<group>"; };
 		7E8B4F58198F0BC200E9CB45 /* FISampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISampleBuffer.h; sourceTree = "<group>"; };
@@ -2162,8 +2160,6 @@
 			isa = PBXGroup;
 			children = (
 				7E8B4F88198F439500E9CB45 /* libFacebookSDK.a */,
-				7E8B4F25198F057C00E9CB45 /* libFinch.a */,
-				7E8B4F23198F052300E9CB45 /* libFinch.a */,
 				7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */,
 				7E637F09196E3B910064B085 /* Twitter.framework */,
 				7E637F07196E3B8B0064B085 /* SystemConfiguration.framework */,
@@ -5217,7 +5213,7 @@
 					"ApportableFacebookSDK-master/include/FacebookSDK",
 				);
 				INFOPLIST_FILE = speedypups_ccv2/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finch-master/build/Debug-iphoneos",
@@ -5229,7 +5225,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SpeedyPups;
-				PROVISIONING_PROFILE = "91614C7E-4BEC-444C-8913-D59EBB4B9F87";
+				PROVISIONING_PROFILE = "d113cdca-5119-45e7-98c9-7e18202b93f7";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -5256,7 +5252,7 @@
 					"ApportableFacebookSDK-master/include/FacebookSDK",
 				);
 				INFOPLIST_FILE = speedypups_ccv2/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finch-master/build/Debug-iphoneos",
@@ -5268,7 +5264,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SpeedyPups;
-				PROVISIONING_PROFILE = "91614C7E-4BEC-444C-8913-D59EBB4B9F87";
+				PROVISIONING_PROFILE = "d113cdca-5119-45e7-98c9-7e18202b93f7";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -5305,7 +5301,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5339,7 +5335,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -127,4 +127,9 @@ typedef enum {
 
 +(void)play_invincible_for:(int)t;
 
+#ifndef ANDROID
++(void)transition_mode1;
++(void)transition_mode2;
+#endif
+
 @end

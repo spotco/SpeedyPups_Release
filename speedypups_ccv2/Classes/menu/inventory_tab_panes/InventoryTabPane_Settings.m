@@ -75,6 +75,7 @@
 	[self addChild:[MenuCommon cons_descaler_for:replay_intro pos:[Common pct_of_obj:parent pctx:0.16 pcty:0.25]]];
 	[touches addObject:replay_intro];
 	
+#ifndef ANDROID
 	TouchButton *restore_purchases = [AnimatedTouchButton cons_pt:CGPointZero
 														 tex:[Resource get_tex:TEX_NMENU_ITEMS]
 													 texrect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"nmenu_shoptab"]
@@ -83,9 +84,10 @@
 											 color:ccc3(0,0,0)
 										  fontsize:10
 											   str:@"Restore Purchases"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
+	
 	[self addChild:[MenuCommon cons_descaler_for:restore_purchases pos:[Common pct_of_obj:parent pctx:0.64 pcty:0.25]]];
 	[touches addObject:restore_purchases];
-	
+#endif
 
 	TouchButton *spotcos_website = [AnimatedTouchButton cons_pt:CGPointZero
 															tex:[Resource get_tex:TEX_NMENU_ITEMS]
