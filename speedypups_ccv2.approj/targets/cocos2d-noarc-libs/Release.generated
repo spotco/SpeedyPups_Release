@@ -1,7 +1,7 @@
 {
     "assets": [
         {
-            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpCN0MiY/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
+            "asset": "../../../../var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmphssEFL/TARGET_BUILD_DIR/libcocos2d-noarc-libs.a", 
             "target": "../../../../../../../../Users/spotco/Documents/speedypups_ccv2_android/normal"
         }
     ], 
@@ -9,7 +9,7 @@
     "defines": {
         "NDEBUG": 1, 
         "NS_BLOCK_ASSERTIONS": 1, 
-        "__IPHONE_OS_VERSION_MIN_REQUIRED": 70100
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 50100
     }, 
     "deps": [
         "UIKit"
@@ -2062,7 +2062,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpCN0MiY/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmphssEFL/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -2070,11 +2070,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpCN0MiY/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmphssEFL/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmpCN0MiY/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/qr/_rdz4vb12s5194dx485c269h0000gn/T/tmphssEFL/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
