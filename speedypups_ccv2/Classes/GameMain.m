@@ -23,6 +23,9 @@
 #define DEBUG_UI		 0
 #define IMMEDIATELY_BOSS 0
 #define BOSS_1_HEALTH	 0
+#define ALL_CHALLENGES	 0
+#define ALL_FREERUN		 0
+#define ALL_CHARACTER	 0
 #define SET_CONSTANT_DT  0
 #define DRAW_HITBOX		 0
 
@@ -62,6 +65,28 @@
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_menu)]];
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_ccv2_test_scene)]];
 	
+	if (ALL_FREERUN) {
+		[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD1];
+		[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_LAB1];
+		[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD2];
+		[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_LAB2];
+		[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD3];
+		[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_LAB3];
+	}
+	
+	if (ALL_CHARACTER) {
+		[UserInventory unlock_character:TEX_DOG_RUN_2];
+		[UserInventory unlock_character:TEX_DOG_RUN_3];
+		[UserInventory unlock_character:TEX_DOG_RUN_4];
+		[UserInventory unlock_character:TEX_DOG_RUN_5];
+		[UserInventory unlock_character:TEX_DOG_RUN_6];
+		[UserInventory unlock_character:TEX_DOG_RUN_7];
+	}
+	
+	if (ALL_CHALLENGES) {
+		[ChallengeRecord set_beaten_challenge:29 to:YES];
+	}
+	
 	//[FreeRunStartAtManager set_starting_loc:FreeRunStartAt_LAB3];
 	
 	//[Player set_character:TEX_DOG_RUN_1];
@@ -90,29 +115,12 @@
 	}
 	*/
 	
-	/*
-	[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD1];
-	[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_LAB1];
-	[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD2];
-	[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_LAB2];
-	[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_WORLD3];
-	[FreeRunStartAtManager set_can_start_at:FreeRunStartAt_LAB3];
-	*/
-	 
-	/*
-	[UserInventory unlock_character:TEX_DOG_RUN_2];
-	[UserInventory unlock_character:TEX_DOG_RUN_3];
-	[UserInventory unlock_character:TEX_DOG_RUN_4];
-	[UserInventory unlock_character:TEX_DOG_RUN_5];
-	[UserInventory unlock_character:TEX_DOG_RUN_6];
-	[UserInventory unlock_character:TEX_DOG_RUN_7];
-	*/
+
 	/*
 	[UserInventory set_item:Item_Rocket owned:YES];
 	[UserInventory set_item:Item_Shield owned:YES];
 	[UserInventory set_item:Item_Magnet owned:YES];
 	*/
-	//[ChallengeRecord set_beaten_challenge:29 to:YES];
 	
 	//[UserInventory set_equipped_gameitem:Item_Shield];
 	//[UserInventory add_bones:5000];
