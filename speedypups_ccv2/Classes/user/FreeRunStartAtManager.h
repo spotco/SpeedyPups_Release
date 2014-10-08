@@ -48,6 +48,6 @@ typedef struct _WorldStartAt {
 @property(readwrite,assign) WorldNum cur_world;
 @property(readwrite,assign) BGMode cur_mode;
 +(GameWorldMode*)cons_worldnum:(WorldNum)world;
--(WorldStartAt)get_next_world_startat;
+-(FreeRunStartAt)get_next_world_startat;
 -(FreeRunStartAt)get_freerun_progress;
 @end

@@ -185,6 +185,9 @@
 -(void)next {
 	if (curchallenge+1<[ChallengeRecord get_num_challenges]) {
 		[self end_update];
+		if (curchallenge > 0) {
+			[GameMain play_ad_on_next_load];
+		}
 		[(UILayer*)[self parent] run_cb:[GameModeCallback cons_mode:GameMode_CHALLENGE n:curchallenge+1]];
 	}
 }

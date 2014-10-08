@@ -108,6 +108,7 @@
 	}
 	return rtv;
 }
+
 @end
 
 @implementation GameWorldMode
@@ -121,16 +122,14 @@
 	return rtv;
 }
 
--(WorldStartAt)get_next_world_startat {
-	WorldStartAt rtv;
-	rtv.tutorial = NO;
-	rtv.bg_start = BGMode_NORMAL;
-	rtv.world_num = cur_world;
-	rtv.world_num++;
-	if (rtv.world_num != WorldNum_1 && rtv.world_num != WorldNum_2 && rtv.world_num != WorldNum_3) {
-		rtv.world_num = WorldNum_1;
+-(FreeRunStartAt)get_next_world_startat {
+	if (cur_world == WorldNum_1) {
+		return FreeRunStartAt_WORLD2;
+	} else if (cur_world == WorldNum_2) {
+		return FreeRunStartAt_WORLD3;
+	} else {
+		return FreeRunStartAt_WORLD1;
 	}
-	return rtv;
 }
 
 -(FreeRunStartAt)get_freerun_progress {

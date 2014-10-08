@@ -83,11 +83,17 @@
 		return [[levelsets[L_LABINTRO] allKeys] random];
 		
 	} else if (mode == AutoLevelStateMode_LAB) {
+		NSString *rtv;
+		
+		retry:
+		rtv = [labsetgen get_from_bucket:L_LAB_1];
+		if (cur_set_completed_levels == 0 && streq(rtv, @"lab_rocketarmy")) goto retry;
+		
 		cur_set_completed_levels++;
 		if (cur_set_completed_levels >= LEVELS_IN_LAB_SET) {
 			mode = AutoLevelStateMode_BOSS1_ENTER;
 		}
-		return [labsetgen get_from_bucket:L_LAB_1];
+		return rtv;
 		
 	} else if (mode == AutoLevelStateMode_BOSS1_ENTER) {
 		return [[levelsets[L_BOSS1START] allKeys] random];

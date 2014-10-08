@@ -8,10 +8,6 @@
 #import "WebRequest.h"
 #import "JSONKit.h"
 
-long sys_time() {
-	return CFAbsoluteTimeGetCurrent();
-}
-
 @implementation DailyLoginPrizeManager
 
 //#define TIME_URL @"http://spotcos.com/SpeedyPups/time.php"
@@ -108,6 +104,7 @@ static long timeof_web_remaining = 0;
 	int tip = [DataStore get_int_for_key:KEY_DAILY_TIP];
 	NSArray *tips = @[
 		@"Play every day for some great prizes!",
+		@"Don't like ads? Buy ADFREE from the store!",
 		@"Use coins to unlock characters from the store!",
 		@"You'll find the most coins on your first run of the day!",
 		@"Use coins to continue after a game over!",

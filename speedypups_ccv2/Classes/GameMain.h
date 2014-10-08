@@ -19,6 +19,8 @@
 +(void)start_from_callback:(GameModeCallback*)c;
 +(void)start_introanim;
 
++(void)play_ad_on_next_load;
+
 +(void)run_scene:(CCScene*)s;
 
 +(BOOL)GET_USE_BG;

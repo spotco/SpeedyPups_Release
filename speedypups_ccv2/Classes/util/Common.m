@@ -53,6 +53,10 @@ float lerp(float a, float b, float t) {
 	return a + (b - a) * t;
 }
 
+long sys_time() {
+	return CFAbsoluteTimeGetCurrent();
+}
+
 @implementation CCSprite_VerboseDealloc
 -(void)dealloc {
 	NSLog(@"%@ verbose_dealloc",[self class]);

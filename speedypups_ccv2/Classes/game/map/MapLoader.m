@@ -445,7 +445,10 @@ static NSMutableDictionary* cached_json;
 			} else if ([type isEqualToString:@"1upobject"]) {
 				float x = getflt(j_object, @"x");
 				float y = getflt(j_object, @"y");
-				[map.game_objects addObject:[OneUpObject cons_pt:ccp(x,y)]];
+				OneUpObject *rtv = [OneUpObject cons_pt:ccp(x,y)];
+				if (getbool(j_object, @"cond")) [rtv set_only_appear_if_below_threshold];
+				[map.game_objects addObject:rtv];
+				
 				
 			} else if ([type isEqualToString:@"checkpoint"]) {
 				float x = getflt(j_object, @"x");
@@ -487,6 +490,10 @@ static NSMutableDictionary* cached_json;
 
 float getflt(NSDictionary* j_object,NSString* key) {
     return ((NSString*)[j_object objectForKey:key]).floatValue;
+}
+
+BOOL getbool(NSDictionary* j_object,NSString* key) {
+    return ((NSString*)[j_object objectForKey:key]).boolValue;
 }
 
 +(GameMap*)load_capegame_map:(NSString *)map_file_name {

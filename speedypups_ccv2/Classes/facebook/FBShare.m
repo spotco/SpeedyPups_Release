@@ -3,6 +3,11 @@
 
 @implementation FBShare
 
++(void)fb_log {
+	[FBSettings setDefaultAppID:@"1446443165607542"];
+	[FBAppEvents activateApp];
+}
+
 +(void)share {
 	FBShareDialogParams *p = [[FBShareDialogParams alloc] init];
 	p.link = [NSURL URLWithString:@"http://speedypups.com"];

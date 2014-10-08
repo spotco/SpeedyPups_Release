@@ -10,10 +10,11 @@
 
 #import "SpeedyPupsIAP.h"
 #import "iRate.h"
+#import "FBShare.h"
 
 @implementation GameMain
 
-#define VERSION_STRING @"SpeedyPups RC4.05 - September 2014"
+#define VERSION_STRING @"SpeedyPups RC4.06 - October 2014"
 #define STARTING_LIVES 10
 
 #define TESTLEVEL @"capegame_launcher"
@@ -25,9 +26,6 @@
 #define SET_CONSTANT_DT  0
 #define DRAW_HITBOX		 0
 
-/**
- **/
-
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
 +(void)main {
 	[[CCDirector sharedDirector] setDisplayFPS:NO];
@@ -35,7 +33,7 @@
 	[GEventDispatcher lazy_alloc];
     [DataStore cons];
     [BatchDraw cons];
-	
+	[FBShare fb_log];
 	if ([UserInventory get_bgm_muted]) [AudioManager set_play_bgm:NO];
 	if ([UserInventory get_sfx_muted]) [AudioManager set_play_sfx:NO];
 	
@@ -57,9 +55,10 @@
 
 	LoadingScene *loader = [LoadingScene cons];
 	[self run_scene:loader];
+	[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_introanim)]];
+	
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_testlevel)]];
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_game_autolevel)]];
-	[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_introanim)]];
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_menu)]];
 	//[loader load_with_callback:[Common cons_callback:(NSObject*)self sel:@selector(start_ccv2_test_scene)]];
 	
@@ -70,10 +69,10 @@
 	for (int ii = 0; ii < 3; ii++) {
 		WorldStartAt startat;
 		startat.world_num = WorldNum_1;
-		startat.tutorial = YES;
-		startat.bg_start = BGMode_NORMAL;
+		startat.tutorial = NO;
+		startat.bg_start = BGMode_LAB;
 		AutoLevelState *state = [AutoLevelState cons_startat:startat];
-		DO_FOR(40,
+		DO_FOR(20,
 			   NSString *rtv = [state get_level];
 			   if (streq(rtv,@"boss1_start")) {
 				   [state to_boss_mode];
@@ -113,7 +112,7 @@
 	[UserInventory set_item:Item_Shield owned:YES];
 	[UserInventory set_item:Item_Magnet owned:YES];
 	*/
-	//[ChallengeRecord set_beaten_challenge:35 to:YES];
+	//[ChallengeRecord set_beaten_challenge:29 to:YES];
 	
 	//[UserInventory set_equipped_gameitem:Item_Shield];
 	//[UserInventory add_bones:5000];
@@ -123,8 +122,8 @@
 +(void)initialize {
 #ifdef ANDROID
 #else
-	[iRate sharedInstance].daysUntilPrompt = 3;
-    [iRate sharedInstance].usesUntilPrompt = 10;
+	[iRate sharedInstance].daysUntilPrompt = 2;
+    [iRate sharedInstance].usesUntilPrompt = 5;
 #endif
 }
 
@@ -132,13 +131,37 @@
 	[GameMain run_scene:[IntroAnim scene]];
 }
 
+
+static BOOL _ad_on_next_load = false;
++(void)play_ad_on_next_load {
+	_ad_on_next_load = true;
+}
+
 +(void)start_game_autolevel {
-    [GameMain run_scene:[GameEngineLayer scene_with_autolevel_lives:[Player current_character_has_power:CharacterPower_DOUBLELIVES]?STARTING_LIVES*2:STARTING_LIVES
-															  world:[FreeRunStartAtManager get_startingat]]];
+	if (_ad_on_next_load) {
+		[AdColony_integration show_ad_onbegin:^{} onfinish:^{
+			[GameMain run_scene:[GameEngineLayer scene_with_autolevel_lives:[Player current_character_has_power:CharacterPower_DOUBLELIVES]?STARTING_LIVES*2:STARTING_LIVES
+																	  world:[FreeRunStartAtManager get_startingat]]];
+		}];
+		_ad_on_next_load = false;
+		
+	} else {
+		[GameMain run_scene:[GameEngineLayer scene_with_autolevel_lives:[Player current_character_has_power:CharacterPower_DOUBLELIVES]?STARTING_LIVES*2:STARTING_LIVES
+																  world:[FreeRunStartAtManager get_startingat]]];
+	}
 }
 
 +(void)start_game_challengelevel:(ChallengeInfo *)info {
-	[GameMain run_scene:[GameEngineLayer scene_with_challenge:info world:info.world]];
+	if (_ad_on_next_load) {
+		[AdColony_integration show_ad_onbegin:^{} onfinish:^{
+			[GameMain run_scene:[GameEngineLayer scene_with_challenge:info world:info.world]];
+		}];
+		_ad_on_next_load = false;
+		
+	} else {
+		[GameMain run_scene:[GameEngineLayer scene_with_challenge:info world:info.world]];
+	}
+	
 	
 }
 
@@ -149,13 +172,17 @@
 	NSLog(@"is_ads_loaded:%d nth_menu:%d",[AdColony_integration is_ads_loaded],[DataStore get_int_for_key:KEY_NTH_MENU]);
 	if ([AdColony_integration is_ads_loaded] && [DataStore get_int_for_key:KEY_NTH_MENU] > 0) {
 		NSLog(@"show ad");
-		[AdColony_integration show_ad];
+		[AdColony_integration show_ad_onbegin:^{} onfinish:^{
+			[AudioManager playbgm_imm:BGM_GROUP_MENU];
+		}];
 	}
 #else
 	if ([[iRate sharedInstance] shouldPromptForRating]) {
 		[[iRate sharedInstance] promptForRating];
 	} else if ([AdColony_integration is_ads_loaded] && [DataStore get_int_for_key:KEY_NTH_MENU] > 0) {
-		[AdColony_integration show_ad];
+		[AdColony_integration show_ad_onbegin:^{} onfinish:^{
+			[AudioManager playbgm_imm:BGM_GROUP_MENU];
+		}];
 	}
 #endif
 	

@@ -587,6 +587,8 @@
 			[Common unset_dt];
 		}
 		
+	} else if (current_mode == GameEngineLayerMode_SHOWING_AD) {
+		
 	}
     [GEventDispatcher dispatch_events];
 }
@@ -759,17 +761,10 @@
 
 -(void)exit_to_next_world {
 	current_mode = GameEngineLayerMode_GAMEEND;
-	WorldStartAt world = [world_mode get_next_world_startat];
-	int _collected_bones = collected_bones;
-	int _time = time;
-	GameEngineStats *_stats = [self get_stats];
+	[FreeRunStartAtManager set_starting_loc:[world_mode get_next_world_startat]];
 	
 	[self exit];
-	
-	CCScene *neu_scene = [GameEngineLayer scene_with_autolevel_lives:lives world:world];
-	GameEngineLayer *g = (GameEngineLayer*)[neu_scene getChildByTag:tGLAYER];
-	[[[g set_bones:_collected_bones] set_time:_time] copy_stats:_stats];
-	[GameMain run_scene:neu_scene];
+	[GameMain start_game_autolevel];
 }
 
 -(void)update_gameobjs {

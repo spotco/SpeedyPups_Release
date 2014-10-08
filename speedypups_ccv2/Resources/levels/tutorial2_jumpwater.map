@@ -160,8 +160,8 @@
         {"x": 11101.9, "label": "BID:29", "bid": 29, "type": "dogbone", "y": 2401.7},
         {"x": 9563.5, "label": "BID:30", "bid": 30, "type": "dogbone", "y": 1795},
         {"x": 9611.9, "label": "BID:31", "bid": 31, "type": "dogbone", "y": 1763.3},
-        {"x": 4100.1, "label": "132", "type": "1upobject", "y": 1751.7},
-        {"x": 6876.8, "label": "133", "type": "1upobject", "y": 2375},
+        {"x": 4100.1, "label": "132", "type": "1upobject", "y": 1751.7, "cond": true},
+        {"x": 6876.8, "label": "133", "type": "1upobject", "y": 2375, "cond": true},
         {"x": 5701.8, "y": 1626.6, "width": 285, "label": "134", "type": "water", "height": 483.38333333333367},
         {
             "x": 4611.7,

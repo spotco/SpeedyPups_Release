@@ -91,6 +91,9 @@ static BGTimeManagerMode bgtime_curmode;
             bgtime_curmode = MODE_DAY_TO_NIGHT;
             bgtime_delayct = TRANSITION_LENGTH;
         }
+#ifndef ANDROID
+		[AudioManager transition_mode1];
+#endif
         
     } else if (bgtime_curmode == MODE_DAY_TO_NIGHT) {
         int pctval = (((float)bgtime_delayct)/TRANSITION_LENGTH)*100;
@@ -126,6 +129,9 @@ static BGTimeManagerMode bgtime_curmode;
             bgtime_curmode = MODE_NIGHT_TO_DAY;
             bgtime_delayct = TRANSITION_LENGTH;
         }
+#ifndef ANDROID
+		[AudioManager transition_mode2];
+#endif
         
     } else if (bgtime_curmode == MODE_NIGHT_TO_DAY) {
         int pctval = (1-((float)bgtime_delayct)/TRANSITION_LENGTH)*100;

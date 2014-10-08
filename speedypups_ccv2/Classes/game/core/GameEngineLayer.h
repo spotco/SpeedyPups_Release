@@ -38,7 +38,9 @@ typedef enum {
 	GameEngineLayerMode_CAPEIN,
 	
 	GameEngineLayerMode_RUNOUT_TO_FREEPUPS,
-	GameEngineLayerMode_FADEOUT_TO_FREEPUPS
+	GameEngineLayerMode_FADEOUT_TO_FREEPUPS,
+	
+	GameEngineLayerMode_SHOWING_AD
 } GameEngineLayerMode;
 
 @interface GameEngineLayer : CCLayer <GEventListener> {
@@ -73,6 +75,7 @@ typedef enum {
 	GameEngineStats *stats;
 	
 	GameEngineLayerMode stored_mode;
+	GameEngineLayerMode ad_stored_mode;
 }
 
 @property(readwrite,strong) GameWorldMode *world_mode;
@@ -87,6 +90,8 @@ typedef enum {
 +(CCScene*)scene_with:(NSString *)map_file_name lives:(int)lives world:(WorldNum)world;
 +(CCScene*)scene_with_autolevel_lives:(int)lives world:(WorldStartAt)world;
 +(CCScene*)scene_with_challenge:(ChallengeInfo*)info world:(WorldNum)world;
+
+-(void)show_ad;
 
 -(UILayer*)get_ui_layer;
 -(BGLayer*)get_bg_layer;

@@ -181,8 +181,8 @@
             "width": 331.60000000000036,
             "type": "camera_area"
         },
-        {"x": 4750, "label": "0", "y": 1800, "type": "1upobject"},
-        {"x": 8005, "label": "1", "y": 3052, "type": "1upobject"},
+        {"x": 4750, "label": "0", "y": 1800, "type": "1upobject", "cond": true},
+        {"x": 8005, "label": "1", "y": 3052, "type": "1upobject", "cond": true},
         {"x": 7320.1, "height": 1045.7714285714287, "label": "0", "y": 1337.1, "width": 475.6999999999998, "type": "island_fill"}
     ]
 }

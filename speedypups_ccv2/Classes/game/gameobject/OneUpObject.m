@@ -5,14 +5,24 @@
 
 #import "UILayer.h"
 
-@implementation OneUpObject
+@implementation OneUpObject {
+	BOOL only_appear_if_below_threshold;
+}
+
+
 +(OneUpObject*)cons_pt:(CGPoint)pt {
 	return [[OneUpObject spriteWithTexture:[Resource get_tex:TEX_ITEM_SS] rect:[FileCache get_cgrect_from_plist:TEX_ITEM_SS idname:@"1upobject"]] cons_pt:pt];
 }
+
+-(void)set_only_appear_if_below_threshold {
+	only_appear_if_below_threshold = true;
+}
+
 -(id)cons_pt:(CGPoint)pt {
 	[self setPosition:pt];
 	active = YES;
 	[self csf_setScale:0.75];
+	only_appear_if_below_threshold = false;
 	return self;
 }
 -(HitRect)get_hit_rect {
@@ -21,6 +31,12 @@
 
 -(void)update:(Player *)player g:(GameEngineLayer *)g {
 	_g = g;
+	if (only_appear_if_below_threshold) {
+		if (active && [g get_lives] >= 10) {
+			active = false;
+		}
+	}
+	
 	[super update:player g:g];
 }
 

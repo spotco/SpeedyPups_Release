@@ -14,6 +14,7 @@
 
 float drp(float a, float b, float div);
 float lerp(float a, float b, float t);
+long sys_time();
 #define NSVEnum(val,type) [NSValue value:&val withObjCType:@encode(type)]
 
 @interface CCSprite_VerboseDealloc : CCSprite

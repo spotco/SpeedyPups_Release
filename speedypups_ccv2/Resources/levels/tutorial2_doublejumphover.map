@@ -128,8 +128,8 @@
         {"label": "(117)gd_img:42", "x": 6952, "img": 42, "type": "ground_detail", "y": 3108},
         {"label": "(118)gd_img:29", "x": 6930, "img": 29, "type": "ground_detail", "y": 3110},
         {"label": "(119)gd_img:24", "x": 6978, "img": 24, "type": "ground_detail", "y": 3106},
-        {"label": "120", "x": 10400, "type": "1upobject", "y": 3350},
-        {"label": "121", "x": 4004, "type": "1upobject", "y": 1750}
+        {"label": "120", "x": 10400, "type": "1upobject", "y": 3350, "cond": true},
+        {"label": "121", "x": 4004, "type": "1upobject", "y": 1750, "cond": true}
     ],
     "connect_pts": {"y2": 2646, "x1": 100, "x2": 15100, "y1": 1548.3}
 }

@@ -5,6 +5,6 @@
 
 +(void)preload;
 +(BOOL)is_ads_loaded;
-+(void)show_ad;
++(void)show_ad_onbegin:(void (^)())onbegin onfinish:(void (^)())onfinish;
 
 @end

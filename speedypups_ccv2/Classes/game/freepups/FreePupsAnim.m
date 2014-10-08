@@ -219,6 +219,7 @@ static float GROUNDLEVEL;
 
 -(void)next {
 	[self exit];
+	[GameMain play_ad_on_next_load];
 	[g exit_to_next_world];
 }
 

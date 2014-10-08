@@ -12,6 +12,7 @@
 	return [[[FreeRunStartAtUnlockUIAnimation alloc] init] cons_for_unlocking:startat];
 }
 -(id)cons_for_unlocking:(FreeRunStartAt)startat {
+	[FreeRunStartAtManager set_starting_loc:startat];
 	self.TRANS_LEN = DEFAULT_TRANS_LEN;
 	self.STAY_LEN = DEFAULT_STAY_LEN;
 	self.YPOS_START = -0.3;
