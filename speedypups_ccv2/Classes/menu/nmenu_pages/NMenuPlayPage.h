@@ -39,6 +39,8 @@ typedef enum {
 	NSMutableArray *challenges_completed_disps;
 	
 	CCSprite *first_time_popup;
+	CCSprite *shop_popup;
+	CCSprite *map_popup;
 	
 	CSF_CCSprite *highscore_sign_base;
 	

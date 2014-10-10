@@ -74,7 +74,9 @@ typedef enum {
 	
 	GEventType_IAP_BUY,
 	GEventType_IAP_FAIL,
-	GEventType_IAP_SUCCESS
+	GEventType_IAP_SUCCESS,
+	
+	GEventType_OPEN_IAP_TAB_AND_BUY_ADFREE
 } GEventType;
 
 @interface GEvent : NSObject

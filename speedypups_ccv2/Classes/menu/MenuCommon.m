@@ -4,6 +4,10 @@
 #import "CharSelAnim.h"
 #import "MainMenuInventoryLayer.h"
 
+#import "DataStore.h"
+#import "FreeRunStartAtManager.h"
+#import "UserInventory.h"
+
 @implementation TouchButton
 @synthesize cb;
 +(TouchButton*)cons_pt:(CGPoint)pt tex:(CCTexture2D *)tex texrect:(CGRect)texrect cb:(CallBack *)tcb {
@@ -220,13 +224,19 @@
 	return descaler;
 }
 
++(CCSprite*)cons_flipper_for:(CCNode*)item x:(float)scx y:(float)scy {
+	CCSprite *flipper = [CCSprite node];
+	[flipper setScaleX:scx];
+	[flipper setScaleY:scy];
+	[flipper addChild:item];
+	return flipper;
+}
+
 +(CSF_CCSprite*)menu_item:(NSString*)tex id:(NSString*)tid pos:(CGPoint)pos {
     CSF_CCSprite *s = [CSF_CCSprite spriteWithTexture:[Resource get_tex:tex] rect:[FileCache get_cgrect_from_plist:tex idname:tid]];
     [s setPosition:pos];
     return s;
 }
-
-#define t_CHARSELBUTTON 3
 
 +(CCMenu*)cons_common_nav_menu {
     CCMenuItem *shopbutton = [MenuCommon item_from:TEX_NMENU_ITEMS
@@ -256,8 +266,12 @@
                                                tar:self sel:@selector(inventory)
                                                pos:[Common screen_pctwid:0.825 pcthei:0.09]];
     
-    CCMenu* m = [CCMenu menuWithItems:invbutton,shopbutton,settingsbutton,homebutton, nil];
+    CCMenu* m = [CCMenu menuWithItems:nil];
+	[m addChild:shopbutton z:0 tag:t_SHOPBUTTON];
     [m addChild:charselbutton z:0 tag:t_CHARSELBUTTON];
+	[m addChild:invbutton z:0 tag:t_INVBUTTON];
+	[m addChild:settingsbutton z:0 tag:t_SETTINGSBUTTON];
+	[m addChild:homebutton z:0 tag:t_HOMEBUTTON];
 	[m setPosition:ccp(0,0)];
     return m;
 }
@@ -300,6 +314,9 @@
 	[self close_inventory];
     [GEventDispatcher push_event:[[GEvent cons_type:GEventType_MENU_GOTO_PAGE] add_i1:MENU_SHOP_PAGE i2:0]];
 	[AudioManager playsfx:SFX_MENU_UP];
+	if ([FreeRunStartAtManager get_starting_loc] != FreeRunStartAt_TUTORIAL && [UserInventory get_current_coins] > 0) {
+		[DataStore set_key:FTUE_HAS_PRESSED_SHOP int_value:1];
+	}
 }
 
 +(void)goto_charsel {
@@ -318,6 +335,9 @@
 	[self close_inventory];
     [GEventDispatcher push_event:[[GEvent cons_type:GEventType_MENU_GOTO_PAGE] add_i1:MENU_MAP_PAGE_ID i2:0]];
 	[AudioManager playsfx:SFX_MENU_UP];
+	if ([FreeRunStartAtManager get_starting_loc] != FreeRunStartAt_TUTORIAL && [FreeRunStartAtManager get_can_start_at:FreeRunStartAt_WORLD1]) {
+		[DataStore set_key:FTUE_HAS_PRESSED_MAP int_value:1];
+	}
 }
 
 +(void)close_inventory {

@@ -9,8 +9,11 @@
 #import "ShopBuyFlyoffTextParticle.h"
 #import "AudioManager.h"
 #import "ShopListTouchButton.h" 
+#import "SpeedyPupsIAP.h"
 
-@implementation NMenuTabShopPage
+@implementation NMenuTabShopPage {
+	ShopTabTouchButton *iap_tab;
+}
 
 +(NMenuTabShopPage*)cons {
 	return [NMenuTabShopPage node];
@@ -21,7 +24,6 @@
 #define t_TOTALBONESPANE 2
 -(id)init {
 	self = [super init];
-	
 	[GEventDispatcher add_listener:self];
 	scroll_items = [NSMutableArray array];
 	current_tab = ShopTab_UPGRADE;
@@ -43,7 +45,7 @@
 	cur_selected_tab = first_tab;
 	[self cons_tab_pos:ccp(tabanchor.x + tabsize.width,tabanchor.y) sel:@selector(tab1:) text:@"Dogs" parent:tabbedpane];
 	[self cons_tab_pos:ccp(tabanchor.x + tabsize.width*2,tabanchor.y) sel:@selector(tab2:) text:@"Extras" parent:tabbedpane];
-	[self cons_tab_pos:ccp(tabanchor.x + tabsize.width*3,tabanchor.y) sel:@selector(tab3:) text:@"$$$" parent:tabbedpane];
+	iap_tab = [self cons_tab_pos:ccp(tabanchor.x + tabsize.width*3,tabanchor.y) sel:@selector(tab3:) text:@"$$$" parent:tabbedpane];
 	
 	
 	clipper = [ClippingNode node];
@@ -237,10 +239,10 @@
 	return tmp;
 }
 
--(ShopTabTouchButton*)cons_tab_pos:(CGPoint)pt sel:(SEL)sel text:(NSString*)str parent:(CCSprite*)parent {
+-(ShopTabTouchButton*)cons_tab_pos:(CGPoint)pt sel:(SEL)sel text:(NSString*)str parent:(CCSprite*)parent{
 	ShopTabTouchButton *tab1 = [ShopTabTouchButton cons_pt:pt text:str cb:[Common cons_callback:self sel:sel]];
 	[touches addObject:tab1];
-	[parent addChild:tab1];
+	[parent addChild:tab1 z:0];
 	return tab1;
 }
 
@@ -304,8 +306,26 @@
 -(void)tab2:(ShopTabTouchButton*)tab{current_scroll_index = 0;[self seltab:2 tab:tab];}
 -(void)tab3:(ShopTabTouchButton*)tab{current_scroll_index = 0;[self seltab:3 tab:tab];}
 
+
+-(void)open_iap_tab_and_buy_adfree {
+	[self seltab:3 tab:iap_tab];
+	ShopListTouchButton *tar_btn = NULL;
+	for (ShopListTouchButton *btn in scroll_items) {
+		if ([btn.sto_info class] == [IAPItemInfo class] && streq(((IAPItemInfo*)btn.sto_info).iap_identifier,SPEEDYPUPS_AD_FREE)) {
+			tar_btn = btn;
+		}
+	}
+	if (tar_btn) {
+		[self sellist:tar_btn];
+		[self buybutton];
+	}
+}
+
 -(void)dispatch_event:(GEvent *)e {
-    if (e.type == GEventType_MENU_INVENTORY) {
+	if (e.type == GEventType_OPEN_IAP_TAB_AND_BUY_ADFREE) {
+		[self open_iap_tab_and_buy_adfree];
+		
+    } else if (e.type == GEventType_MENU_INVENTORY) {
         [tabbedpane setVisible:NO];
 		[[self getChildByTag:t_SHOPKEEPER] setVisible:NO];
 		[[self getChildByTag:t_SHOPSIGN] setVisible:NO];

@@ -50,6 +50,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.fiksu</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>aso887341247</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1446443165607542</string>

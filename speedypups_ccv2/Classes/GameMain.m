@@ -14,7 +14,7 @@
 
 @implementation GameMain
 
-#define VERSION_STRING @"SpeedyPups RC4.06 - October 2014"
+#define VERSION_STRING @"SpeedyPups RC4.07 - October 2014"
 #define STARTING_LIVES 10
 
 #define TESTLEVEL @"capegame_launcher"
@@ -28,6 +28,7 @@
 #define ALL_CHARACTER	 0
 #define SET_CONSTANT_DT  0
 #define DRAW_HITBOX		 0
+#define ADS_DISABLED	 0
 
 #define KEY_NTH_MENU @"key_nth_menu_adcolony_play"
 +(void)main {
@@ -47,8 +48,10 @@
 	} else {
 		[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
 	}
-	//[UserInventory set_ads_disabled:YES];
-	
+	if (ADS_DISABLED) {
+		[UserInventory set_ads_disabled:YES];
+	}
+		
 	[DataStore set_key:KEY_NTH_MENU int_value:0];
 	NSLog(@"UUID:%@ ADS:%d",[Common unique_id], [UserInventory get_ads_disabled]);
 	[TrackingUtil track_evt:TrackingEvt_Login];

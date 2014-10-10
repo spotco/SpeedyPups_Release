@@ -54,5 +54,4 @@
 }
 
 +(NMenuTabShopPage*)cons;
-
 @end

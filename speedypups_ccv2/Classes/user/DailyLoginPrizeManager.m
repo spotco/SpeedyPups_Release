@@ -34,21 +34,22 @@ static long timeof_web_remaining = 0;
 +(void)daily_popup_web_check:(CallBack *)ready fail:(CallBack *)fail {
 	if ([DataStore get_str_for_key:KEY_TODAY] == NULL) {
 		[Common run_callback:ready];
+	} else {
+		[WebRequest request_to:TIME_URL callback:^(NSString* response, WebRequestStatus status) {
+			if (status == WebRequestStatus_OK) {
+				NSDictionary *json = [response objectFromJSONString];
+				web_remaining = [[json objectForKey:@"remain"] longValue];
+				timeof_web_remaining = sys_time();
+				web_today = [json objectForKey:@"today"];
+				NSLog(@"time.php request(%@,%lu)",web_today,web_remaining);
+				[Common run_callback:ready];
+				
+			} else if (status == WebRequestStatus_FAIL) {
+				[Common run_callback:fail];
+				
+			}
+		}];
 	}
-	[WebRequest request_to:TIME_URL callback:^(NSString* response, WebRequestStatus status) {
-		if (status == WebRequestStatus_OK) {
-			NSDictionary *json = [response objectFromJSONString];
-			web_remaining = [[json objectForKey:@"remain"] longValue];
-			timeof_web_remaining = sys_time();
-			web_today = [json objectForKey:@"today"];
-			NSLog(@"time.php request(%@,%lu)",web_today,web_remaining);
-			[Common run_callback:ready];
-			
-		} else if (status == WebRequestStatus_FAIL) {
-			[Common run_callback:fail];
-			
-		}
-	}];
 }
 
 +(long)get_time_until_new_day {
@@ -56,11 +57,12 @@ static long timeof_web_remaining = 0;
 	return MAX(0,web_remaining - (sys_time() - timeof_web_remaining));
 }
 
-+(void)daily_popup_after_check_show {
++(BOOL)daily_popup_after_check_show {
 	if ([DataStore get_str_for_key:KEY_TODAY] == NULL) {
 		if ([DataStore get_int_for_key:KEY_FIRST_LOGIN_PRIZE_TAKEN] == 0) {
 			[DataStore set_key:KEY_FIRST_LOGIN_PRIZE_TAKEN int_value:1];
 			[self first_login_prize_popup];
+			return YES;
 		}
 		if (web_today != NULL) {
 			[DataStore set_key:KEY_TODAY str_value:web_today];
@@ -72,9 +74,11 @@ static long timeof_web_remaining = 0;
 			[self daily_prize_popup];
 			[DataStore set_key:KEY_DAILY_WHEEL_RESET_TAKEN int_value:0];
 			[DataStore set_key:KEY_COINS_SPAWNED_TODAY int_value:0];
+			return YES;
 		}
 	}
 	
+	return NO;
 }
 
 +(void)first_login_prize_popup {

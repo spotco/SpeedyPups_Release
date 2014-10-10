@@ -3,6 +3,15 @@
 #import "Resource.h"
 #import "FileCache.h"
 
+#define t_SHOPBUTTON 1
+#define t_SETTINGSBUTTON 2
+#define t_CHARSELBUTTON 3
+#define t_HOMEBUTTON 4
+#define t_INVBUTTON 5
+
+#define FTUE_HAS_PRESSED_MAP @"ftue_has_pressed_map"
+#define FTUE_HAS_PRESSED_SHOP @"ftue_has_pressed_shop"
+
 @class BasePopup;
 
 @interface TouchButton : CSF_CCSprite
@@ -56,6 +65,7 @@
 +(CCMenu*)cons_common_nav_menu;
 
 +(CCSprite*)cons_descaler_for:(CCNode*)item pos:(CGPoint)pos;
++(CCSprite*)cons_flipper_for:(CCNode*)item x:(float)scx y:(float)y;
 
 +(CCMenuItem*)nav_menu_get_charselbutton:(CCMenu*)menu;
 +(void)inventory;

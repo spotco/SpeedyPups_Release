@@ -9,9 +9,14 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "GameMain.h" 
+#import "GameMain.h"
+#import <FiksuSDK/FiksuSDK.h>
 
 @implementation MyNavigationController
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+	return [FiksuTrackingManager handleURL:url sourceApplication:sourceApplication];
+}
 
 // The available orientations should be defined in the Info.plist file.
 // And in iOS 6+ only, you can override it in the Root View controller in the "supportedInterfaceOrientations" method.
@@ -60,6 +65,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[FiksuTrackingManager applicationDidFinishLaunching:launchOptions];
+	
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	

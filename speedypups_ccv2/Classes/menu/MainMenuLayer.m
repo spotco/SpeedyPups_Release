@@ -14,6 +14,8 @@
 #import "DailyLoginPrizeManager.h"
 #import "ConnectingPopup.h"
 #import "TrackingUtil.h"
+#import "DailyLoginPopup.h"
+#import "UserInventory.h"
 
 @implementation NMenuPage
 -(void)setOpacity:(GLubyte)opacity {
@@ -93,6 +95,66 @@
     return self;
 }
 
+-(void)cond_show_iap_popup {
+#define KEY_SHOW_IAP_POPUP_CT @"key_show_iap_popup_ct"
+	int keyval = [DataStore get_int_for_key:KEY_SHOW_IAP_POPUP_CT];
+	keyval = (keyval+1)%5;
+	[DataStore set_key:KEY_SHOW_IAP_POPUP_CT int_value:keyval];
+	if (keyval != 1 || [UserInventory get_ads_disabled]) return;
+	
+	BasePopup *p = [BasePopup cons];
+	[p addChild:[Common cons_label_pos:[Common pct_of_obj:p pctx:0.5 pcty:0.875]
+								 color:ccc3(20,20,20)
+							  fontsize:35
+								   str:@"Like the game..."]];
+	[p addChild:[Common cons_label_pos:[Common pct_of_obj:p pctx:0.5 pcty:0.75]
+								 color:ccc3(20,20,20)
+							  fontsize:15
+								   str:@"But not the Ads?"]];
+	[p addChild:[Common cons_label_pos:[Common pct_of_obj:p pctx:0.4 pcty:0.675]
+								 color:ccc3(20,20,20)
+							  fontsize:12
+								   str:@"Get SpeedyPups ADFREE for just"]];
+	[p addChild:[Common cons_label_pos:[Common pct_of_obj:p pctx:0.725 pcty:0.675]
+								 color:ccc3(200,20,20)
+							  fontsize:32
+								   str:@"99\u00A2!"]];
+	
+	
+	[p addChild:[Common cons_label_pos:[Common pct_of_obj:p pctx:0.4 pcty:0.475]
+								 color:ccc3(20,20,20)
+							  fontsize:12
+								   str:@"And we'll throw in..."]];
+	
+	[p addChild:[[CCSprite spriteWithTexture:[Resource get_tex:TEX_ITEM_SS]
+										rect:[FileCache get_cgrect_from_plist:TEX_ITEM_SS idname:@"star_coin"]]
+				 pos:[Common pct_of_obj:p pctx:0.625 pcty:0.475]]];
+	[p addChild:[Common cons_label_pos:[Common pct_of_obj:p pctx:0.7125 pcty:0.475]
+								 color:ccc3(200,30,30)
+							  fontsize:12
+								   str:@"x"]];
+	[p addChild:[[Common cons_label_pos:[Common pct_of_obj:p pctx:0.73 pcty:0.475]
+								  color:ccc3(200,30,30)
+							   fontsize:25
+									str:@"10"] anchor_pt:ccp(0,0.5)]];
+	
+    CCMenuItem *shopbutton = [MenuCommon item_from:TEX_NMENU_ITEMS
+											   rect:@"buybutton"
+												tar:self sel:@selector(to_iap_window)
+												pos:[Common pct_of_obj:p pctx:0.5 pcty:0.18]];
+	[shopbutton setScale:0.9];
+	CCMenu *menu = [CCMenu menuWithItems:shopbutton, nil];
+	[menu setPosition:CGPointZero];
+	[p addChild:menu];
+	[MenuCommon popup:p];
+}
+
+-(void)to_iap_window {
+	[self popup_close];
+	[MenuCommon goto_shop];
+	[GEventDispatcher push_event:[GEvent cons_type:GEventType_OPEN_IAP_TAB_AND_BUY_ADFREE]];
+}
+
 static BOOL daily_popup_show = NO;
 +(void)daily_popup_go {
 	daily_popup_show = YES;
@@ -117,8 +179,13 @@ static BOOL daily_popup_fail = NO;
 		
 	} else if (daily_popup_show) {
 		if (current_popup != NULL && [current_popup class] == [ConnectingPopup class])[self popup_close];
+		BOOL did_show_dailypopup = [DailyLoginPrizeManager daily_popup_after_check_show];
+		
+		if (!did_show_dailypopup) {
+			[self cond_show_iap_popup];
+		}
 		daily_popup_show = NO;
-		[DailyLoginPrizeManager daily_popup_after_check_show];
+
 		
 	} else if (daily_popup_fail) {
 		if (current_popup != NULL && [current_popup class] == [ConnectingPopup class])[self popup_close];

@@ -136,6 +136,21 @@
 		7E24B5281992147200AC6F61 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24B5271992147200AC6F61 /* iRate.m */; };
 		7E3885021996986C00E48476 /* BatchSpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3885011996986C00E48476 /* BatchSpriteManager.m */; };
 		7E3A8BC8196E6BD000D0ECCC /* CCRibbon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A8BC7196E6BD000D0ECCC /* CCRibbon.m */; };
+		7E550C3319E7CE0100F46148 /* FiksuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E550C2519E7CE0100F46148 /* FiksuSDK.framework */; };
+		7E550C3419E7CE0100F46148 /* fiksu-bar-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2719E7CE0100F46148 /* fiksu-bar-1.png */; };
+		7E550C3519E7CE0100F46148 /* fiksu-close-debug.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2819E7CE0100F46148 /* fiksu-close-debug.png */; };
+		7E550C3619E7CE0100F46148 /* fiksu-config.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2919E7CE0100F46148 /* fiksu-config.png */; };
+		7E550C3719E7CE0100F46148 /* fiksu-event-failed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2A19E7CE0100F46148 /* fiksu-event-failed.png */; };
+		7E550C3819E7CE0100F46148 /* fiksu-event-succeeded.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2B19E7CE0100F46148 /* fiksu-event-succeeded.png */; };
+		7E550C3919E7CE0100F46148 /* fiksu-event.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2C19E7CE0100F46148 /* fiksu-event.png */; };
+		7E550C3A19E7CE0100F46148 /* fiksu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2D19E7CE0100F46148 /* fiksu-icon.png */; };
+		7E550C3B19E7CE0100F46148 /* fiksu-verify.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2E19E7CE0100F46148 /* fiksu-verify.png */; };
+		7E550C3C19E7CE0100F46148 /* FMConfigViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C2F19E7CE0100F46148 /* FMConfigViewController.nib */; };
+		7E550C3D19E7CE0100F46148 /* FMEventsViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C3019E7CE0100F46148 /* FMEventsViewController.nib */; };
+		7E550C3E19E7CE0100F46148 /* FMTrackingViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C3119E7CE0100F46148 /* FMTrackingViewController.nib */; };
+		7E550C3F19E7CE0100F46148 /* FMVerifyViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C3219E7CE0100F46148 /* FMVerifyViewController.nib */; };
+		7E550C4119E7CE1400F46148 /* FiksuConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E550C4019E7CE1400F46148 /* FiksuConfiguration.plist */; };
+		7E550C4219E7D00E00F46148 /* FiksuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E550C2519E7CE0100F46148 /* FiksuSDK.framework */; };
 		7E594D12198B65BC00D78315 /* nmenu_bg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D0E198B65BC00D78315 /* nmenu_bg_0.png */; };
 		7E594D13198B65BC00D78315 /* nmenu_bg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D0F198B65BC00D78315 /* nmenu_bg_1.png */; };
 		7E594D14198B65BC00D78315 /* nmenu_bg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E594D10198B65BC00D78315 /* nmenu_bg_2.png */; };
@@ -750,7 +765,7 @@
 		7E637EF2196E3B410064B085 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EF1196E3B410064B085 /* iAd.framework */; };
 		7E637EF4196E3B480064B085 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EF3196E3B480064B085 /* CoreTelephony.framework */; };
 		7E637EF6196E3B500064B085 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EF5196E3B500064B085 /* libz.dylib */; };
-		7E637EF8196E3B570064B085 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EF7196E3B570064B085 /* AdSupport.framework */; };
+		7E637EF8196E3B570064B085 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EF7196E3B570064B085 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7E637EFA196E3B5D0064B085 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EF9196E3B5D0064B085 /* CoreMedia.framework */; };
 		7E637EFD196E3B660064B085 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EFB196E3B660064B085 /* EventKit.framework */; };
 		7E637EFE196E3B660064B085 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E637EFC196E3B660064B085 /* EventKitUI.framework */; };
@@ -1146,6 +1161,20 @@
 		7E3885011996986C00E48476 /* BatchSpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatchSpriteManager.m; sourceTree = "<group>"; };
 		7E3A8BC6196E6B9700D0ECCC /* CCRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRibbon.h; sourceTree = "<group>"; };
 		7E3A8BC7196E6BD000D0ECCC /* CCRibbon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRibbon.m; sourceTree = "<group>"; };
+		7E550C2519E7CE0100F46148 /* FiksuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FiksuSDK.framework; sourceTree = "<group>"; };
+		7E550C2719E7CE0100F46148 /* fiksu-bar-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-bar-1.png"; sourceTree = "<group>"; };
+		7E550C2819E7CE0100F46148 /* fiksu-close-debug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-close-debug.png"; sourceTree = "<group>"; };
+		7E550C2919E7CE0100F46148 /* fiksu-config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-config.png"; sourceTree = "<group>"; };
+		7E550C2A19E7CE0100F46148 /* fiksu-event-failed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-event-failed.png"; sourceTree = "<group>"; };
+		7E550C2B19E7CE0100F46148 /* fiksu-event-succeeded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-event-succeeded.png"; sourceTree = "<group>"; };
+		7E550C2C19E7CE0100F46148 /* fiksu-event.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-event.png"; sourceTree = "<group>"; };
+		7E550C2D19E7CE0100F46148 /* fiksu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-icon.png"; sourceTree = "<group>"; };
+		7E550C2E19E7CE0100F46148 /* fiksu-verify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fiksu-verify.png"; sourceTree = "<group>"; };
+		7E550C2F19E7CE0100F46148 /* FMConfigViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = FMConfigViewController.nib; sourceTree = "<group>"; };
+		7E550C3019E7CE0100F46148 /* FMEventsViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = FMEventsViewController.nib; sourceTree = "<group>"; };
+		7E550C3119E7CE0100F46148 /* FMTrackingViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = FMTrackingViewController.nib; sourceTree = "<group>"; };
+		7E550C3219E7CE0100F46148 /* FMVerifyViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = FMVerifyViewController.nib; sourceTree = "<group>"; };
+		7E550C4019E7CE1400F46148 /* FiksuConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FiksuConfiguration.plist; sourceTree = "<group>"; };
 		7E594D0E198B65BC00D78315 /* nmenu_bg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nmenu_bg_0.png; sourceTree = "<group>"; };
 		7E594D0F198B65BC00D78315 /* nmenu_bg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nmenu_bg_1.png; sourceTree = "<group>"; };
 		7E594D10198B65BC00D78315 /* nmenu_bg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nmenu_bg_2.png; sourceTree = "<group>"; };
@@ -2101,6 +2130,7 @@
 				7E8B4F55198F0B3800E9CB45 /* OpenAL.framework in Frameworks */,
 				7E8B4EC2198EFCF800E9CB45 /* CoreAudio.framework in Frameworks */,
 				7E637F0A196E3B910064B085 /* Twitter.framework in Frameworks */,
+				7E550C3319E7CE0100F46148 /* FiksuSDK.framework in Frameworks */,
 				7E637F08196E3B8B0064B085 /* SystemConfiguration.framework in Frameworks */,
 				7E637F06196E3B810064B085 /* StoreKit.framework in Frameworks */,
 				7E637F04196E3B7C0064B085 /* Social.framework in Frameworks */,
@@ -2130,6 +2160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E550C4219E7D00E00F46148 /* FiksuSDK.framework in Frameworks */,
 				7E16B10718FAB8180039A93F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2140,6 +2171,7 @@
 		7E16A96118FAB6B80039A93F = {
 			isa = PBXGroup;
 			children = (
+				7E550C4019E7CE1400F46148 /* FiksuConfiguration.plist */,
 				7E8B4F8D198F44AD00E9CB45 /* FacebookSDK.xcodeproj */,
 				7E16A98118FAB6B80039A93F /* speedypups_ccv2 */,
 				7E16A96C18FAB6B80039A93F /* Frameworks */,
@@ -2159,6 +2191,7 @@
 		7E16A96C18FAB6B80039A93F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E550C2419E7CE0100F46148 /* FiksuSDK.embeddedframework */,
 				7E8B4F88198F439500E9CB45 /* libFacebookSDK.a */,
 				7E8B4EC1198EFCF800E9CB45 /* CoreAudio.framework */,
 				7E637F09196E3B910064B085 /* Twitter.framework */,
@@ -2601,6 +2634,34 @@
 				7E22F1D4193DE1AA004F4746 /* JSONKit.m */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		7E550C2419E7CE0100F46148 /* FiksuSDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				7E550C2519E7CE0100F46148 /* FiksuSDK.framework */,
+				7E550C2619E7CE0100F46148 /* Resources */,
+			);
+			path = FiksuSDK.embeddedframework;
+			sourceTree = "<group>";
+		};
+		7E550C2619E7CE0100F46148 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E550C2719E7CE0100F46148 /* fiksu-bar-1.png */,
+				7E550C2819E7CE0100F46148 /* fiksu-close-debug.png */,
+				7E550C2919E7CE0100F46148 /* fiksu-config.png */,
+				7E550C2A19E7CE0100F46148 /* fiksu-event-failed.png */,
+				7E550C2B19E7CE0100F46148 /* fiksu-event-succeeded.png */,
+				7E550C2C19E7CE0100F46148 /* fiksu-event.png */,
+				7E550C2D19E7CE0100F46148 /* fiksu-icon.png */,
+				7E550C2E19E7CE0100F46148 /* fiksu-verify.png */,
+				7E550C2F19E7CE0100F46148 /* FMConfigViewController.nib */,
+				7E550C3019E7CE0100F46148 /* FMEventsViewController.nib */,
+				7E550C3119E7CE0100F46148 /* FMTrackingViewController.nib */,
+				7E550C3219E7CE0100F46148 /* FMVerifyViewController.nib */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7E594D0D198B65BC00D78315 /* nmenu_bgs */ = {
@@ -4324,6 +4385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E637EDB196E39A50064B085 /* sfx_rocket.wav in Resources */,
+				7E550C3C19E7CE0100F46148 /* FMConfigViewController.nib in Resources */,
 				7E637E2F196E39A50064B085 /* lab_ezshiz.map in Resources */,
 				7E637EF0196E39A50064B085 /* ingame_ui_ss.png in Resources */,
 				7E637D8D196E39A50064B085 /* lab_island_corner.png in Resources */,
@@ -4399,6 +4461,7 @@
 				7E637DBC196E39A50064B085 /* dashjumpparticles_ss.png in Resources */,
 				7E637E48196E39A50064B085 /* swingvine_swingbreak.map in Resources */,
 				7E637DFC196E39A50064B085 /* classic_huegcave.map in Resources */,
+				7E550C3919E7CE0100F46148 /* fiksu-event.png in Resources */,
 				7E637DB0196E39A50064B085 /* dog2ss.png in Resources */,
 				7E637E37196E39A50064B085 /* lab_swingers.map in Resources */,
 				7E637E72196E39A50064B085 /* gameloop3.mp3 in Resources */,
@@ -4413,6 +4476,7 @@
 				7E637D9C196E39A50064B085 /* cloudlevel_bg.png in Resources */,
 				7E637E90196E39A50064B085 /* goal_ss.png in Resources */,
 				7E637EB5196E39A50064B085 /* bark_low.wav in Resources */,
+				7E550C3619E7CE0100F46148 /* fiksu-config.png in Resources */,
 				7E637E1D196E39A50064B085 /* hard_sliptwist.map in Resources */,
 				7E637DAB196E39A50064B085 /* armored_dog_ss.plist in Resources */,
 				7E637DE7196E39A50064B085 /* boss1_area.map in Resources */,
@@ -4469,6 +4533,7 @@
 				7E637E19196E39A50064B085 /* freerun_progress.map in Resources */,
 				7E637ECD196E39A50064B085 /* sfx_goal.wav in Resources */,
 				7E637E74196E39A50064B085 /* intro.mp3 in Resources */,
+				7E550C3819E7CE0100F46148 /* fiksu-event-succeeded.png in Resources */,
 				7E637EA3196E39A50064B085 /* bomb.png in Resources */,
 				7E637E27196E39A50064B085 /* lab_alladat.map in Resources */,
 				7EC04D33197906F400898FA2 /* Spotlight_80.png in Resources */,
@@ -4491,6 +4556,7 @@
 				7E637E4D196E39A50064B085 /* bwall_test.map in Resources */,
 				7E637DFA196E39A50064B085 /* classic_cavewbwall.map in Resources */,
 				7E637DD6196E39A50064B085 /* extras_art_oldlogo.png in Resources */,
+				7E550C3E19E7CE0100F46148 /* FMTrackingViewController.nib in Resources */,
 				7E637D98196E39A50064B085 /* lab2_windowwall.png in Resources */,
 				7E637E1E196E39A50064B085 /* jumppad_bigjump.map in Resources */,
 				7E637E0F196E39A50064B085 /* filler_directdrop.map in Resources */,
@@ -4521,6 +4587,7 @@
 				7E637EB4196E39A50064B085 /* bark_high.wav in Resources */,
 				7E637DCF196E39A50064B085 /* extras_art_logohead.png in Resources */,
 				7E637E49196E39A50064B085 /* swingvine_swingintro.map in Resources */,
+				7E550C3A19E7CE0100F46148 /* fiksu-icon.png in Resources */,
 				7E637E81196E39A50064B085 /* nmenu_levelselectobj.png in Resources */,
 				7E637E20196E39A50064B085 /* jumppad_crazyloop.map in Resources */,
 				7E637EC1196E39A50064B085 /* sfx_buy.wav in Resources */,
@@ -4546,6 +4613,7 @@
 				7E637EAC196E39A50064B085 /* swingvine_tex_loose.png in Resources */,
 				7E637DAE196E39A50064B085 /* dog1ss.png in Resources */,
 				7E637E61196E39A50064B085 /* tutorial_spikevine.map in Resources */,
+				7E550C3B19E7CE0100F46148 /* fiksu-verify.png in Resources */,
 				7E637E5E196E39A50064B085 /* tutorial_doublejump.map in Resources */,
 				7E637ED2196E39A50064B085 /* sfx_intro_surprise.wav in Resources */,
 				7E637D7B196E39A50064B085 /* BG3_island_corner.png in Resources */,
@@ -4579,6 +4647,7 @@
 				7E637D8E196E39A50064B085 /* lab_rock_particle.png in Resources */,
 				7E637E96196E39A50064B085 /* launcher_default.png in Resources */,
 				7E637D89196E39A50064B085 /* lab_ground_1.png in Resources */,
+				7E550C3519E7CE0100F46148 /* fiksu-close-debug.png in Resources */,
 				7EC04D37197907A800898FA2 /* Icon@2x~ipad.png in Resources */,
 				7E637E3F196E39A50064B085 /* prettyss.map in Resources */,
 				7E637D81196E39A50064B085 /* breakablewall_body.png in Resources */,
@@ -4587,6 +4656,7 @@
 				7E637DB1196E39A50064B085 /* dog3ss.plist in Resources */,
 				7EC04D2F197906F400898FA2 /* Icon.png in Resources */,
 				7E637EE6196E39A50064B085 /* sfx_tutorialdog_out.wav in Resources */,
+				7E550C4119E7CE1400F46148 /* FiksuConfiguration.plist in Resources */,
 				7E637DF3196E39A50064B085 /* capegame_creative_challenge.map in Resources */,
 				7E637D83196E39A50064B085 /* lab_bg.png in Resources */,
 				7E637DEE196E39A50064B085 /* cannon_cannonsandrobots.map in Resources */,
@@ -4631,6 +4701,7 @@
 				7E637E62196E39A50064B085 /* tutorial_swingvine.map in Resources */,
 				7E637EEB196E39A50064B085 /* tut_anim_2.png in Resources */,
 				7E637DA8196E39A50064B085 /* grounddetail_world2_ss.png in Resources */,
+				7E550C3419E7CE0100F46148 /* fiksu-bar-1.png in Resources */,
 				7E637EBA196E39A50064B085 /* sfx_bone_1.wav in Resources */,
 				7E637D86196E39A50064B085 /* ceil_labentrance.png in Resources */,
 				7E637D87196E39A50064B085 /* ceil_repeat_labentrance.png in Resources */,
@@ -4652,11 +4723,13 @@
 				7E637DB6196E39A50064B085 /* dog5ss.png in Resources */,
 				7E637D64196E39A50064B085 /* BG1_island_corner.png in Resources */,
 				7E637E76196E39A50064B085 /* jingle.mp3 in Resources */,
+				7E550C3F19E7CE0100F46148 /* FMVerifyViewController.nib in Resources */,
 				7E637DF9196E39A50064B085 /* classic_bridgenbwall.map in Resources */,
 				7E637D80196E39A50064B085 /* breakablewall_base.png in Resources */,
 				7E637E1A196E39A50064B085 /* freerun_progress_to_lab.map in Resources */,
 				7EC04D401979088600898FA2 /* icon-80.png in Resources */,
 				7E637D90196E39A50064B085 /* labbreakablewall_base.png in Resources */,
+				7E550C3719E7CE0100F46148 /* fiksu-event-failed.png in Resources */,
 				7EB4914D193D1D60008DE2EA /* carton_six_13.png in Resources */,
 				7E637E38196E39A50064B085 /* lab_towerfall.map in Resources */,
 				7E637DD2196E39A50064B085 /* extras_art_menu_concept3.png in Resources */,
@@ -4713,6 +4786,7 @@
 				7E637DD5196E39A50064B085 /* extras_art_olddog.png in Resources */,
 				7E637E6E196E39A50064B085 /* gameloop1.mp3 in Resources */,
 				7E637D70196E39A50064B085 /* BG2_frontislands_0.png in Resources */,
+				7E550C3D19E7CE0100F46148 /* FMEventsViewController.nib in Resources */,
 				7E637D6A196E39A50064B085 /* BG1_sky.png in Resources */,
 				7E637EE7196E39A50064B085 /* sfx_whimper.wav in Resources */,
 				7E637EB9196E39A50064B085 /* sfx_bird_fly.wav in Resources */,
@@ -5203,6 +5277,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/speedypups_ccv2/Classes/ads",
 					"$(PROJECT_DIR)/speedypups_ccv2/Classes/facebook",
+					"$(PROJECT_DIR)/FiksuSDK.embeddedframework",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -5243,6 +5318,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/speedypups_ccv2/Classes/ads",
 					"$(PROJECT_DIR)/speedypups_ccv2/Classes/facebook",
+					"$(PROJECT_DIR)/FiksuSDK.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = speedypups_ccv2/Prefix.pch;
@@ -5289,6 +5365,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/cocos2d_noarc_libs.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FiksuSDK.embeddedframework",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2d-noarc-libs/cocos2d-noarc-libs-Prefix.pch";
@@ -5328,6 +5408,10 @@
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/cocos2d_noarc_libs.dst;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FiksuSDK.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2d-noarc-libs/cocos2d-noarc-libs-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

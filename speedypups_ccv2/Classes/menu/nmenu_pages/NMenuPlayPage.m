@@ -199,6 +199,39 @@
 	[freerunmodebutton addChild:first_time_popup];
 	[first_time_popup setPosition:[Common pct_of_obj:freerunmodebutton pctx:0.25 pcty:0.9]];
 
+	
+	shop_popup = [CCSprite spriteWithTexture:[Resource get_tex:TEX_NMENU_ITEMS] rect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"first_time_popup"]];
+	[shop_popup setAnchorPoint:ccp(1,0)];
+	[shop_popup setScaleX:-1];
+	[shop_popup setPosition:[Common pct_of_obj:[nav_menu getChildByTag:t_SHOPBUTTON] pctx:0.4 pcty:0.8]];
+	[shop_popup addChild:[MenuCommon cons_flipper_for:[[Common cons_label_pos:[Common pct_of_obj:first_time_popup pctx:-0.5 pcty:0.8]
+												 color:ccc3(10,10,10)
+											  fontsize:10
+												   str:@"Coins to spend?"] set_scale:1/CC_CONTENT_SCALE_FACTOR()] x:-1 y:1]];
+	[shop_popup addChild:[MenuCommon cons_flipper_for:[[Common cons_label_pos:[Common pct_of_obj:first_time_popup pctx:-0.5 pcty:0.5]
+										   color:ccc3(10,10,10)
+										fontsize:13
+											 str:@"Go to the shop!"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]  x:-1 y:1]];
+	[[nav_menu getChildByTag:t_SHOPBUTTON] addChild:shop_popup];
+	
+	
+	map_popup  = [CCSprite spriteWithTexture:[Resource get_tex:TEX_NMENU_ITEMS] rect:[FileCache get_cgrect_from_plist:TEX_NMENU_ITEMS idname:@"first_time_popup"]];
+	[map_popup setAnchorPoint:ccp(1,0)];
+	[map_popup setPosition:[Common pct_of_obj:startworlddisp pctx:0.3 pcty:0.925]];
+	[map_popup addChild:[[Common cons_label_pos:[Common pct_of_obj:first_time_popup pctx:0.5 pcty:0.8]
+																		color:ccc3(10,10,10)
+																	 fontsize:8
+																		  str:@"Start from elsewhere?"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
+	[map_popup addChild:[[Common cons_label_pos:[Common pct_of_obj:first_time_popup pctx:0.5 pcty:0.5]
+																		color:ccc3(10,10,10)
+																	 fontsize:11
+																		  str:@"Click to change!"] set_scale:1/CC_CONTENT_SCALE_FACTOR()]];
+	[startworlddisp addChild:map_popup];
+	
+	[first_time_popup setVisible:NO];
+	[shop_popup setVisible:NO];
+	[map_popup setVisible:NO];
+	
     return self;
 }
 
@@ -318,13 +351,29 @@
 }
 
 -(void)setVisible:(BOOL)visible {
-	if (visible) {
+	if (visible && ![self visible]) {
 		[startworld_disp set_string:[FreeRunStartAtManager name_for_loc:[FreeRunStartAtManager get_starting_loc]]];
 		TexRect *tr = [FreeRunStartAtManager get_icon_for_loc:[FreeRunStartAtManager get_starting_loc]];
 		[startworld_disp_icon set_texture:tr.tex];
 		[startworld_disp_icon set_texturerect:tr.rect];
 		
-		[first_time_popup setVisible:[FreeRunStartAtManager get_starting_loc] == FreeRunStartAt_TUTORIAL];
+		[first_time_popup setVisible:NO];
+		[shop_popup setVisible:NO];
+		[map_popup setVisible:NO];
+		
+		if ([FreeRunStartAtManager get_starting_loc] == FreeRunStartAt_TUTORIAL) {
+			[first_time_popup setVisible:YES];
+			
+		} else {
+			if ([DataStore get_int_for_key:FTUE_HAS_PRESSED_MAP] < 1 && [FreeRunStartAtManager get_can_start_at:FreeRunStartAt_WORLD1]) {
+				[map_popup setVisible:YES];
+			}
+				
+			if ([DataStore get_int_for_key:FTUE_HAS_PRESSED_SHOP] < 1 && [UserInventory get_current_coins] > 0) {
+				[shop_popup setVisible:YES];
+				
+			}
+		}
 		
 		for (CCLabelTTF* challenge_completed_disp in challenges_completed_disps)
 			[challenge_completed_disp setString:[NSString stringWithFormat:@"%d/%d",[ChallengeRecord get_highest_available_challenge],[ChallengeRecord get_num_challenges]]];
@@ -454,6 +503,7 @@
 -(void)run_button_pressed {
 	[AudioManager playsfx:SFX_MENU_UP];
     cur_mode = PlayPageMode_MODE_CHOOSE;
+	[shop_popup setVisible:NO];
 }
 
 -(void)freerun_button_pressed {
