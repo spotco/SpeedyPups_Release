@@ -29,8 +29,8 @@
 		cur_set_completed_levels++;
 		if (cur_set_completed_levels >= LEVELS_IN_SET) {
 			mode = AutoLevelStateMode_FILLER;
-			sets_completed++;
 			[AutoLevelState set_filler_progress:sets_completed];
+			sets_completed++;
 		}
 		return [setgen get_from_bucket:cur_set];
 		

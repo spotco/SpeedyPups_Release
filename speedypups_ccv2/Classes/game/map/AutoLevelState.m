@@ -28,7 +28,7 @@
 	tutorial_levels = @[
 		@"tutorial2_jumpwater",
 		@"tutorial2_doublejumphover",
-		@"filler_sanicloop",
+		@"tutorial_sanicloop",
 		@"tutorial2_swipeget",
 		@"tutorial_breakrocks",
 		@"tutorial_upsidebounce",

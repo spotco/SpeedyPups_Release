@@ -514,6 +514,7 @@
 		[self update_particles];
 		[self push_added_particles];
 		[GEventDispatcher push_event:[GEvent cons_type:GEventType_UIANIM_TICK]];
+		[self update_render];
 		
 		if (player.current_island != NULL) { //when fall on the ground transition to normal gameplay (else lock the camera)
 			current_mode = GameEngineLayerMode_GAMEPLAY;
@@ -751,8 +752,10 @@
 		[[CCDirector sharedDirector] pushScene:[CapeGameEngineLayer credits_scene_g:self]];
 		[AudioManager playbgm_imm:BGM_GROUP_WORLD1];
 		[Player character_bark];
+		[[self get_ui_layer] show_cover:NO];
 		
 	} else if (e.type == GEventType_BOSS3_CREDITS_END) {
+		[[self get_ui_layer] show_cover:NO];
 		if ([self get_challenge] == NULL) {
 			current_mode = GameEngineLayerMode_FADEOUT_TO_FREEPUPS;
 		} else {

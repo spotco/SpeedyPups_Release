@@ -17,7 +17,7 @@
 #define VERSION_STRING @"SpeedyPups RC4.1 - October 2014"
 #define STARTING_LIVES 10
 
-#define TESTLEVEL @"capegame_launcher"
+#define TESTLEVEL @"filler_godog"
 #define USE_BG			 1
 
 #define DEBUG_UI		 0

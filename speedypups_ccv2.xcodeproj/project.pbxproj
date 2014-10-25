@@ -842,6 +842,7 @@
 		7ED1701C1999C6BE00D38373 /* OALAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED16FFE1999C6BE00D38373 /* OALAudioFile.m */; };
 		7ED1701D1999C6BE00D38373 /* OALTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED170011999C6BE00D38373 /* OALTools.m */; };
 		7EFFCB5C19FB808A0057E9B3 /* FillerProgressUIAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFFCB5B19FB808A0057E9B3 /* FillerProgressUIAnimation.m */; };
+		7EFFCB5E19FB968C0057E9B3 /* tutorial_sanicloop.map in Resources */ = {isa = PBXBuildFile; fileRef = 7EFFCB5D19FB968C0057E9B3 /* tutorial_sanicloop.map */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2122,6 +2123,7 @@
 		7ED170031999C6BE00D38373 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		7EFFCB5A19FB808A0057E9B3 /* FillerProgressUIAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillerProgressUIAnimation.h; sourceTree = "<group>"; };
 		7EFFCB5B19FB808A0057E9B3 /* FillerProgressUIAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillerProgressUIAnimation.m; sourceTree = "<group>"; };
+		7EFFCB5D19FB968C0057E9B3 /* tutorial_sanicloop.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tutorial_sanicloop.map; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3784,6 +3786,7 @@
 				7E637CC1196E39A40064B085 /* tutorial_swipeget.map */,
 				7E637CC2196E39A40064B085 /* tutorial_upsidebounce.map */,
 				7E637CC3196E39A40064B085 /* tutorial_water.map */,
+				7EFFCB5D19FB968C0057E9B3 /* tutorial_sanicloop.map */,
 			);
 			name = levels;
 			path = Resources/levels;
@@ -4428,6 +4431,7 @@
 				7E637E13196E39A50064B085 /* filler_islandjump.map in Resources */,
 				7E637E64196E39A50064B085 /* tutorial_swipeget.map in Resources */,
 				7E637DA3196E39A50064B085 /* cloud_ss.png in Resources */,
+				7EFFCB5E19FB968C0057E9B3 /* tutorial_sanicloop.map in Resources */,
 				7E637EC3196E39A50064B085 /* sfx_cat_hit.wav in Resources */,
 				7E637E66196E39A50064B085 /* tutorial_water.map in Resources */,
 				7E637E4F196E39A50064B085 /* cave_test.map in Resources */,

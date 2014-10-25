@@ -40,10 +40,10 @@
 	
 	[base addChild:[[CCSprite spriteWithTexture:[Resource get_tex:TEX_UI_INGAMEUI_SS]
 										   rect:[FileCache get_cgrect_from_plist:TEX_UI_INGAMEUI_SS idname:@"fillerprogressline"]]
-					pos:[Common pct_of_obj:base pctx:0.5 pcty:0.24]]];
+					pos:[Common pct_of_obj:base pctx:0.54 pcty:0.24]]];
 	
 	TexRect *tr1 = [FreeRunStartAtManager get_icon_for_loc:pos];
-	[base addChild:[[[CCSprite spriteWithTexture:tr1.tex rect:tr1.rect] pos:[Common pct_of_obj:base pctx:0.12 pcty:0.285]] scale:0.6]];
+	[base addChild:[[[CCSprite spriteWithTexture:tr1.tex rect:tr1.rect] pos:[Common pct_of_obj:base pctx:0.16 pcty:0.285]] scale:0.6]];
 	[base addChild:[[[CCSprite spriteWithTexture:[Resource get_tex:TEX_FREERUNSTARTICONS] rect:[FileCache get_cgrect_from_plist:TEX_FREERUNSTARTICONS idname:@"icon_question"]] pos:[Common pct_of_obj:base pctx:0.88 pcty:0.285]] scale:0.6]];
 	
 	CCSprite *dogicon = [CCSprite node];
