@@ -39,6 +39,13 @@ static AdColony_integration *instance;
 
 static long _last_ad_shown_time = 0;
 +(void)show_ad_onbegin:(void (^)())onbegin onfinish:(void (^)())onfinish {
+	NSLog(@"ADS SHOWN(%d) ads_disabl(%d) last_shown_time(%ld) sys_time(%ld) lst-sys_time(%ld)",
+		  [UserInventory get_ads_disabled] || ((_last_ad_shown_time != 0) && (sys_time() - _last_ad_shown_time < 120)),
+		  [UserInventory get_ads_disabled],
+		  _last_ad_shown_time,
+		  sys_time(),
+		  sys_time() - _last_ad_shown_time
+	);
 	if ([UserInventory get_ads_disabled] || ((_last_ad_shown_time != 0) && (sys_time() - _last_ad_shown_time < 120))) {
 		//NSLog(@"too short time %ld",sys_time() - _last_ad_shown_time);
 		onbegin();

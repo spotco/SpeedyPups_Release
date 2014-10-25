@@ -48,7 +48,7 @@
 	
 	CCSprite *dogicon = [CCSprite node];
 	[dogicon runAction:[Common cons_anim:@[@"dog_selector_0",@"dog_selector_1"] speed:0.2 tex_key:TEX_NMENU_ITEMS]];
-	[dogicon setPosition:[Common pct_of_obj:base pctx:(pct == FillerProgressUIAnimation_ONE?0.3:(pct == FillerProgressUIAnimation_TWO?0.5:0.7)) pcty:0.475]];
+	[dogicon setPosition:[Common pct_of_obj:base pctx:(pct == FillerProgressUIAnimation_ONE?0.45:(pct == FillerProgressUIAnimation_TWO?0.6:0.75)) pcty:0.475]];
 	[dogicon setScale:0.6];
 	[base addChild:dogicon];
 	return self;
