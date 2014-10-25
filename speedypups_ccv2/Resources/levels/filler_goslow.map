@@ -15,7 +15,7 @@
         {"x": 4099, "label": "17", "type": "spike", "y": 1931},
         {"x": 4195, "label": "18", "type": "spike", "y": 2051},
         {"x": 1590, "y": 305, "width": 3567.6000000000004, "label": "19", "type": "water", "height": 462.5},
-        {"x": 700, "label": "20", "type": "checkpoint", "y": 741.1},
+        {"x": 700, "label": "20", "type": "checkpoint", "y": 741.1, "filler":true},
         {"x": 1601, "label": "BID:1", "bid": 1, "type": "dogbone", "y": 997},
         {"x": 1701, "label": "BID:2", "bid": 2, "type": "dogbone", "y": 998},
         {"x": 2328.6, "label": "BID:5", "bid": 5, "type": "dogbone", "y": 1208.6},

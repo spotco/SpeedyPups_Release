@@ -305,4 +305,12 @@
 	}
 }
 
+static int FILLER_PROGRESS = 1;
++(void)set_filler_progress:(int)fillerprogress {
+	FILLER_PROGRESS = fillerprogress;
+}
++(int)get_filler_progress {
+	return FILLER_PROGRESS;
+}
+
 @end

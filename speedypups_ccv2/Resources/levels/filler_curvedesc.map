@@ -56,7 +56,7 @@
         {"type": "dogbone", "x": 4344, "label": "BID:14", "bid": 14, "y": 1116},
         {"type": "dogbone", "x": 4540, "label": "BID:15", "bid": 15, "y": 970},
         {"type": "dogbone", "x": 4164, "label": "BID:16", "bid": 16, "y": 1290},
-        {"type": "checkpoint", "x": 284, "label": "26", "y": 2250},
+        {"type": "checkpoint", "x": 284, "label": "26", "y": 2250, "filler":true},
         {"type": "ground_detail", "x": 1984, "label": "(29)gd_img:6", "img": 6, "y": 1706},
         {"type": "birdflock", "x": 2924, "label": "30", "y": 1468},
         {"type": "ground_detail", "x": 3772, "label": "(31)gd_img:6", "img": 6, "y": 1216},

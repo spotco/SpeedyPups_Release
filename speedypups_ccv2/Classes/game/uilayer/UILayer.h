@@ -26,7 +26,11 @@
     GameModeCallback *retry_cb;
     UIAnim *curanim;
     NSMutableArray *ingame_ui_anims;
+	
+	CCLayerColor *white_cover;
 }
+-(void)show_cover:(BOOL)vis;
+
 
 +(UILayer*)cons_with_gamelayer:(GameEngineLayer*)g;
 

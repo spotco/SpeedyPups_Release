@@ -14,7 +14,7 @@
         {"can_fall": true, "x2": 11203.8, "y2": 806.6, "ground": "open", "y1": 796.6, "ndir": "left", "hei": 500, "type": "line", "x1": 9510.4}
     ],
     "objects": [
-        {"x": 898.4, "label": "0", "y": 4501.7, "type": "checkpoint"},
+        {"x": 898.4, "label": "0", "y": 4501.7, "type": "checkpoint", "filler":true},
         {
             "x": 1051.7,
             "height": 596.5833333333335,

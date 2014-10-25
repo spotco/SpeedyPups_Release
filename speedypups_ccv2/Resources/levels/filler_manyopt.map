@@ -46,7 +46,7 @@
     "connect_pts": {"x2": 11202.7, "y1": 1045, "x1": 50, "y2": 1150},
     "assert_links": 0,
     "objects": [
-        {"type": "checkpoint", "x": 605, "y": 1045, "label": "0"},
+        {"type": "checkpoint", "x": 605, "y": 1045, "label": "0", "filler":true},
         {"x": 698.4, "camera": {"x": 120, "y": 110, "z": 219}, "y": 1025, "height": 539.9833333333335, "type": "camera_area", "width": 255, "label": "CAM(120,110,219)"},
         {
             "x": 2751.7,

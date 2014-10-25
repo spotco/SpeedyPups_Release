@@ -1,6 +1,6 @@
 {
     "objects": [
-        {"x": 800, "label": "0", "type": "checkpoint", "y": 1200},
+        {"x": 800, "label": "0", "type": "checkpoint", "y": 1200, "filler":true},
         {"img": 6, "x": 9147.2, "label": "(1)gd_img:6", "type": "ground_detail", "y": 848.6},
         {"img": 6, "x": 9401.5, "label": "(2)gd_img:6", "type": "ground_detail", "y": 851.4},
         {"img": 29, "x": 9421.5, "label": "(3)gd_img:29", "type": "ground_detail", "y": 852.9},

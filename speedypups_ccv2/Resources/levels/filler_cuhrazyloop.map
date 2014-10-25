@@ -158,7 +158,7 @@
         {"type": "birdflock", "x": 2500.1, "y": 2168.8, "label": "63"},
         {"type": "speedup", "x": 3212.6, "y": 2252.6, "label": "68", "dir": {"y": 0.76, "x": 0.65}},
         {"type": "speedup", "x": 1548.8, "y": 1558.8, "label": "69", "dir": {"y": 1, "x": 0.04}},
-        {"type": "checkpoint", "x": 853.8, "y": 1147.5, "label": "70"},
+        {"type": "checkpoint", "x": 853.8, "y": 1147.5, "label": "70", "filler":true},
         {"type": "ground_detail", "x": 652.5, "y": 1148.8, "label": "(71)gd_img:37", "img": 37},
         {"type": "ground_detail", "x": 548.8, "y": 1151.3, "label": "(72)gd_img:37", "img": 37},
         {"type": "ground_detail", "x": 451.3, "y": 1151.3, "label": "(73)gd_img:37", "img": 37},

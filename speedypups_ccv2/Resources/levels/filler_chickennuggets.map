@@ -58,7 +58,7 @@
         {"type": "line", "y2": 1695, "x1": 3905.1, "can_fall": true, "x2": 3952.6, "ground": "open", "ndir": "right", "y1": 1695, "hei": 50}
     ],
     "objects": [
-        {"type": "checkpoint", "x": 496.3, "label": "2", "y": 698.8},
+        {"type": "checkpoint", "x": 496.3, "label": "2", "y": 698.8, "filler":true},
         {"type": "dogbone", "x": 4797.6, "label": "BID:61", "y": 1803.8, "bid": 61},
         {"type": "dogbone", "x": 4702.6, "label": "BID:63", "y": 1901.3, "bid": 63},
         {"type": "dogbone", "x": 4501.3, "label": "BID:65", "y": 2093.8, "bid": 65},

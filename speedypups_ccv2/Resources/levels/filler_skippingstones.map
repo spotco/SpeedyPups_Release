@@ -50,7 +50,7 @@
     "objects": [
         {"x": 1835, "y": 1307.5, "type": "water", "label": "3", "height": 487.5, "width": 310},
         {"x": 2877.5, "y": 1165, "type": "water", "label": "5", "height": 500, "width": 427.5},
-        {"type": "checkpoint", "x": 442, "label": "7", "y": 1798},
+        {"type": "checkpoint", "x": 442, "label": "7", "y": 1798, "filler":true},
         {"x": 2360, "y": 1237.5, "type": "water", "label": "0", "height": 477.5, "width": 352.5},
         {"x": 3535.1, "y": 1022.5, "type": "water", "label": "1", "height": 482.5, "width": 445},
         {"type": "checkpoint", "x": 5600.1, "label": "2", "y": 1402.5},

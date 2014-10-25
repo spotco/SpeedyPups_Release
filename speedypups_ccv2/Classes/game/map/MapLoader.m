@@ -453,7 +453,9 @@ static NSMutableDictionary* cached_json;
 			} else if ([type isEqualToString:@"checkpoint"]) {
 				float x = getflt(j_object, @"x");
 				float y = getflt(j_object, @"y");
-				[map.game_objects addObject:[CheckPoint cons_x:x y:y]];
+				CheckPoint *rtv = [CheckPoint cons_x:x y:y];
+				if (getbool(j_object, @"filler")) [rtv set_show_filler_progress];
+				[map.game_objects addObject:rtv];
 			}
 			
 		} else if (cur_mode == MapLoaderMode_CHALLENGE) {

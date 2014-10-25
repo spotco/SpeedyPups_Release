@@ -72,14 +72,14 @@ static long timeof_web_remaining = 0;
 }
 
 +(BOOL)daily_popup_after_check_show {
+	if ([DataStore get_int_for_key:KEY_FIRST_LOGIN_PRIZE_TAKEN] == 0) {
+		[DataStore set_key:KEY_FIRST_LOGIN_PRIZE_TAKEN int_value:1];
+		[self first_login_prize_popup];
+		return YES;
+	}
 	if ([DataStore get_str_for_key:KEY_TODAY] == NULL) {
 		if (web_today != NULL) {
 			[DataStore set_key:KEY_TODAY str_value:web_today];
-		}
-		if ([DataStore get_int_for_key:KEY_FIRST_LOGIN_PRIZE_TAKEN] == 0) {
-			[DataStore set_key:KEY_FIRST_LOGIN_PRIZE_TAKEN int_value:1];
-			[self first_login_prize_popup];
-			return YES;
 		}
 		
 	} else if (web_today != NULL) {

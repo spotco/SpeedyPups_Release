@@ -10,7 +10,7 @@
         {"type": "line", "y2": 697.5, "x1": 551.3, "can_fall": true, "x2": 998.8, "ground": "bridge", "ndir": "left", "y1": 700, "hei": 50}
     ],
     "objects": [
-        {"type": "checkpoint", "x": 451.3, "label": "5", "y": 698.8},
+        {"type": "checkpoint", "x": 451.3, "label": "5", "y": 698.8, "filler":true},
         {"type": "ground_detail", "x": 1247.5, "label": "(6)gd_img:5", "img": 5, "y": 698.8},
         {"type": "ground_detail", "x": 1932.5, "label": "(8)gd_img:2", "img": 2, "y": 702.5},
         {"type": "birdflock", "x": 3098.8, "label": "9", "y": 900},

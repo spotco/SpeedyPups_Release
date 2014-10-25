@@ -36,6 +36,7 @@ typedef enum {
     GameEngineLayerMode_RUNOUT,
 	GameEngineLayerMode_CAPEOUT,
 	GameEngineLayerMode_CAPEIN,
+	GameEngineLayerMode_CAPEIN_PRE_AD,
 	
 	GameEngineLayerMode_RUNOUT_TO_FREEPUPS,
 	GameEngineLayerMode_FADEOUT_TO_FREEPUPS,
@@ -90,8 +91,6 @@ typedef enum {
 +(CCScene*)scene_with:(NSString *)map_file_name lives:(int)lives world:(WorldNum)world;
 +(CCScene*)scene_with_autolevel_lives:(int)lives world:(WorldStartAt)world;
 +(CCScene*)scene_with_challenge:(ChallengeInfo*)info world:(WorldNum)world;
-
--(void)show_ad;
 
 -(UILayer*)get_ui_layer;
 -(BGLayer*)get_bg_layer;

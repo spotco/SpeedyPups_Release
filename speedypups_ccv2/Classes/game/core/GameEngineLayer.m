@@ -17,6 +17,7 @@
 #import "TrackingUtil.h"
 #import "BossRushAutoLevel.h"
 #import "BatchSpriteManager.h"
+#import "AdColony_integration.h" 
 
 @implementation GameEngineLayer {
 	BOOL first_update;
@@ -463,7 +464,7 @@
 				current_mode = GameEngineLayerMode_GAMEEND; //logic done in BOSS3_DEFEATED event
 			} else {
 				[AudioManager playbgm_imm:BGM_GROUP_CAPEGAME];
-				current_mode = GameEngineLayerMode_CAPEIN;
+				current_mode = GameEngineLayerMode_CAPEIN_PRE_AD;
 			}
 			[Player character_bark];
 			
@@ -486,6 +487,20 @@
 			[self update_render];
 		}
 		
+	} else if (current_mode == GameEngineLayerMode_CAPEIN_PRE_AD) {
+		if (challenge == NULL) {
+			current_mode = GameEngineLayerMode_SHOWING_AD;
+			[AdColony_integration show_ad_onbegin:^{} onfinish:^{
+				current_mode = GameEngineLayerMode_CAPEIN;
+				[self play_worldnum_bgm];
+				[[self get_ui_layer] show_cover:NO];
+			}];
+		} else {
+			current_mode = GameEngineLayerMode_CAPEIN;
+			[[self get_ui_layer] show_cover:NO];
+		}
+		[self update_render];
+		
 	} else if (current_mode == GameEngineLayerMode_CAPEIN) {
 		if (do_runin_anim) {
 			[self play_worldnum_bgm];
@@ -500,10 +515,9 @@
 		[self push_added_particles];
 		[GEventDispatcher push_event:[GEvent cons_type:GEventType_UIANIM_TICK]];
 		
-		if (player.current_island != NULL) {
+		if (player.current_island != NULL) { //when fall on the ground transition to normal gameplay (else lock the camera)
 			current_mode = GameEngineLayerMode_GAMEPLAY;
 		}
-		
 		
     } else if (current_mode == GameEngineLayerMode_UIANIM) {
         [GEventDispatcher push_event:[GEvent cons_type:GEventType_UIANIM_TICK]];
@@ -588,7 +602,7 @@
 		}
 		
 	} else if (current_mode == GameEngineLayerMode_SHOWING_AD) {
-		
+		[self incr_time:[Common get_dt_Scale]];
 	}
     [GEventDispatcher dispatch_events];
 }

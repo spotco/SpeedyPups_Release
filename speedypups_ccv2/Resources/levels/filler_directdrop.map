@@ -1,6 +1,6 @@
 {
     "objects": [
-        {"x": 950, "label": "0", "type": "checkpoint", "y": 1100},
+        {"x": 950, "label": "0", "type": "checkpoint", "y": 1100, "filler":true},
         {"x": 2248.4, "label": "2", "dir": {"x": -0.01, "y": 1}, "type": "speedup", "y": 846.7},
         {"x": 2250, "label": "3", "dir": {"x": -0.01, "y": 1}, "type": "speedup", "y": 603.3},
         {"x": 2251.7, "label": "4", "dir": {"x": -0.01, "y": 1}, "type": "speedup", "y": 403.3},

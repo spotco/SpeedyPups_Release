@@ -9,5 +9,5 @@
 
 +(CheckPoint*)cons_x:(float)x y:(float)y;
 -(void)cons_img;
-
+-(void)set_show_filler_progress;
 @end

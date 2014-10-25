@@ -19,6 +19,7 @@
 #import "ScoreComboAnimation.h"
 #import "OneUpParticle.h"
 #import "TrackingUtil.h"
+#include "FillerProgressUIAnimation.h"
 
 @implementation UILayer
 
@@ -66,6 +67,14 @@
     [self update_items];
     ingame_ui_anims = [NSMutableArray array];
     self.isTouchEnabled = YES;
+	
+	white_cover = [CCLayerColor layerWithColor:ccc4(255,255,255,255)];
+	[self addChild:white_cover];
+	[self show_cover:NO];
+}
+
+-(void)show_cover:(BOOL)vis {
+	[white_cover setVisible:vis];
 }
 
 -(void)dispatch_event:(GEvent *)e {
@@ -106,7 +115,7 @@
         [self start_bone_collect_anim];
 		
 	} else if (e.type == GEventType_COMBO_DISP_ANIM) {
-		if ([game_engine_layer get_challenge] == NULL && [game_engine_layer get_mode] != GameEngineLayerMode_CAPEIN) {
+		if ([game_engine_layer get_challenge] == NULL && [game_engine_layer get_mode] != GameEngineLayerMode_CAPEIN && [game_engine_layer get_mode] != GameEngineLayerMode_CAPEIN_PRE_AD) {
 			[self start_combo_anim:e.f1];
 		}
 		
@@ -139,8 +148,11 @@
 		[self update_items];
 		[ingameui animslot_notification];
 		
-	}  else if (e.type == GEventType_IAP_FAIL || e.type == GEventType_IAP_SUCCESS) {
+	} else if (e.type == GEventType_IAP_FAIL || e.type == GEventType_IAP_SUCCESS) {
 		if (askcontinueui.visible) [askcontinueui dispatch_event:e];
+		
+	} else if (e.type == GEventType_FILLERPROGRESS) {
+		[self start_fillerprogress_anim:e.i1 pct:e.i2];
 		
 	}
 }
@@ -324,6 +336,11 @@
 }
 -(void)start_freerunprogress_anim:(FreeRunStartAt)p {
 	UIIngameAnimation *ua = [FreeRunProgressAnimation cons_at:p];
+	[ingameuianimholder addChild:ua];
+	[ingame_ui_anims addObject:ua];
+}
+-(void)start_fillerprogress_anim:(FreeRunStartAt)p pct:(FillerProgressUIAnimationPct)pct {
+	FillerProgressUIAnimation *ua = [FillerProgressUIAnimation cons_at:p pct:pct];
 	[ingameuianimholder addChild:ua];
 	[ingame_ui_anims addObject:ua];
 }

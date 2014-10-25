@@ -9,6 +9,7 @@
 #import "Common.h"
 #import "FireworksParticleA.h"
 #import "CapeGameEngineLayer_CreditsScene.h"
+#import "UILayer.h"
 
 #import "CapeGameBossCat.h"
 
@@ -467,6 +468,7 @@ static NSString *blank = @"";
 }
 
 -(void)exit {
+	[[[self get_main_game] get_ui_layer] show_cover:YES];
 	[GEventDispatcher remove_listener:self];
 	[self removeAllChildrenWithCleanup:YES];
 	for (Particle *p in particles) {

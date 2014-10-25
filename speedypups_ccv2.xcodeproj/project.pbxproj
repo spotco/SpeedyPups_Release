@@ -841,6 +841,7 @@
 		7ED1701B1999C6BE00D38373 /* NSMutableDictionary+WeakReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED16FFC1999C6BE00D38373 /* NSMutableDictionary+WeakReferences.m */; };
 		7ED1701C1999C6BE00D38373 /* OALAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED16FFE1999C6BE00D38373 /* OALAudioFile.m */; };
 		7ED1701D1999C6BE00D38373 /* OALTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED170011999C6BE00D38373 /* OALTools.m */; };
+		7EFFCB5C19FB808A0057E9B3 /* FillerProgressUIAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFFCB5B19FB808A0057E9B3 /* FillerProgressUIAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2119,6 +2120,8 @@
 		7ED170011999C6BE00D38373 /* OALTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALTools.m; sourceTree = "<group>"; };
 		7ED170021999C6BE00D38373 /* ObjectALMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectALMacros.h; sourceTree = "<group>"; };
 		7ED170031999C6BE00D38373 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		7EFFCB5A19FB808A0057E9B3 /* FillerProgressUIAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillerProgressUIAnimation.h; sourceTree = "<group>"; };
+		7EFFCB5B19FB808A0057E9B3 /* FillerProgressUIAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillerProgressUIAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3101,6 +3104,8 @@
 				7E6379DF196E394D0064B085 /* UILayer.m */,
 				7E6379E0196E394D0064B085 /* UIWaterAlert.h */,
 				7E6379E1196E394D0064B085 /* UIWaterAlert.m */,
+				7EFFCB5A19FB808A0057E9B3 /* FillerProgressUIAnimation.h */,
+				7EFFCB5B19FB808A0057E9B3 /* FillerProgressUIAnimation.m */,
 			);
 			path = uilayer;
 			sourceTree = "<group>";
@@ -4939,6 +4944,7 @@
 				7E637B8F196E394D0064B085 /* DailyLoginPrizeManager.m in Sources */,
 				7E637B41196E394D0064B085 /* GameStartAnim.m in Sources */,
 				7E637B0E196E394D0064B085 /* LineIsland.m in Sources */,
+				7EFFCB5C19FB808A0057E9B3 /* FillerProgressUIAnimation.m in Sources */,
 				7ED170041999C6BE00D38373 /* OALAction.m in Sources */,
 				7ED1700C1999C6BE00D38373 /* ALBuffer.m in Sources */,
 				7E637B0D196E394D0064B085 /* LabLineIsland.m in Sources */,

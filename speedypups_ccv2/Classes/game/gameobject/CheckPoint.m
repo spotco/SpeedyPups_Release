@@ -2,7 +2,9 @@
 #import "GameEngineLayer.h"
 #import "ScoreManager.h"
 
-@implementation CheckPoint
+@implementation CheckPoint {
+	BOOL show_filler_progress;
+}
 
 +(CheckPoint*)cons_x:(float)x y:(float)y {
     CheckPoint *p = [CheckPoint node];
@@ -37,6 +39,7 @@
     active_img.visible = NO;
     texwid = [tex1 contentSizeInPixels].width;
     texhei = [tex1 contentSizeInPixels].height;
+	show_filler_progress = NO;
 }
 
 -(HitRect)get_hit_rect {
@@ -60,8 +63,15 @@
             [g add_particle:[FireworksParticleA cons_x:center.x y:center.y vx:float_random(-3,3) vy:float_random(9,14) ct:arc4random_uniform(20)+10]];
         }
         [AudioManager playsfx:SFX_CHECKPOINT];
+		
+		if (show_filler_progress) {
+			[GEventDispatcher push_event:[[GEvent cons_type:GEventType_FILLERPROGRESS] add_i1:[g.world_mode get_freerun_progress] i2:[AutoLevelState get_filler_progress]]];
+		}
     }
 }
 
+-(void)set_show_filler_progress {
+	show_filler_progress = YES;
+}
 
 @end

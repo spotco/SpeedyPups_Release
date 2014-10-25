@@ -101,4 +101,7 @@ typedef enum AutoLevelStateMode {
 
 -(void)conditional_go_to_coin_level_or_mode:(AutoLevelStateMode)_mode;
 
++(void)set_filler_progress:(int)fillerprogress;
++(int)get_filler_progress;
+
 @end
